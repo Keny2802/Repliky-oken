@@ -5,6 +5,7 @@ import {
 import Header from "./components/Header";
 import Subheader from "./components/Subheader";
 import Hero from "./sections/Hero";
+import About from "./sections/About";
 import Atc from "./sections/Atc";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
@@ -15,6 +16,7 @@ const Home = () => {
       <Header />
       <Subheader />
       <Hero />
+      <About />
       <Atc />
       <Contact />
       <Footer />
