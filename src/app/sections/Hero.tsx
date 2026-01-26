@@ -29,7 +29,7 @@ const Hero = () => {
                 loading="lazy"
                 decoding="async"
                 draggable={false}
-                className="w-full max-h-250 object-cover"
+                className="w-full max-h-screen object-cover"
                 />
                 <Wrapper className="absolute inset-0 bg-black/60"></Wrapper>
                 <Wrapper className="p-3 md:p-3.5 lg:p-4 text-white text-center absolute inset-0 flex justify-center items-center flex-col gap-3 md:gap-3.5 lg:gap-6">

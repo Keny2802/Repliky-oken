@@ -52,7 +52,7 @@ const ContactInfo = () => {
                     </p>
                     <Cta
                     href="tel:+420604197497"
-                    className="block mt-3 md:mt-3.5 lg:mt-4 bg-[#322e2e] text-white">
+                    className="block mt-3 md:mt-3.5 lg:mt-4 bg-[#322e2e] text-white text-center">
                         <Padding>
                             Zavolejte ještě dnes
                         </Padding>

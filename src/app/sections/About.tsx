@@ -1,8 +1,13 @@
 "use client";
 
 import {
+    useState,
+    useEffect,
     Fragment
 } from "react";
+import {
+    Gallery
+} from "../o-nas/Gallery";
 import Image from "next/image";
 
 import Wrapper from "../components/Wrapper";
@@ -10,6 +15,7 @@ import FlexCol from "../components/FlexCol";
 import Heading from "../components/Heading";
 import Subheading from "../components/Subheading";
 import FlexRow from "../components/FlexRow";
+import Flex from "../components/Flex";
 import Cta from "../components/Cta";
 import setLinkWithoutHash from "../functions/setLinkWithoutHash";
 import Padding from "../components/Padding";
@@ -53,29 +59,8 @@ const About = () => {
                                 );
                             })
                         }
-                        <FlexRow className="flex-wrap">
-                            {[
-                                {
-                                    image: "/assets/1.jpeg",
-                                    alt: "Ukázka práce okna | Repliky oken Jaroslav Heindinger"
-                                },
-                                {
-                                    image: "/assets/2.jpeg",
-                                    alt: "Ukázka práce okna z větší dálky | Repliky oken Jaroslav Heindinger"
-                                },
-                                {
-                                    image: "/assets/3.jpeg",
-                                    alt: "Ukázka práce dveří | Repliky oken Jaroslav Heindinger"
-                                },
-                                {
-                                    image: "/assets/4.jpeg",
-                                    alt: "Ukázka práce hezkých bílých oken | Repliky oken Jaroslav Heindinger"
-                                },
-                                {
-                                    image: "/assets/5.jpeg",
-                                    alt: "Ukázka práce hezkých bílých oken foceno z větší dálky | Repliky oken Jaroslav Heindinger"
-                                }
-                            ].map((card, index) => {
+                        <Flex className="flex-wrap">
+                            {Gallery.map((card, index) => {
                                 return (
                                     <Image
                                     key={index}
@@ -90,7 +75,7 @@ const About = () => {
                                     />
                                 );
                             })}
-                        </FlexRow>
+                        </Flex>
                         <Cta
                         href="#nabidka"
                         onClick={(e) => {

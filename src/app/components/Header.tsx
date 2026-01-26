@@ -1,16 +1,27 @@
+"use client";
+
 import {
+    useState,
   Fragment
 } from "react";
+import {
+    Menu,
+    XIcon
+} from "lucide-react";
 import Link from "next/link";
 
 import Padding from "./Padding";
 import Flex from "./Flex";
 import Logo from "./Logo";
+import Icon from "./Icon";
+import MobileMenu from "./MobileMenu";
 
 const Header = () => {
+    const [isMobileMenu, setMobileMenu] = useState<boolean>(false);
+
     return (
         <Fragment>
-            <header className="bg-white shadow-lg">
+            <header className="bg-white shadow-lg border-b border-gray-200">
                 <Padding>
                     <Flex className="justify-between">
                         <Logo />
@@ -49,9 +60,36 @@ const Header = () => {
                                 }
                             </Flex>
                         </ul>
+                        {
+                            isMobileMenu === false ? (
+                                <Icon
+                                className="md:hidden cursor-pointer"
+                                onClick={() => {
+                                    setMobileMenu(prev => !prev);
+                                }}>
+                                    <Menu />
+                                </Icon>
+                            ) : (
+                                <Icon
+                                className="md:hidden cursor-pointer"
+                                onClick={() => {
+                                    setMobileMenu(false);
+                                }}>
+                                    <XIcon />
+                                </Icon>
+                            )
+                        }
                     </Flex>
                 </Padding>
             </header>
+            {
+                isMobileMenu && (
+                    <MobileMenu
+                    isMobileMenu={isMobileMenu}
+                    setMobileMenu={setMobileMenu}
+                    />
+                )
+            }
         </Fragment>
     );
 };
