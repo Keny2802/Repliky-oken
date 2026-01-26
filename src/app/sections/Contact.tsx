@@ -17,7 +17,7 @@ const Contact = () => {
                 <Padding>
                     <Image
                     fill
-                    src="/assets/contact/contact.jpeg"
+                    src="/assets/contact/contact.JPEG"
                     alt="Napište nám nebo zavolejte a proměníme Vaše představy do reality | Replikyoken.cz Jaroslav Heindinger"
                     loading="lazy"
                     decoding="async"
