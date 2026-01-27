@@ -13,11 +13,13 @@ import Padding from "../components/Padding";
 const Contact = () => {
     return (
         <Fragment>
-            <Wrapper className="max-w-full min-h-[1000px] md:min-h-[600px] aspect-square relative">
+            <Wrapper
+            className="max-w-full min-h-[1000px] md:min-h-[600px] aspect-square relative"
+            id="kontakt">
                 <Padding>
                     <Image
                     fill
-                    src="/assets/contact/contact.JPEG"
+                    src="/assets/contact/contact.avif"
                     alt="Napište nám nebo zavolejte a proměníme Vaše představy do reality | Replikyoken.cz Jaroslav Heindinger"
                     loading="lazy"
                     decoding="async"

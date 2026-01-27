@@ -24,7 +24,7 @@ const Hero = () => {
                 <Image
                 width={1000}
                 height={1000}
-                src="/assets/hero/hero.jpeg"
+                src="/assets/hero/hero.avif"
                 alt="Dokonalé repliky oken pro váš domov | Replikyoken.cz Jaroslav Heindinger"
                 loading="lazy"
                 decoding="async"

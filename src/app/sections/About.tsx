@@ -39,7 +39,7 @@ const About = () => {
                     <Image
                     width={400}
                     height={400}
-                    src="/assets/about/about.JPEG"
+                    src="/assets/about/about.avif"
                     alt="O nás | Repliky oken Jaroslav Heindinger"
                     loading="lazy"
                     decoding="async"

@@ -34,12 +34,16 @@ const Header = () => {
                                             href: "/jak-to-probiha"
                                         },
                                         {
-                                            text: "O nás",
-                                            href: "/o-nas"
+                                            text: "Galerie",
+                                            href: "/galerie"
                                         },
                                         {
                                             text: "Naše realizace",
                                             href: "/nase-realizace"
+                                        },
+                                        {
+                                            text: "O nás",
+                                            href: "/o-nas"
                                         },
                                         {
                                             text: "Kontakt",

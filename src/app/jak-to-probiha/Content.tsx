@@ -2,12 +2,12 @@ import {
     Fragment
 } from "react";
 
-import Wrapper from "../components/Wrapper";
+import HowItWorks from "../components/HowItWorks";
 
 const Content = () => {
     return (
         <Fragment>
-            <Wrapper></Wrapper>
+            <HowItWorks />
         </Fragment>
     );
 };

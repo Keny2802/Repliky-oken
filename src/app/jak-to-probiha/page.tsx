@@ -3,7 +3,7 @@ import {
 } from "react";
 
 import Header from "../components/Header";
-import HowItWorks from "../components/HowItWorks";
+import Content from "./Content";
 import Contact from "../sections/Contact";
 import Footer from "../sections/Footer";
 
@@ -11,7 +11,7 @@ const Page = () => {
     return (
         <Fragment>
             <Header />
-            <HowItWorks />
+            <Content />
             <Contact />
             <Footer />
         </Fragment>

@@ -41,36 +41,40 @@ const MobileMenu = ({ ...props }: MobileMenuType) => {
                     <ul className="mt-4 md:mt-6 lg:mt-8 header-list">
                         <FlexCol>
                             {
-                                [
-                                    {
-                                        text: "Jak to probíhá",
-                                        href: "/jak-to-probiha"
-                                    },
-                                    {
-                                        text: "O nás",
-                                        href: "/o-nas"
-                                    },
-                                    {
-                                        text: "Naše realizace",
-                                        href: "/nase-realizace"
-                                    },
-                                    {
-                                        text: "Kontakt",
-                                        href: "/kontakt"
-                                    }
-                                ].map((link, index) => {
-                                    return (
-                                        <Fragment key={index}>
-                                            <li className="text-base md:text-[17px] lg:text-lg font-medium header-item">
-                                                <Link
-                                                href={link.href}>
-                                                    {link.text}
-                                                </Link>
-                                            </li>
-                                        </Fragment>
-                                    );
-                                })
-                            }
+                                    [
+                                        {
+                                            text: "Jak to probíhá",
+                                            href: "/jak-to-probiha"
+                                        },
+                                        {
+                                            text: "Galerie",
+                                            href: "/galerie"
+                                        },
+                                        {
+                                            text: "Naše realizace",
+                                            href: "/nase-realizace"
+                                        },
+                                        {
+                                            text: "O nás",
+                                            href: "/o-nas"
+                                        },
+                                        {
+                                            text: "Kontakt",
+                                            href: "/kontakt"
+                                        }
+                                    ].map((link, index) => {
+                                        return (
+                                            <Fragment key={index}>
+                                                <li className="text-base md:text-[17px] lg:text-lg font-medium mobile-menu-item">
+                                                    <Link
+                                                    href={link.href}>
+                                                        {link.text}
+                                                    </Link>
+                                                </li>
+                                            </Fragment>
+                                        );
+                                    })
+                                }
                         </FlexCol>
                     </ul>
                 </Padding>

@@ -4,12 +4,12 @@ import type {
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Dokonalé repliky oken | Replikyoken.cz",
-  description: "Dokonalé repliky oken pro váš domov | Replikyoken.cz Jaroslav Heindinger",
+  title: "Dokonalé repliky oken | Jaroslav Heindinger",
+  description: "Jsme malá rodinná firma, vyrábíme s respektem k řemeslu a přání zákazníka. Každému oknu věnujeme maximální péči a chceme, aby vytvořené výrobky sloužily výborně a dlouho. Firma úspěšně funguje druhou generaci a všechny naše zkušenosti promítáme do naší práce. | Replikyoken.cz Jaroslav Heindinger",
   icons: {
     icon: [
       {
-        url: "/assets/logo/small-logo.png",
+        url: "/assets/logo/favicon.ico",
         type: "image/png"
       }
     ]

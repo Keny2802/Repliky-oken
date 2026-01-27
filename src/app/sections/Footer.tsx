@@ -21,20 +21,20 @@ const Footer = () => {
                                 {
                                     [
                                         {
-                                            text: "Domů",
-                                            href: "#domov"
-                                        },
-                                        {
                                             text: "Jak to probíhá",
                                             href: "/jak-to-probiha"
                                         },
                                         {
-                                            text: "O nás",
-                                            href: "/o-nas"
+                                            text: "Galerie",
+                                            href: "/galerie"
                                         },
                                         {
                                             text: "Naše realizace",
                                             href: "/nase-realizace"
+                                        },
+                                        {
+                                            text: "O nás",
+                                            href: "/o-nas"
                                         },
                                         {
                                             text: "Kontakt",
@@ -43,10 +43,9 @@ const Footer = () => {
                                     ].map((link, index) => {
                                         return (
                                             <Fragment key={index}>
-                                                <li className="footer-header-item">
+                                                <li className="text-base md:text-[17px] lg:text-lg font-medium footer-header-item">
                                                     <Link
-                                                    href={link.href}
-                                                    className="footer-header-link">
+                                                    href={link.href}>
                                                         {link.text}
                                                     </Link>
                                                 </li>

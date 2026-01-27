@@ -22,13 +22,13 @@ const Atc = () => {
                     Kvalitní, precizní a přesně na míru - ať vaše okna vypadají jako nová.
                 </Subheading>
                 <Cta
-                href="#nabidka"
+                href="#kontakt"
                 onClick={(e) => {
-                    setLinkWithoutHash(e, "#nabidka");
+                    setLinkWithoutHash(e, "kontakt");
                 }}
                 className="bg-white text-black">
                     <Padding>
-                        Zjistit více
+                        Kontaktujte nás
                     </Padding>
                 </Cta>
             </Wrapper>

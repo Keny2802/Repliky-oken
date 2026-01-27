@@ -7,6 +7,7 @@ import Subheader from "./components/Subheader";
 import Hero from "./sections/Hero";
 import About from "./sections/About";
 import Atc from "./sections/Atc";
+import Gallery from "./sections/Gallery";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
 
@@ -18,6 +19,7 @@ const Home = () => {
       <Hero />
       <About />
       <Atc />
+      <Gallery />
       <Contact />
       <Footer />
     </Fragment>
