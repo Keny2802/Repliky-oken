@@ -14,7 +14,7 @@ import Padding from "../components/Padding";
 const Atc = () => {
     return (
         <Fragment>
-            <Wrapper className="p-4 md:p-6 lg:p-8 bg-[#362315] text-white text-center  flex justify-center items-center flex-col gap-3 md:gap-6 lg:gap-8">
+            <Wrapper className="px-8 md:px-12 py-16 md:py-24 bg-[#362315] text-white text-center  flex justify-center items-center flex-col gap-3 md:gap-6 lg:gap-8">
                 <Heading>
                     Potřebujete nová okna do domu nebo bytu?
                 </Heading>
