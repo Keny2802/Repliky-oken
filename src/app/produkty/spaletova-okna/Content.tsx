@@ -78,13 +78,13 @@ const Content = () => {
                                     height={200}
                                     src={img}
                                     alt={`${index + 1}. Ukázka produktu špaletových oken | replikyoken.cz Jaroslav Heindinger`}
-                                    className="md:w-50 md:h-50 object-cover cursor-pointer rounded-md"
+                                    className="w-full md:w-50 md:h-50 object-cover cursor-pointer rounded-md"
                                     />
                                 </Fragment>
                             );
                         })
                     }
-                    </FlexRow>
+                </FlexRow>
                     <FlexCol className="mt-2 md:mt-4 lg:mt-6 justify-center items-center">
                         <h3 className="text-2xl md:text-3xl font-semibold">
                             Špaletová okna jsme vylepšili:

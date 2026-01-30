@@ -4,20 +4,18 @@ import {
 
 import Header from "../components/Header";
 import Subheader from "../components/Subheader";
-import Contact from "../sections/Contact";
-import Gallery from "../sections/Gallery";
+import About from "../sections/About";
 import Footer from "../sections/Footer";
 
-const Page = () => {
+const Content = () => {
     return (
         <Fragment>
             <Header />
             <Subheader />
-            <Gallery />
-            <Contact />
+            <About />
             <Footer />
         </Fragment>
     );
 };
 
-export default Page;
+export default Content;

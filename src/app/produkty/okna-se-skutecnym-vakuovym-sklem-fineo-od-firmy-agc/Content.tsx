@@ -73,7 +73,7 @@ const Content = () => {
                                     height={200}
                                     src={img}
                                     alt={`${index + 1}. Ukázka produktu okna se skutečným vakuovým sklem fineo od firmy AGC | replikyoken.cz Jaroslav Heindinger`}
-                                    className="md:w-50 md:h-50 object-cover cursor-pointer rounded-md"
+                                    className="w-full md:w-50 md:h-50 object-cover cursor-pointer rounded-md"
                                     />
                                 </Fragment>
                             );

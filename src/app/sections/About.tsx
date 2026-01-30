@@ -44,7 +44,7 @@ const About = () => {
                     loading="lazy"
                     decoding="async"
                     draggable={false}
-                    className="rounded-2xl"
+                    className="w-full md:w-max rounded-2xl"
                     />
                     <FlexCol className="justify-center items-center">
                         {
@@ -64,14 +64,14 @@ const About = () => {
                                 return (
                                     <Image
                                     key={index}
-                                    width={100}
-                                    height={100}
+                                    width={200}
+                                    height={200}
                                     src={card.image}
                                     alt={card.alt}
                                     loading="lazy"
                                     decoding="async"
                                     draggable={false}
-                                    className="rounded-md"
+                                    className="w-full md:w-50 md:h-50 rounded-md"
                                     />
                                 );
                             })}

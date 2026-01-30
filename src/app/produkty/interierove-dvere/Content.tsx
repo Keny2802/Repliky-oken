@@ -94,7 +94,7 @@ const Content = () => {
                                     height={200}
                                     src={img}
                                     alt={`${index + 1}. Ukázka produktu interiérových dveřích | replikyoken.cz Jaroslav Heindinger`}
-                                    className="md:w-50 md:h-50 object-cover cursor-pointer rounded-md"
+                                    className="w-full md:w-50 md:h-50 object-cover cursor-pointer rounded-md"
                                     />
                                 </Fragment>
                             );

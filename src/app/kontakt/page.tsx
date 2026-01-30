@@ -2,16 +2,12 @@ import {
     Fragment
 } from "react";
 
-import Header from "../components/Header";
-import Contact from "../sections/Contact";
-import Footer from "../sections/Footer";
+import Content from "./Content";
 
 const Page = () => {
     return (
         <Fragment>
-            <Header />
-            <Contact />
-            <Footer />
+            <Content />
         </Fragment>
     );
 };

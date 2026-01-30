@@ -2,16 +2,12 @@ import {
     Fragment
 } from "react";
 
-import Header from "../components/Header";
-import About from "../sections/About";
-import Footer from "../sections/Footer";
+import Content from "./Content";
 
 const Page = () => {
     return (
         <Fragment>
-            <Header />
-            <About />
-            <Footer />
+            <Content />
         </Fragment>
     );
 };

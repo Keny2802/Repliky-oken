@@ -5,7 +5,6 @@ import {
 import Header from "../components/Header";
 import Subheader from "../components/Subheader";
 import Contact from "../sections/Contact";
-import Gallery from "../sections/Gallery";
 import Footer from "../sections/Footer";
 
 const Page = () => {
@@ -13,7 +12,6 @@ const Page = () => {
         <Fragment>
             <Header />
             <Subheader />
-            <Gallery />
             <Contact />
             <Footer />
         </Fragment>
