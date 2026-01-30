@@ -57,22 +57,22 @@ const Contact = () => {
                                         ].map((input, index) => {
                                             return (
                                                 <Fragment key={index}>
-                                                    <input
-                                                    type={input.type}
-                                                    placeholder={input.placeholder}
-                                                    className="p-4 md:p-4.5 lg:p-5 w-full bg-[#362315] text-white focus:outline-none"
-                                                    />
                                                     {
-                                                        index === -1 && (
-                                                            <textarea
+                                                        index !== -1 && (
+                                                            <input
+                                                            type={input.type}
                                                             placeholder={input.placeholder}
-                                                            className="p-4 md:p-4.5 lg:p-5 w-full bg-[#362315] text-white focus:outline-none"></textarea>
+                                                            className="p-4 md:p-4.5 lg:p-5 w-full bg-[#362315] text-white focus:outline-none"
+                                                            />
                                                         )
                                                     }
                                                 </Fragment>
                                             );
                                         })
                                     }
+                                    <textarea
+                                    placeholder="Zpráva pro nás"
+                                    className="p-4 md:p-4.5 lg:p-5 min-h-[200px] w-full resize-none bg-[#362315] text-white focus:outline-none"></textarea>
                                     <button
                                     type="button"
                                     className="w-full bg-white text-black text-base md:text-lg lg:text-[19px] rounded-3xl cursor-pointer">
