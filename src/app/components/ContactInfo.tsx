@@ -16,7 +16,7 @@ import Padding from "./Padding";
 const ContactInfo = () => {
     return (
         <Fragment>
-            <Wrapper className="p-3.5 md:p-4 lg:p-4.5 w-full md:w-4/10 min-h-100 bg-white/10 rounded-md">
+            <Wrapper className="p-3.5 md:p-4 lg:p-4.5 w-full md:w-4/10 min-h-100 bg-black/10 border border-gray-500 rounded-md">
                 <Wrapper className="mt-3 md:mt-3 5 lg:mt-4 flex justify-center items-center flex-col gap-3 md:gap-3 5 lg:gap-4">
                     <h3 className="text-2xl md:text-3xl font-medium">
                         Ing. Jaroslav Heindinger
@@ -52,7 +52,7 @@ const ContactInfo = () => {
                     </p>
                     <Cta
                     href="tel:+420604197497"
-                    className="block mt-3 md:mt-3.5 lg:mt-4 bg-[#322e2e] text-white text-center">
+                    className="block mt-3 md:mt-3.5 lg:mt-4 bg-white text-black text-center">
                         <Padding>
                             Zavolejte ještě dnes
                         </Padding>

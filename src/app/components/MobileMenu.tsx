@@ -33,7 +33,7 @@ const MobileMenu = ({ ...props }: MobileMenuType) => {
                 setMobileMenu(false);
             }}></Wrapper>
             <Wrapper className={clsx(
-            "fixed top-0 left-0 bg-white shadow-md w-[300px] h-full z-50 transform transition-transform duration-300 ease-in-out",
+            "fixed top-0 left-0 bg-[#362315] shadow-md w-[300px] h-full z-50 transform transition-transform duration-300 ease-in-out",
             isMobileMenu ? "translate-x-0 md:-translate-x-full" : "-translate-x-full",
             className)}>
                 <Padding>
@@ -65,7 +65,47 @@ const MobileMenu = ({ ...props }: MobileMenuType) => {
                                     ].map((link, index) => {
                                         return (
                                             <Fragment key={index}>
-                                                <li className="text-base md:text-[17px] lg:text-lg font-medium mobile-menu-item">
+                                                <li className="text-base md:text-[17px] lg:text-lg text-white mobile-menu-item">
+                                                    <Link
+                                                    href={link.href}>
+                                                        {link.text}
+                                                    </Link>
+                                                </li>
+                                            </Fragment>
+                                        );
+                                    })
+                                }
+                        </FlexCol>
+                    </ul>
+                    <Wrapper className="mt-2 border-t border-gray-300"></Wrapper>
+                    <ul className="mt-4 md:mt-6 lg:mt-8 header-list">
+                        <FlexCol>
+                            {
+                                    [
+                                        {
+                                            text: "Špaletová okna",
+                                            href: "/produkty/spaletova-okna"
+                                        },
+                                        {
+                                            text: "Jedno rámová okna",
+                                            href: "/produkty/jedno-ramova-okna-s-izolacnim-sklem-trojsklo-dvojsklo"
+                                        },
+                                        {
+                                            text: "Okna se skutečným vakuovým sklem",
+                                            href: "/produkty/okna-se-skutecnym-vakuovym-sklem-fineo-od-firmy-agc"
+                                        },
+                                        {
+                                            text: "Interiérové dveře",
+                                            href: "/produkty/interierove-dvere"
+                                        },
+                                        {
+                                            text: "Vchodové dveře",
+                                            href: "/produkty/vchodove-dvere"
+                                        },
+                                    ].map((link, index) => {
+                                        return (
+                                            <Fragment key={index}>
+                                                <li className="text-base md:text-[17px] lg:text-lg text-white mobile-menu-item">
                                                     <Link
                                                     href={link.href}>
                                                         {link.text}

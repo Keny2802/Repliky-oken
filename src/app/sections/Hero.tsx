@@ -80,7 +80,7 @@ const Hero = () => {
                                         onClick={(e) => {
                                             setLinkWithoutHash(e, heroCta.href);
                                         }}
-                                        className="bg-[#322e2e] text-white last:bg-white last:text-black">
+                                        className="bg-[#362315] text-white last:bg-white last:text-black">
                                             <Padding>
                                                 {heroCta.text}
                                             </Padding>

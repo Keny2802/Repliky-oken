@@ -60,13 +60,13 @@ const Contact = () => {
                                                     <input
                                                     type={input.type}
                                                     placeholder={input.placeholder}
-                                                    className="p-4 md:p-4.5 lg:p-5 w-full bg-[#322e2e] text-white focus:outline-none"
+                                                    className="p-4 md:p-4.5 lg:p-5 w-full bg-[#362315] text-white focus:outline-none"
                                                     />
                                                     {
                                                         index === -1 && (
                                                             <textarea
                                                             placeholder={input.placeholder}
-                                                            className="p-4 md:p-4.5 lg:p-5 w-full bg-[#322e2e] text-white focus:outline-none"></textarea>
+                                                            className="p-4 md:p-4.5 lg:p-5 w-full bg-[#362315] text-white focus:outline-none"></textarea>
                                                         )
                                                     }
                                                 </Fragment>

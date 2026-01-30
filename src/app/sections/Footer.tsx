@@ -10,7 +10,7 @@ import ContactInfo from "../components/ContactInfo";
 const Footer = () => {
     return (
         <Fragment>
-            <Wrapper className="p-4 md:p-6 lg:p-12 bg-[#322e2e] text-white">
+            <Wrapper className="p-4 md:p-6 lg:p-12 bg-[#362315] text-white">
                 <Flex className="md:justify-between items-start md:items-center flex-col md:flex-row">
                     <Wrapper>
                         <p className="text-2xl font-bold">
@@ -61,16 +61,24 @@ const Footer = () => {
                                     [
                                         {
                                             text: "Špaletová okna",
-                                            href: "/spaletova-okna"
+                                            href: "/produkty/spaletova-okna"
                                         },
                                         {
-                                            text: "Vchodové dveře",
-                                            href: "/vchodove-dvere"
+                                            text: "Jedno rámová okna",
+                                            href: "/produkty/jedno-ramova-okna-s-izolacnim-sklem-trojsklo-dvojsklo"
+                                        },
+                                        {
+                                            text: "Okna se skutečným vakuovým sklem",
+                                            href: "/produkty/okna-se-skutecnym-vakuovym-sklem-fineo-od-firmy-agc"
                                         },
                                         {
                                             text: "Interiérové dveře",
-                                            href: "/interierove-dvere"
-                                        }
+                                            href: "/produkty/interierove-dvere"
+                                        },
+                                        {
+                                            text: "Vchodové dveře",
+                                            href: "/produkty/vchodove-dvere"
+                                        },
                                     ].map((link, index) => {
                                         return (
                                             <Fragment key={index}>

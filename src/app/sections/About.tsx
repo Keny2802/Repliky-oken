@@ -81,7 +81,7 @@ const About = () => {
                         onClick={(e) => {
                             setLinkWithoutHash(e, "#nabidka");
                         }}
-                        className="mt-2 md:mt-3 lg:mt-4 bg-[#322e2e] text-white text-center">
+                        className="mt-2 md:mt-3 lg:mt-4 bg-[#362315] text-white text-center">
                             <Padding>
                                 Zjistit více
                             </Padding>

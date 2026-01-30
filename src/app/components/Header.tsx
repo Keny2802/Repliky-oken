@@ -21,7 +21,7 @@ const Header = () => {
 
     return (
         <Fragment>
-            <header className="bg-white shadow-lg border-b border-gray-200">
+            <header className="bg-[#362315] text-white shadow-lg border-b border-gray-200">
                 <Padding>
                     <Flex className="justify-between">
                         <Logo />
@@ -52,7 +52,7 @@ const Header = () => {
                                     ].map((link, index) => {
                                         return (
                                             <Fragment key={index}>
-                                                <li className="text-base md:text-[17px] lg:text-lg font-medium header-item">
+                                                <li className="text-base md:text-[17px] lg:text-lg header-item">
                                                     <Link
                                                     href={link.href}>
                                                         {link.text}
