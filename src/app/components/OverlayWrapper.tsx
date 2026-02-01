@@ -1,13 +1,14 @@
 import {
-    Fragment
+    Fragment,
+    ReactNode
 } from "react";
 import clsx from "clsx";
 
 import Wrapper from "./Wrapper";
 
-type OverlayWrapperType = {
+interface OverlayWrapperType {
     className?: string;
-    children: React.ReactNode;
+    children?: ReactNode;
 };
 
 const OverlayWrapper = ({ ...props }: OverlayWrapperType) => {
@@ -18,10 +19,8 @@ const OverlayWrapper = ({ ...props }: OverlayWrapperType) => {
 
     return (
         <Fragment>
-            <Wrapper className="relative">
-                <Wrapper className={clsx("w-full absolute inset-0 flex justify-center items-center flex-col gap-3 md:gap-3 5 lg:gap-4", className)}>
-                    {children}
-                </Wrapper>
+            <Wrapper className={clsx(`${className || ""} p-2 md:p-3 lg:p-4 absolute inset-0 flex justify-center items-center`)}>
+                {children}
             </Wrapper>
         </Fragment>
     );

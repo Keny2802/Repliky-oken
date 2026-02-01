@@ -14,18 +14,19 @@ const Contact = () => {
     return (
         <Fragment>
             <Wrapper
-            className="max-w-full min-h-[1000px] md:min-h-[600px] aspect-square relative"
+            className="max-w-full min-h-[1200px] md:min-h-[600px] aspect-square relative"
             id="kontakt">
                 <Padding>
                     <Image
                     fill
-                    src="/assets/contact/contact.avif"
+                    // src="/assets/contact/contact.avif"
+                    src="/assets/fotky/produkty/spaletova-okna/spaletova-okna-2.avif"
                     alt="Napište nám nebo zavolejte a proměníme Vaše představy do reality | Replikyoken.cz Jaroslav Heindinger"
                     loading="lazy"
                     decoding="async"
                     draggable={false}
                     />
-                    <Wrapper className="absolute inset-0 bg-black/50"></Wrapper>
+                    <Wrapper className="absolute inset-0"></Wrapper>
                     <Wrapper className="p-4 md:p-6 lg:p-8 text-white text-center absolute inset-0 flex justify-center items-center flex-col gap-3 md:gap-6 lg:gap-8">
                         <Heading>
                             Spojte se s námi.
@@ -62,7 +63,7 @@ const Contact = () => {
                                                             <input
                                                             type={input.type}
                                                             placeholder={input.placeholder}
-                                                            className="p-4 md:p-4.5 lg:p-5 w-full bg-[#362315] text-white focus:outline-none"
+                                                            className="p-4 md:p-4.5 lg:p-5 w-full bg-[#f5f2e8] text-black focus:outline-none placeholder:text-black"
                                                             />
                                                         )
                                                     }
@@ -72,10 +73,10 @@ const Contact = () => {
                                     }
                                     <textarea
                                     placeholder="Zpráva pro nás"
-                                    className="p-4 md:p-4.5 lg:p-5 min-h-[200px] w-full resize-none bg-[#362315] text-white focus:outline-none"></textarea>
+                                    className="p-4 md:p-4.5 lg:p-5 min-h-[200px] w-full resize-none bg-[#f5f2e8] text-f5f2e8 focus:outline-none placeholder:text-black"></textarea>
                                     <button
                                     type="button"
-                                    className="w-full bg-white text-black text-base md:text-lg lg:text-[19px] rounded-3xl cursor-pointer">
+                                    className="w-full bg-[#f5f2e8] text-black text-base md:text-lg lg:text-[19px] rounded-3xl cursor-pointer">
                                         <Padding>
                                             Odeslat formulář
                                         </Padding>

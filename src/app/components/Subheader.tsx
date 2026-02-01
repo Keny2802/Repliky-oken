@@ -9,7 +9,7 @@ import Flex from "./Flex";
 const Subheader = () => {
     return (
         <Fragment>
-            <header className="hidden md:block bg-[#362315] text-white shadow-lg">
+            <header className="hidden md:block bg-[#f5f2e8] text-black shadow-lg">
                 <Wrapper className="p-2 md:p-2.5 lg:p-3">
                     <Flex className="justify-center">
                         <ul className="header-list">

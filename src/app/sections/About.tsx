@@ -1,8 +1,6 @@
 "use client";
 
 import {
-    useState,
-    useEffect,
     Fragment
 } from "react";
 import {
@@ -24,7 +22,8 @@ const About = () => {
     return (
         <Fragment>
             <Wrapper className="p-4 md:p-6 lg:p-8 bg-white shadow-lg">
-                <FlexCol className="justify-center items-center">
+                <Wrapper>
+                    <FlexCol className="justify-center items-center">
                     <Heading>
                         O nás
                     </Heading>
@@ -39,7 +38,7 @@ const About = () => {
                     <Image
                     width={400}
                     height={400}
-                    src="/assets/about/about.avif"
+                    src="/assets/fotky/produkty/vchodove-dvere-do-bytu/vchodove-dvere-do-bytu-2.avif"
                     alt="O nás | Repliky oken Jaroslav Heindinger"
                     loading="lazy"
                     decoding="async"
@@ -76,18 +75,21 @@ const About = () => {
                                 );
                             })}
                         </Flex>
-                        <Cta
-                        href="#nabidka"
-                        onClick={(e) => {
-                            setLinkWithoutHash(e, "#nabidka");
-                        }}
-                        className="mt-2 md:mt-3 lg:mt-4 bg-[#362315] text-white text-center">
-                            <Padding>
-                                Zjistit více
-                            </Padding>
-                        </Cta>
-                    </FlexCol>
-                </FlexRow>
+                        </FlexCol>
+                    </FlexRow>
+                </Wrapper>
+                <Wrapper className="flex justify-center">
+                    <Cta
+                    href="#nabidka"
+                    onClick={(e) => {
+                        setLinkWithoutHash(e, "#nabidka");
+                    }}
+                    className="flex justify-center items-center w-full mt-2 md:mt-4 lg:mt-6 bg-[#f5f2e8] text-black text-center border border-gray-200">
+                        <Padding className="bg-[#f5f2e8]">
+                            Zjistit více
+                        </Padding>
+                    </Cta>
+                </Wrapper>
             </Wrapper>
         </Fragment>
     );

@@ -1,6 +1,11 @@
 export const Gallery = [
     {
         title: "Praha ulice Rybná, Praha 1. Repliky špaletových oken",
+        image: "/assets/fotky/reference/praha-ulice-rybna-repliky-oken/praha-ulice-rybna-repliky-oken-1.avif",
+        alt: ""
+    },
+    {
+        title: "Praha ulice Rybná, Praha 1. Repliky špaletových oken",
         image: "/assets/fotky/reference/praha-ulice-rybna-repliky-oken/praha-ulice-rybna-repliky-oken-2.avif",
         alt: ""
     },

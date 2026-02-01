@@ -20,10 +20,9 @@ const Logo = () => {
                 <Image
                 width={250}
                 height={250}
-                src="/assets/logo/logo.avif"
+                src="/assets/logo/clean-logo.avif"
                 alt="Jaroslav Heindinger Replikyoken.cz Logo"
-                loading="lazy"
-                decoding="async"
+                priority={true}
                 draggable={false}
                 />
             </Link>

@@ -33,7 +33,7 @@ const MobileMenu = ({ ...props }: MobileMenuType) => {
                 setMobileMenu(false);
             }}></Wrapper>
             <Wrapper className={clsx(
-            "fixed top-0 left-0 bg-[#362315] shadow-md w-[300px] h-full z-50 transform transition-transform duration-300 ease-in-out",
+            "fixed top-0 left-0 bg-[#f5f2e8] shadow-md w-[300px] h-full z-50 transform transition-transform duration-300 ease-in-out",
             isMobileMenu ? "translate-x-0 md:-translate-x-full" : "-translate-x-full",
             className)}>
                 <Padding>
@@ -46,10 +46,10 @@ const MobileMenu = ({ ...props }: MobileMenuType) => {
                                             text: "Jak to probíhá",
                                             href: "/jak-to-probiha"
                                         },
-                                        {
-                                            text: "Galerie",
-                                            href: "/galerie"
-                                        },
+                                        // {
+                                        //     text: "Galerie",
+                                        //     href: "/galerie"
+                                        // },
                                         {
                                             text: "Naše realizace",
                                             href: "/nase-realizace"
@@ -65,7 +65,7 @@ const MobileMenu = ({ ...props }: MobileMenuType) => {
                                     ].map((link, index) => {
                                         return (
                                             <Fragment key={index}>
-                                                <li className="text-base md:text-[17px] lg:text-lg text-white mobile-menu-item">
+                                                <li className="text-base md:text-[17px] lg:text-lg text-black mobile-menu-item">
                                                     <Link
                                                     href={link.href}>
                                                         {link.text}
@@ -105,7 +105,7 @@ const MobileMenu = ({ ...props }: MobileMenuType) => {
                                     ].map((link, index) => {
                                         return (
                                             <Fragment key={index}>
-                                                <li className="text-base md:text-[17px] lg:text-lg text-white mobile-menu-item">
+                                                <li className="text-base md:text-[17px] lg:text-lg text-black mobile-menu-item">
                                                     <Link
                                                     href={link.href}>
                                                         {link.text}

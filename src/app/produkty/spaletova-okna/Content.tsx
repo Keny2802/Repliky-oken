@@ -1,9 +1,13 @@
+"use client";
+
 import {
+    useState,
     Fragment
 } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+import ContactHeader from "@/app/components/contact-header/ContactHeader";
 import Header from "@/app/components/Header";
 import Subheader from "@/app/components/Subheader";
 import Atc from "@/app/sections/Atc";
@@ -12,12 +16,30 @@ import FlexCol from "@/app/components/FlexCol";
 import FlexRow from "@/app/components/FlexRow";
 import Heading from "@/app/components/Heading";
 import Subheading from "@/app/components/Subheading";
+import OverlaySwipeSlider from "@/app/components/OverlaySwipeSlider";
 import Contact from "@/app/sections/Contact";
 import Footer from "@/app/sections/Footer";
 
+const carouselItems = [
+    "/assets/fotky/produkty/spaletova-okna/spaletova-okna-1.avif",
+    "/assets/fotky/produkty/spaletova-okna/spaletova-okna-2.avif",
+    "/assets/fotky/produkty/spaletova-okna/spaletova-okna-3.avif",
+    "/assets/fotky/produkty/spaletova-okna/spaletova-okna-4.avif",
+    "/assets/fotky/produkty/spaletova-okna/spaletova-okna-5.avif",
+    "/assets/fotky/produkty/spaletova-okna/spaletova-okna-6.avif",
+    "/assets/fotky/produkty/spaletova-okna/spaletova-okna-7.avif",
+    "/assets/fotky/produkty/spaletova-okna/spaletova-okna-8.avif",
+    "/assets/fotky/produkty/spaletova-okna/spaletova-okna-9.avif",
+    "/assets/fotky/produkty/spaletova-okna/spaletova-okna-10.avif",
+];
+
 const Content = () => {
+    const [activeIndex, setActiveIndex] = useState<number | null>(null);
+    const [isImageClicked, setImageClicked] = useState<boolean>(false);
+
     return (
         <Fragment>
+            <ContactHeader />
             <Header />
             <Subheader />
             <Wrapper className="px-8 md:px-12 py-16 md:py-24 bg-white shadow-md">
@@ -59,18 +81,7 @@ const Content = () => {
                 </Wrapper>
                 <FlexRow className="flex-wrap justify-center items-center w-full">
                     {
-                        [
-                            "/assets/fotky/produkty/spaletova-okna/spaletova-okna-1.avif",
-                            "/assets/fotky/produkty/spaletova-okna/spaletova-okna-2.avif",
-                            "/assets/fotky/produkty/spaletova-okna/spaletova-okna-3.avif",
-                            "/assets/fotky/produkty/spaletova-okna/spaletova-okna-4.avif",
-                            "/assets/fotky/produkty/spaletova-okna/spaletova-okna-5.avif",
-                            "/assets/fotky/produkty/spaletova-okna/spaletova-okna-6.avif",
-                            "/assets/fotky/produkty/spaletova-okna/spaletova-okna-7.avif",
-                            "/assets/fotky/produkty/spaletova-okna/spaletova-okna-8.avif",
-                            "/assets/fotky/produkty/spaletova-okna/spaletova-okna-9.avif",
-                            "/assets/fotky/produkty/spaletova-okna/spaletova-okna-10.avif",
-                        ].map((img, index) => {
+                        carouselItems.map((img, index) => {
                             return (
                                 <Fragment key={index}>
                                     <Image
@@ -79,6 +90,10 @@ const Content = () => {
                                     src={img}
                                     alt={`${index + 1}. Ukázka produktu špaletových oken | replikyoken.cz Jaroslav Heindinger`}
                                     className="w-full md:w-50 md:h-50 object-cover cursor-pointer rounded-md"
+                                    onClick={() => {
+                                        setActiveIndex(index);
+                                        setImageClicked(true);
+                                    }}
                                     />
                                 </Fragment>
                             );
@@ -145,6 +160,28 @@ const Content = () => {
             <Atc />
             <Contact />
             <Footer />
+            {/* {
+                activeIndex !== null && isImageClicked && (
+                    <SwipeSlider
+                    images={carouselItems}
+                    currentIndex={activeIndex}
+                    setCurrentIndex={setActiveIndex}
+                    onClose={() => setActiveIndex(null)}
+                    />
+                )
+            } */}
+            {
+                activeIndex !== null && (
+                    <OverlaySwipeSlider
+                    key={activeIndex}
+                    items={carouselItems.map((img, index) => ({
+                        image: img
+                    }))}
+                    startIndex={activeIndex}
+                    onClose={() => setActiveIndex(null)}
+                    />
+                )
+            }
         </Fragment>
     );
 };

@@ -2,6 +2,7 @@ import {
   Fragment
 } from "react";
 
+import ContactHeader from "./components/contact-header/ContactHeader";
 import Header from "./components/Header";
 import Subheader from "./components/Subheader";
 import Hero from "./sections/Hero";
@@ -14,6 +15,7 @@ import Footer from "./sections/Footer";
 const Home = () => {
   return (
     <Fragment>
+      <ContactHeader />
       <Header />
       <Subheader />
       <Hero />

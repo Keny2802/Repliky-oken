@@ -10,7 +10,7 @@ import ContactInfo from "../components/ContactInfo";
 const Footer = () => {
     return (
         <Fragment>
-            <Wrapper className="p-4 md:p-6 lg:p-12 bg-[#362315] text-white">
+            <Wrapper className="p-4 md:p-6 lg:p-12 bg-white text-black">
                 <Flex className="md:justify-between items-start md:items-center flex-col md:flex-row">
                     <Wrapper>
                         <p className="text-2xl font-bold">

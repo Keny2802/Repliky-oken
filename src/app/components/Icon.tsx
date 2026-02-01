@@ -22,7 +22,7 @@ const Icon = ({ ...props }: iconType) => {
     return (
         <Fragment>
             <Wrapper
-            className={clsx(`${className || ""} h-6 md:h-7 lg:h-8 w-6 md:w-7 lg:w-8`)}
+            className={clsx(`${className || ""} w-5 h-5 md:h-6 md:w-6 lg:h-8 lg:w-8`)}
             onClick={onClick}>
                 {children}
             </Wrapper>

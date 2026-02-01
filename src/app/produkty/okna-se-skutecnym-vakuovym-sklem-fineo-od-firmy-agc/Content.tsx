@@ -4,6 +4,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 
+import ContactHeader from "@/app/components/contact-header/ContactHeader";
 import Header from "@/app/components/Header";
 import Subheader from "@/app/components/Subheader";
 import Atc from "@/app/sections/Atc";
@@ -18,6 +19,7 @@ import Footer from "@/app/sections/Footer";
 const Content = () => {
     return (
         <Fragment>
+            <ContactHeader />
             <Header />
             <Subheader />
             <Wrapper className="px-8 md:px-12 py-16 md:py-24 bg-white shadow-md">

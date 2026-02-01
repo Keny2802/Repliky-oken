@@ -24,20 +24,25 @@ const Hero = () => {
                 <Image
                 width={1000}
                 height={1000}
-                src="/assets/hero/hero.avif"
+                // src="/assets/hero/hero.avif"
+                src="/assets/fotky/reference/pysely-rekonstrukce-historicke-vily/pysely-rekonstrukce-historicke-vily-19.avif"
                 alt="Dokonalé repliky oken pro váš domov | Replikyoken.cz Jaroslav Heindinger"
                 loading="lazy"
                 decoding="async"
                 draggable={false}
-                className="w-full max-h-screen object-cover"
+                className="w-full min-h-[100vh] max-h-[200vh] bg-fixed bg-center object-cover"
                 />
-                <Wrapper className="absolute inset-0 bg-black/60"></Wrapper>
+                <Wrapper className="absolute inset-0 bg-black/30"></Wrapper>
                 <Wrapper className="p-3 md:p-3.5 lg:p-4 text-white text-center absolute inset-0 flex justify-center items-center flex-col gap-3 md:gap-3.5 lg:gap-6">
                     <HeroHeading>
-                        Dokonalé repliky oken pro váš domov
+                        Repliky oken pro váš domov
                     </HeroHeading>
-                    <Subheading>
-                        Kvalitní, precizní a přesně na míru - ať vaše okna vypadají jako nová.
+                    <Subheading className="max-w-5xl">
+                        {/* Kvalitní, precizní a přesně na míru - ať vaše okna vypadají jako nová. */}
+                        Každé okno z naší výroby je originál. Jsme malá rodinná firma, vyrábíme s respektem k řemeslu a
+                        přání zákazníka. Každému oknu věnujeme maximální péči a chceme, aby vytvořené výrobky sloužily
+                        výborně a dlouho. Firma úspěšně funguje druhou generaci a všechny naše zkušenosti promítáme do
+                        naší práce.
                     </Subheading>
                     <Wrapper className="flex flex-col gap-3 md:gap-3 5 lg:gap-4">
                         {
@@ -48,10 +53,10 @@ const Hero = () => {
                                 return (
                                     <Fragment key={index}>
                                         <Flex>
-                                            {/* <CheckIcon className="w-10 md:w-12 lg:w-16 h-10 md:h-12 lg:h-16 text-[#0dff9a]" /> */}
-                                            <Icon>
-                                                <CheckIcon className="text-[#0dff9a]" />
-                                            </Icon>
+                                            <CheckIcon className="w-8 md:w-9 lg:w-12 h-8 md:h-9 lg:h-12 text-[#f5f2e8]" />
+                                            {/* <Icon>
+                                                <CheckIcon className="text-[#f5f2e8]" />
+                                            </Icon> */}
                                             <p className="text-xl md:text-3xl lg:text-4xl font-bold">
                                                 {heroBenefit}
                                             </p>
@@ -80,7 +85,7 @@ const Hero = () => {
                                         onClick={(e) => {
                                             setLinkWithoutHash(e, heroCta.href);
                                         }}
-                                        className="bg-[#362315] text-white last:bg-white last:text-black">
+                                        className="bg-[#f5f2e8] text-black last:bg-transparent last:text-white last:border last:border-[#f5f2e8] last:hover:bg-[#f5f2e8] last:hover:text-black transition-colors duration-300 ease-in-out">
                                             <Padding>
                                                 {heroCta.text}
                                             </Padding>

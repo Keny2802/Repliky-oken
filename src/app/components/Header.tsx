@@ -21,7 +21,7 @@ const Header = () => {
 
     return (
         <Fragment>
-            <header className="bg-[#362315] text-white shadow-lg border-b border-gray-200">
+            <header className="bg-[#f5f2e8] text-black shadow-lg border-b border-gray-200">
                 <Padding>
                     <Flex className="justify-between">
                         <Logo />
@@ -33,10 +33,10 @@ const Header = () => {
                                             text: "Jak to probíhá",
                                             href: "/jak-to-probiha"
                                         },
-                                        {
-                                            text: "Galerie",
-                                            href: "/galerie"
-                                        },
+                                        // {
+                                        //     text: "Galerie",
+                                        //     href: "/galerie"
+                                        // },
                                         {
                                             text: "Naše realizace",
                                             href: "/nase-realizace"
