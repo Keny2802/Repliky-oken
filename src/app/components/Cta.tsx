@@ -1,9 +1,13 @@
+"use client";
+
 import {
     Fragment,
     ReactNode
 } from "react";
 import clsx from "clsx";
 import Link from "next/link";
+
+import TapAnimation from "./TapAnimation";
 
 interface CtaType {
     className?: string;
@@ -25,7 +29,9 @@ const Cta = ({ ...props }: CtaType) => {
             href={href}
             onClick={onClick}
             className={clsx(`${className || ""} w-full md:min-w-75 md:max-w-100 text-base md:text-lg lg:text-[19px] rounded-3xl`)}>
-                {children}
+                <TapAnimation>
+                    {children}
+                </TapAnimation>
             </Link>
         </Fragment>
     );

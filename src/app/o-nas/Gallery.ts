@@ -1,5 +1,9 @@
 export const Gallery = [
     {
+        image: "/assets/fotky/produkty/vchodove-dvere-do-bytu/vchodove-dvere-do-bytu-2.avif",
+        alt: "Ukázka práce vchodových dveří do bytu | Repliky oken Jaroslav Heindinger"
+    },
+    {
         image: "/assets/fotky/produkty/interierove-dvere/interierove-dvere-12.avif",
         alt: "Ukázka práce interiérových dveří | Repliky oken Jaroslav Heindinger"
     },

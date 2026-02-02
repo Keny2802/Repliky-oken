@@ -83,10 +83,10 @@ export const Gallery = [
         image: "/assets/fotky/reference/pysely-rekonstrukce-historicke-vily/pysely-rekonstrukce-historicke-vily-20.avif",
         alt: ""
     },
-    {
-        image: "/assets/fotky/reference/pysely-rekonstrukce-historicke-vily/pysely-rekonstrukce-historicke-vily-21.avif",
-        alt: ""
-    },
+    // {
+    //     image: "/assets/fotky/reference/pysely-rekonstrukce-historicke-vily/pysely-rekonstrukce-historicke-vily-21.avif",
+    //     alt: ""
+    // },
     {
         image: "/assets/fotky/reference/pysely-rekonstrukce-historicke-vily/pysely-rekonstrukce-historicke-vily-22.avif",
         alt: ""

@@ -2,6 +2,7 @@
 
 import {
     useState,
+    useEffect,
     Fragment
 } from "react";
 import Image from "next/image";
@@ -12,13 +13,14 @@ import Header from "@/app/components/Header";
 import Subheader from "@/app/components/Subheader";
 import Atc from "@/app/sections/Atc";
 import Wrapper from "@/app/components/Wrapper";
+import ScrollAnimation from "@/app/components/ScrollAnimation";
 import FlexCol from "@/app/components/FlexCol";
 import FlexRow from "@/app/components/FlexRow";
 import Heading from "@/app/components/Heading";
 import Subheading from "@/app/components/Subheading";
-import OverlaySwipeSlider from "@/app/components/OverlaySwipeSlider";
 import Contact from "@/app/sections/Contact";
 import Footer from "@/app/sections/Footer";
+import Carousel from "@/app/components/Carousel";
 
 const carouselItems = [
     "/assets/fotky/produkty/spaletova-okna/spaletova-okna-1.avif",
@@ -35,7 +37,16 @@ const carouselItems = [
 
 const Content = () => {
     const [activeIndex, setActiveIndex] = useState<number | null>(null);
-    const [isImageClicked, setImageClicked] = useState<boolean>(false);
+
+    useEffect(() => {
+        const body = document.body;
+
+        if (activeIndex !== null) {
+            body.style.overflow = "hidden";
+        } else {
+            body.style.overflow = "";
+        };
+    }, [activeIndex]);
 
     return (
         <Fragment>
@@ -43,63 +54,65 @@ const Content = () => {
             <Header />
             <Subheader />
             <Wrapper className="px-8 md:px-12 py-16 md:py-24 bg-white shadow-md">
-                <FlexCol className="items-center">
-                    <Heading>
-                        Špaletová okna
-                    </Heading>
-                    <Subheading className="md:max-w-5xl">
-                        Vycházíme z konstrukce klasického špaletového okna, vyrobeného na přelomu 19. a 20. století, které
-                        díky úzkým profilům okenních křídel a rámů propouštělo více světla do místností a na svou dobu
-                        mělo velmi dobré izolační vlastnosti. Ruční truhlářská práce je základem naší výroby, nesnažíme se o
-                        předělání moderního eurookna do vzhledu klasického, ale o klasické okno, které má skvělé tepelné a
-                        hlukové izolační vlastnosti.
-                    </Subheading>
-                    <ul className="point-lit">
-                        <li className="list-disc point-list-item">
-                            Naše okna
-                            {" "}
-                            <strong className="strong">
-                                běžně osazujeme v památkově chráněných oblastech.
-                            </strong>
-                        </li>
-                        <li className="list-disc point-list-item">
-                            Veškerou komunikaci a
-                            {" "}
-                            <strong className="strong">
-                                dokumentaci potřebnou pro památkový odbor zajistíme!
-                            </strong>
-                        </li>
-                    </ul>
-                </FlexCol>
-                <Wrapper className="mt-2 md:mt-4 flex justify-center">
-                    <Image
-                    width={800}
-                    height={800}
-                    src="/assets/fotky/produkty/spaletova-okna/spaletova-okna-1.avif"
-                    alt="Ukázka produktu špaletových oken z replikyoken.cz | Jaroslav Heindinger"
-                    />
-                </Wrapper>
-                <FlexRow className="flex-wrap justify-center items-center w-full">
-                    {
-                        carouselItems.map((img, index) => {
-                            return (
-                                <Fragment key={index}>
-                                    <Image
-                                    width={200}
-                                    height={200}
-                                    src={img}
-                                    alt={`${index + 1}. Ukázka produktu špaletových oken | replikyoken.cz Jaroslav Heindinger`}
-                                    className="w-full md:w-50 md:h-50 object-cover cursor-pointer rounded-md"
-                                    onClick={() => {
-                                        setActiveIndex(index);
-                                        setImageClicked(true);
-                                    }}
-                                    />
-                                </Fragment>
-                            );
-                        })
-                    }
-                </FlexRow>
+                <ScrollAnimation>
+                    <FlexCol className="items-center">
+                        <Heading>
+                            Špaletová okna
+                        </Heading>
+                        <Subheading className="md:max-w-5xl">
+                            Vycházíme z konstrukce klasického špaletového okna, vyrobeného na přelomu 19. a 20. století, které
+                            díky úzkým profilům okenních křídel a rámů propouštělo více světla do místností a na svou dobu
+                            mělo velmi dobré izolační vlastnosti. Ruční truhlářská práce je základem naší výroby, nesnažíme se o
+                            předělání moderního eurookna do vzhledu klasického, ale o klasické okno, které má skvělé tepelné a
+                            hlukové izolační vlastnosti.
+                        </Subheading>
+                        <ul className="point-lit">
+                            <li className="list-disc point-list-item">
+                                Naše okna
+                                {" "}
+                                <strong className="strong">
+                                    běžně osazujeme v památkově chráněných oblastech.
+                                </strong>
+                            </li>
+                            <li className="list-disc point-list-item">
+                                Veškerou komunikaci a
+                                {" "}
+                                <strong className="strong">
+                                    dokumentaci potřebnou pro památkový odbor zajistíme!
+                                </strong>
+                            </li>
+                        </ul>
+                    </FlexCol>
+                    <Wrapper className="mt-2 md:mt-4 flex justify-center">
+                        <Image
+                        width={800}
+                        height={800}
+                        src="/assets/fotky/produkty/spaletova-okna/spaletova-okna-1.avif"
+                        alt="Ukázka produktu špaletových oken z replikyoken.cz | Jaroslav Heindinger"
+                        className="cursor-pointer"
+                        onClick={() => setActiveIndex(0)}
+                        />
+                    </Wrapper>
+                    <FlexRow className="flex-wrap justify-center items-center w-full">
+                        {
+                            carouselItems.map((img, index) => {
+                                return (
+                                    <Fragment key={index}>
+                                        <Image
+                                        width={200}
+                                        height={200}
+                                        src={img}
+                                        alt={`${index + 1}. Ukázka produktu špaletových oken | replikyoken.cz Jaroslav Heindinger`}
+                                        className="w-full md:w-50 md:h-50 object-cover cursor-pointer rounded-md"
+                                        onClick={() => {
+                                            setActiveIndex(index);
+                                        }}
+                                        />
+                                    </Fragment>
+                                );
+                            })
+                        }
+                    </FlexRow>
                     <FlexCol className="mt-2 md:mt-4 lg:mt-6 justify-center items-center">
                         <h3 className="text-2xl md:text-3xl font-semibold">
                             Špaletová okna jsme vylepšili:
@@ -122,8 +135,8 @@ const Content = () => {
                                 })
                             }
                         </ul>
-                </FlexCol>
-                <FlexCol className="mt-2 md:mt-4 lg:mt-6 justify-center items-center">
+                    </FlexCol>
+                    <FlexCol className="mt-2 md:mt-4 lg:mt-6 justify-center items-center">
                         <h3 className="text-2xl md:text-3xl font-semibold">
                             Špaletová okna umíme vyrobit podle vašich přání a požadavků, lze osadit:
                         </h3>
@@ -155,31 +168,21 @@ const Content = () => {
                                 </Link>
                             </li>
                         </ul>
-                </FlexCol>
+                    </FlexCol>
+                </ScrollAnimation>
             </Wrapper>
             <Atc />
             <Contact />
             <Footer />
-            {/* {
-                activeIndex !== null && isImageClicked && (
-                    <SwipeSlider
-                    images={carouselItems}
-                    currentIndex={activeIndex}
-                    setCurrentIndex={setActiveIndex}
-                    onClose={() => setActiveIndex(null)}
-                    />
-                )
-            } */}
             {
                 activeIndex !== null && (
-                    <OverlaySwipeSlider
-                    key={activeIndex}
-                    items={carouselItems.map((img, index) => ({
-                        image: img
-                    }))}
-                    startIndex={activeIndex}
-                    onClose={() => setActiveIndex(null)}
-                    />
+                    <Fragment>
+                        <Carousel
+                        carouselSet={carouselItems}
+                        startIndex={activeIndex}
+                        onClose={() => setActiveIndex(null)}
+                        />
+                    </Fragment>
                 )
             }
         </Fragment>
