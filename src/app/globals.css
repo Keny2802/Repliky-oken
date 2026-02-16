@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+:root {
+    --fade-duration: 500;
+}
+
 .slide-container {
     transform: translateX(calc(var(--slide-index, 0) * -100%));
 }

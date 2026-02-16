@@ -6,6 +6,7 @@ import ContactHeader from "./components/contact-header/ContactHeader";
 import Header from "./components/Header";
 import Subheader from "./components/Subheader";
 import Hero from "./sections/Hero";
+import Products from "./sections/Products";
 import About from "./sections/About";
 import Atc from "./sections/Atc";
 import Gallery from "./sections/Gallery";
@@ -19,6 +20,7 @@ const Home = () => {
       <Header />
       <Subheader />
       <Hero />
+      <Products />
       <About />
       <Atc />
       <Gallery />

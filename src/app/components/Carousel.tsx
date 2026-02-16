@@ -93,8 +93,8 @@ const Carousel = ( { ...props } : CarouselType ) => {
                                     key={index}>
                                         <Image
                                         fill
-                                        // width={800}
-                                        // height={800}
+                                        width={800}
+                                        height={800}
                                         src={carouselItem}
                                         alt={title || `${index + 1}. Ukázka práce od replikyoken.cz | Jaroslav Heidinger`}
                                         sizes="(max-width: 800px) 100vw, 800px"

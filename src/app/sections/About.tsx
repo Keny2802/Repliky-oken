@@ -15,6 +15,10 @@ import ScrollAnimation from "../components/ScrollAnimation";
 import FlexCol from "../components/FlexCol";
 import Heading from "../components/Heading";
 import Subheading from "../components/Subheading";
+import MarginTop from "../components/MarginTop";
+import BodyText from "../components/BodyText";
+import List from "../components/List";
+import ListItem from "../components/ListItem";
 import FlexRow from "../components/FlexRow";
 import Flex from "../components/Flex";
 import Cta from "../components/Cta";
@@ -37,18 +41,15 @@ const About = () => {
 
     return (
         <Fragment>
-            <Wrapper className="p-4 md:p-6 lg:p-8 bg-white shadow-lg">
+            <Wrapper className="p-4 md:p-6 lg:p-8 border-t border-gray-200 bg-white shadow-lg">
                 <ScrollAnimation>
                     <Wrapper>
                         <FlexCol className="justify-center items-center">
                             <Heading>
                                 O nás
                             </Heading>
-                            <Subheading>
-                                Každé okno z naší výroby je originál. Jsme malá rodinná firma, vyrábíme s respektem k řemeslu a
-                                přání zákazníka. Každému oknu věnujeme maximální péči a chceme, aby vytvořené výrobky sloužily
-                                výborně a dlouho. Firma úspěšně funguje druhou generaci a všechny naše zkušenosti promítáme do
-                                naší práce.
+                            <Subheading className="max-w-3xl">
+                                Každé okno z naší výroby je originál. Jsme malá rodinná firma, vyrábíme s respektem k řemeslu a přání zákazníka. Každému oknu věnujeme maximální péči a chceme, aby vytvořené výrobky sloužily výborně a dlouho. Firma úspěšně funguje druhou generaci a všechny naše zkušenosti promítáme do naší práce.
                             </Subheading>
                         </FlexCol>
                     <FlexRow>
@@ -64,36 +65,50 @@ const About = () => {
                         className="w-full md:w-max rounded-2xl cursor-pointer"
                         />
                         <FlexCol className="justify-center items-center">
-                            {
-                                [
-                                    "Během celé akce budete v kontaktu s jedním člověkem. Profesionálním truhlářem, který řídí návrh, výrobu, montáž, záruku i servis. Celý proces je pod kontrolou a žádný detail se neztratí.",
-                                    "Jsme specialisté na výměnu oken v památkových oblastech, povolení pro výměnu zajišťujeme"
-                                ].map((text, index) => {
-                                    return (
-                                        <Subheading key={index}>
-                                            {text}
-                                        </Subheading>
-                                    );
-                                })
-                            }
-                            <Flex className="flex-wrap">
-                                {Gallery.map((card, index) => {
-                                    return (
-                                        <Image
-                                        key={index}
-                                        width={200}
-                                        height={200}
-                                        src={card.image}
-                                        alt={card.alt}
-                                        loading="lazy"
-                                        decoding="async"
-                                        draggable={false}
-                                        onClick={() => setActiveIndex(index)}
-                                        className="w-full md:w-50 md:h-50 rounded-md cursor-pointer"
-                                        />
-                                    );
-                                })}
-                            </Flex>
+                                <Subheading>
+                                    Každé okno z naší výroby je originál. Jsme malá rodinná firma, vyrábíme s respektem k řemeslu a přání zákazníka. Každému oknu věnujeme maximální péči a chceme, aby vytvořené výrobky sloužily výborně a dlouho. Firma úspěšně funguje druhou generaci a všechny naše zkušenosti promítáme do naší práce
+                                </Subheading>
+                                <MarginTop>
+                                    <BodyText>
+                                        Během celé akce budete v kontaktu s jedním člověkem. Profesionálním truhlářem, který řídí návrh, výrobu, montáž, záruku i servis. Celý proces je pod kontrolou a žádný detail se neztratí.
+                                    </BodyText>
+                                    <MarginTop>
+                                        <List className="ml-4 md:ml-6 lg:ml-8">
+                                            {
+                                                [
+                                                    "Jsme specialisté na výměnu oken v památkových oblastech, povolení pro výměnu zajišťujeme.",
+                                                    "Rekonstrukce bytů - výměna všech výplní otvorů.",
+                                                    "Repliky oken a dveří v historických vilách a domech.",
+                                                    "Okna v činžovních domech v památkových oblastech."
+                                                ].map((listItem, index) => {
+                                                    return (
+                                                        <ListItem key={index}>
+                                                            {listItem}
+                                                        </ListItem>
+                                                    );
+                                                })
+                                            }
+                                        </List>
+                                    </MarginTop>
+                                </MarginTop>
+                                <Flex className="flex-wrap">
+                                    {Gallery.map((card, index) => {
+                                        return (
+                                            <Image
+                                            key={index}
+                                            width={200}
+                                            height={200}
+                                            src={card.image}
+                                            alt={card.alt}
+                                            loading="lazy"
+                                            decoding="async"
+                                            draggable={false}
+                                            onClick={() => setActiveIndex(index)}
+                                            className="w-full md:w-50 md:h-50 rounded-md cursor-pointer"
+                                            />
+                                        );
+                                    })}
+                                </Flex>
                             </FlexCol>
                         </FlexRow>
                     </Wrapper>

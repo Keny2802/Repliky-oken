@@ -16,7 +16,7 @@ const Subheading = ({ ...props }: SubheadingType) => {
     } = props;
     return (
         <Fragment>
-            <p className={clsx("mt-2 md:mt-3 lg:mt-4 text-base md:text-[17px] lg:text-lg text-center", className)}>
+            <p className={clsx(className, "mt-2 md:mt-3 lg:mt-4 text-base md:text-[17px] lg:text-lg text-center")}>
                 {children}
             </p>
         </Fragment>

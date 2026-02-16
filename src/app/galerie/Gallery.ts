@@ -90,5 +90,37 @@ export const Gallery = [
     {
         image: "/assets/fotky/reference/pysely-rekonstrukce-historicke-vily/pysely-rekonstrukce-historicke-vily-22.avif",
         alt: ""
-    }
+    },
+    {
+        image: "/assets/fotky/produkty/produkt-1.avif",
+        alt: ""
+    },
+    {
+        image: "/assets/fotky/produkty/produkt-2.avif",
+        alt: ""
+    },
+    {
+        image: "/assets/fotky/produkty/produkt-3.avif",
+        alt: ""
+    },
+    {
+        image: "/assets/fotky/produkty/produkt-4.avif",
+        alt: ""
+    },
+    {
+        image: "/assets/fotky/produkty/produkt-5.avif",
+        alt: ""
+    },
+    {
+        image: "/assets/fotky/produkty/produkt-6.avif",
+        alt: ""
+    },
+    {
+        image: "/assets/fotky/produkty/produkt-7.avif",
+        alt: ""
+    },
+    {
+        image: "/assets/fotky/produkty/produkt-9.avif",
+        alt: ""
+    },
 ];
