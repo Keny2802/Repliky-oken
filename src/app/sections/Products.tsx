@@ -15,20 +15,20 @@ import MarginTop from "../components/MarginTop";
 import RelativeOverlayWrapper from "../components/RelativeOverlayWrapper";
 import SmallerHeading from "../components/SmallerHeading";
 import Img from "../components/Img";
-import Icon from "../components/Icon";
+import Flex from "../components/Flex";
 
 const products = [
     {
-        image: "/assets/fotky/produkty/interierove-dvere/interierove-dvere-20.avif",
-        alt: "Produkt interiérové dveře společnosti Repliky Oken",
-        title: "Interiérové dveře",
-        href: "/produkty/interierove-dvere"
+        image: "/assets/fotky/produkty/spaletova-okna/spaletova-okna-22.avif",
+        alt: "Produkt špaletová okna společnosti Repliky Oken",
+        title: "Špaletová Okna",
+        href: "/produkty/spaletova-okna"
     },
     {
         image: "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-s-izolacnim-zasklenim-2.avif",
         alt: "Produkt jednorámových oken s izolačním zasklením společnosti Repliky Oken",
         title: "Jednorámové okna s izolačním zasklením",
-        href: "/produkty/interierove-dvere"
+        href: "/produkty/jedno-ramova-okna-s-izolacnim-sklem-trojsklo-dvojsklo"
     },
     {
         image: "/assets/fotky/produkty/okna-se-skutecnym-vakuovym-sklem/okna-se-skutecnym-vakuovym-sklem-4.avif",
@@ -37,10 +37,10 @@ const products = [
         href: "/produkty/okna-se-skutecnym-vakuovym-sklem-fineo-od-firmy-agc"
     },
     {
-        image: "/assets/fotky/produkty/spaletova-okna/spaletova-okna-22.avif",
-        alt: "Produkt špaletová okna společnosti Repliky Oken",
-        title: "Špaletová Okna",
-        href: "/produkty/spaletova-okna"
+        image: "/assets/fotky/produkty/interierove-dvere/interierove-dvere-20.avif",
+        alt: "Produkt interiérové dveře společnosti Repliky Oken",
+        title: "Interiérové dveře",
+        href: "/produkty/interierove-dvere"
     },
     {
         image: "/assets/fotky/produkty/vchodove-dvere-do-bytu/vchodove-dvere-do-bytu-8.avif",
@@ -56,7 +56,7 @@ const Products = () => {
             <Wrapper className="p-4 md:p-6 lg:p-8 bg-white shadow-lg">
                 <ScrollAnimation>
                     <Wrapper>
-                        <FlexCol>
+                        <FlexCol className="justify-center items-center">
                             <Heading>
                                 Produkty
                             </Heading>
@@ -65,7 +65,7 @@ const Products = () => {
                             </Subheading>
                         </FlexCol>
                         <MarginTop>
-                            <Wrapper className="w-full grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5 lg:gap-6">
+                            <Flex className="justify-center items-center flex-wrap gap-4 md:gap-5 lg:gap-6">
                                 {
                                     products.map((card, index) => {
                                         const words = card.title.split(" ");
@@ -90,9 +90,9 @@ const Products = () => {
                                         return (
                                             <RelativeOverlayWrapper
                                             key={index}
-                                            className="p-2 md:p-3 lg:p-4 max-w-[449px] max-h-[500px] odd:bg-[#f2f0ef] even:border-4 even:border-[#f2f0ef] cursor-pointer group">
+                                            className="p-4 md:p-5 lg:p-6 md:w-[449px] max-h-[600px] odd:bg-[#f2f0ef] even:border-4 even:border-[#f2f0ef] cursor-pointer group">
                                                 <Wrapper className="transition-transform duration-300 ease-in-out group-hover:scale-105">
-                                                    <SmallerHeading className="text-[#1d1b21]">
+                                                    <SmallerHeading className="text-[#1d1b21] text-center">
                                                         {/* {card.title} */}
                                                         {highlightedSentence}
                                                     </SmallerHeading>
@@ -109,7 +109,7 @@ const Products = () => {
                                                             <Link
                                                             href={card.href}
                                                             target="_blank"
-                                                            className="p-2.5 md:p-3 lg:p-4 absolute bottom-5 right-15 bg-[#e40209] text-white rounded-md cursor-pointer">
+                                                            className="p-2.5 md:p-3 lg:p-4 absolute bottom-5 right-5 md:right-0 bg-[#e40209] text-white rounded-md cursor-pointer">
                                                                 <ChevronRight className="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8" />
                                                             </Link>
                                                         </RelativeOverlayWrapper>
@@ -119,7 +119,7 @@ const Products = () => {
                                         );
                                     })
                                 }
-                            </Wrapper>
+                            </Flex>
                         </MarginTop>
                     </Wrapper>
                 </ScrollAnimation>

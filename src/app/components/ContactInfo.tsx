@@ -18,7 +18,7 @@ const ContactInfo = () => {
         <Fragment>
             <Wrapper className="p-3.5 md:p-4 lg:p-4.5 w-full md:w-4/10 min-h-100 bg-[#f5f2e8] text-black rounded-md">
                 <Wrapper className="mt-3 md:mt-3.5 lg:mt-4 flex justify-center items-center flex-col gap-3 md:gap-3 5 lg:gap-4">
-                    <h3 className="text-2xl md:text-3xl font-medium">
+                    <h3 className="text-2xl md:text-3xl">
                         Ing. Jaroslav Heidinger
                     </h3>
                     <Link

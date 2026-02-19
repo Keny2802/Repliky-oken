@@ -92,7 +92,6 @@ const Carousel = ( { ...props } : CarouselType ) => {
                                     className="relative w-full h-full shrink-0 flex justify-center"
                                     key={index}>
                                         <Image
-                                        fill
                                         width={800}
                                         height={800}
                                         src={carouselItem}

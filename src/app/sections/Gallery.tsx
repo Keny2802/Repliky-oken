@@ -51,9 +51,9 @@ const Gallery = () => {
                                         width={300}
                                         height={300}
                                         src={card.image}
-                                        alt={card.alt || `${index + 1}. Ukázka realizace replikyoken.cz Jaroslav Heindingera`}
+                                        alt={card.alt || `${index + 1}. Ukázka realizace replikyoken.cz Jaroslav Heindinger`}
                                         draggable={false}
-                                        className="w-full md:w-75 md:h-75 object-cover rounded-md cursor-pointer"
+                                        className="w-full max-h-[210px] md:w-50 md:h-50 object-cover rounded-md cursor-pointer"
                                         onClick={() => setActiveIndex(index)}
                                         />
                                     </Fragment>

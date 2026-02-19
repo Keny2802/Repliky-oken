@@ -85,11 +85,11 @@ const Content = () => {
                     </FlexCol>
                     <Wrapper className="mt-2 md:mt-4 flex justify-center">
                         <Image
-                        width={800}
-                        height={800}
+                        width={600}
+                        height={600}
                         src="/assets/fotky/produkty/spaletova-okna/spaletova-okna-1.avif"
                         alt="Ukázka produktu špaletových oken z replikyoken.cz | Jaroslav Heindinger"
-                        className="cursor-pointer"
+                        className="max-h-[600px] cursor-pointer"
                         onClick={() => setActiveIndex(0)}
                         />
                     </Wrapper>
@@ -103,7 +103,7 @@ const Content = () => {
                                         height={200}
                                         src={img}
                                         alt={`${index + 1}. Ukázka produktu špaletových oken | replikyoken.cz Jaroslav Heindinger`}
-                                        className="w-full md:w-50 md:h-50 object-cover cursor-pointer rounded-md"
+                                        className="w-full max-h-[320px] md:w-50 md:h-50 object-cover cursor-pointer rounded-md"
                                         onClick={() => {
                                             setActiveIndex(index);
                                         }}

@@ -8,13 +8,15 @@ import Flex from "../components/Flex";
 import ContactInfo from "../components/ContactInfo";
 
 const Footer = () => {
+    const DYNAMIC_YEAR = new Date().getFullYear();
+
     return (
         <Fragment>
             <Wrapper className="p-4 md:p-6 lg:p-12 bg-white text-black">
                 <Flex className="md:justify-between items-start md:items-center flex-col md:flex-row">
                     <Wrapper>
-                        <p className="text-2xl font-bold">
-                            Navigace webu
+                        <p className="text-2xl uppercase">
+                            Odkazy domovské stránky
                         </p>
                         <ul className="footer-header-list">
                             <Wrapper className="mt-2 md:mt-2.5 lg:mt-4 flex flex-col gap-2 md:gap-2.5 lg:gap-1.5">
@@ -43,7 +45,7 @@ const Footer = () => {
                                     ].map((link, index) => {
                                         return (
                                             <Fragment key={index}>
-                                                <li className="text-base md:text-[17px] lg:text-lg font-medium footer-header-item">
+                                                <li className="text-base md:text-[17px] lg:text-lg footer-header-item">
                                                     <Link
                                                     href={link.href}>
                                                         {link.text}
@@ -55,8 +57,11 @@ const Footer = () => {
                                 }
                             </Wrapper>
                         </ul>
-                        <ul className="mt-4 md:mt-5 lg:mt-6 footer-header-list">
-                            <Wrapper className="mt-2 md:mt-2.5 lg:mt-4 flex flex-col gap-2 md:gap-2.5 lg:gap-1.5">
+                        <p className="mt-2 md:mt-2.5 lg:mt-3 text-2xl uppercase">
+                            Produkty
+                        </p>
+                        <ul className="mt-2 footer-header-list">
+                            <Wrapper className="mt-2 md:mt-2.5 flex flex-col gap-2 md:gap-2.5 lg:gap-1.5">
                                 {
                                     [
                                         {
@@ -98,6 +103,15 @@ const Footer = () => {
                     </Wrapper>
                     <ContactInfo />
                 </Flex>
+            </Wrapper>
+            <Wrapper className="p-2.5 md:p-3 lg:p-4 flex flex-col justify-center items-center gap-2 text-center">
+                <p className="text-base">
+                    Repliky Oken Jaroslav Heidinger, {DYNAMIC_YEAR}, všechna práva vyhrazena.
+                </p>
+                <Link
+                href="https://vojtaoliva.cz">
+                    Web vytvořil Vojtěch Oliva.
+                </Link>
             </Wrapper>
         </Fragment>
     );

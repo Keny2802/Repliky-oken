@@ -62,14 +62,11 @@ const About = () => {
                         decoding="async"
                         draggable={false}
                         onClick={() => setActiveIndex(0)}
-                        className="w-full md:w-max rounded-2xl cursor-pointer"
+                        className="w-full max-h-[300px] md:max-w-[400px] md:max-h-[400px] object-cover rounded-2xl cursor-pointer"
                         />
                         <FlexCol className="justify-center items-center">
-                                <Subheading>
-                                    Každé okno z naší výroby je originál. Jsme malá rodinná firma, vyrábíme s respektem k řemeslu a přání zákazníka. Každému oknu věnujeme maximální péči a chceme, aby vytvořené výrobky sloužily výborně a dlouho. Firma úspěšně funguje druhou generaci a všechny naše zkušenosti promítáme do naší práce
-                                </Subheading>
                                 <MarginTop>
-                                    <BodyText>
+                                    <BodyText className="max-w-4xl">
                                         Během celé akce budete v kontaktu s jedním člověkem. Profesionálním truhlářem, který řídí návrh, výrobu, montáž, záruku i servis. Celý proces je pod kontrolou a žádný detail se neztratí.
                                     </BodyText>
                                     <MarginTop>
@@ -91,7 +88,7 @@ const About = () => {
                                         </List>
                                     </MarginTop>
                                 </MarginTop>
-                                <Flex className="flex-wrap">
+                                <Flex className="max-w-5xl flex-wrap">
                                     {Gallery.map((card, index) => {
                                         return (
                                             <Image
@@ -104,7 +101,7 @@ const About = () => {
                                             decoding="async"
                                             draggable={false}
                                             onClick={() => setActiveIndex(index)}
-                                            className="w-full md:w-50 md:h-50 rounded-md cursor-pointer"
+                                            className="w-full max-h-[210px] md:w-50 md:h-50 object-cover rounded-md cursor-pointer"
                                             />
                                         );
                                     })}

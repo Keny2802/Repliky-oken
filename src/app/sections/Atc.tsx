@@ -3,6 +3,7 @@
 import {
     Fragment
 } from "react";
+import Link from "next/link";
 
 import Wrapper from "../components/Wrapper";
 import ScrollAnimation from "../components/ScrollAnimation";
@@ -23,10 +24,16 @@ const Atc = () => {
                     <Subheading>
                         Kvalitní, precizní a přesně na míru - ať vaše okna vypadají jako nová.
                     </Subheading>
+                    {/* <Link
+                    href="#kontakt"
+                    onClick={(e) => {
+                        setLinkWithoutHash(e as any, "kontakt");
+                    }}
+                    className="bg-white text-black"></Link> */}
                     <Cta
                     href="#kontakt"
                     onClick={(e) => {
-                        setLinkWithoutHash(e, "kontakt");
+                        setLinkWithoutHash(e as any, "kontakt");
                     }}
                     className="bg-white text-black">
                         <Padding className="bg-white mt-2 md:mt-4 lg:mt-6 w-full md:max-w-[400px] mx-auto rounded-3xl">

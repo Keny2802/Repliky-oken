@@ -33,9 +33,8 @@ const MobileMenu = ({ ...props }: MobileMenuType) => {
                 setMobileMenu(false);
             }}></Wrapper>
             <Wrapper className={clsx(
-            "fixed top-0 left-0 bg-[#f5f2e8] shadow-md w-[300px] h-full z-50 transform transition-transform duration-300 ease-in-out",
-            isMobileMenu ? "translate-x-0 md:-translate-x-full" : "-translate-x-full",
-            className)}>
+            className,
+            isMobileMenu ? "translate-x-0 md:-translate-x-full" : "-translate-x-full", "fixed top-0 left-0 bg-[#f5f2e8] shadow-md w-[300px] h-full z-50 transform transition-transform duration-300 ease-in-out")}>
                 <Padding>
                     <Logo />
                     <ul className="mt-4 md:mt-6 lg:mt-8 header-list">

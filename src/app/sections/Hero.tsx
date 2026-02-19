@@ -130,7 +130,7 @@ const Hero = () => {
                                     }
                                 </Flex>
                             </MarginTop>
-                            <MarginTop>
+                            <MarginTop className="lg:mt-12">
                                 <Flex className="justify-center">
                                     {
                                         HeroCarousel.map((_, index) => {
