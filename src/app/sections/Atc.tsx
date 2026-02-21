@@ -24,12 +24,6 @@ const Atc = () => {
                     <Subheading>
                         Kvalitní, precizní a přesně na míru - ať vaše okna vypadají jako nová.
                     </Subheading>
-                    {/* <Link
-                    href="#kontakt"
-                    onClick={(e) => {
-                        setLinkWithoutHash(e as any, "kontakt");
-                    }}
-                    className="bg-white text-black"></Link> */}
                     <Cta
                     href="#kontakt"
                     onClick={(e) => {

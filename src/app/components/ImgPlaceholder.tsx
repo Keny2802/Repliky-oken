@@ -6,8 +6,8 @@ import {
 } from "react";
 import clsx from "clsx";
 
-import Img from "./Img";
 import Wrapper from "./Wrapper";
+import Img from "./Img";
 
 type ImgPlaceholderType = {
     fill?: boolean,

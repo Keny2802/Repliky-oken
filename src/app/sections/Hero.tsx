@@ -104,22 +104,38 @@ const Hero = () => {
                                     {
                                         [
                                             {
-                                                text: "Zjistit více",
-                                                href: "#nabidka"
+                                                text: "Mrknout na realizace",
+                                                href: "/nase-realizace"
                                             },
                                             {
-                                                text: "Nezávazná kalkulace",
-                                                href: "#kalkulacka"
-                                            }
+                                                text: "Podívat se na produkty",
+                                                href: "produkty"
+                                            },
+                                            // {
+                                            //     text: "Zjistit více",
+                                            //     href: "#nabidka"
+                                            // },
+                                            // {
+                                            //     text: "Nezávazná kalkulace",
+                                            //     href: "#kalkulacka"
+                                            // }
                                         ].map((heroCta, index) => {
                                             return (
                                                 <Fragment key={index}>
                                                     <Cta
                                                     href={heroCta.href}
-                                                    onClick={(e) => {
-                                                        setLinkWithoutHash(e, heroCta.href);
-                                                    }}
-                                                    className="bg-[#f5f2e8] text-black last:bg-transparent last:text-white last:border last:border-[#f5f2e8] last:hover:bg-[#f5f2e8] last:hover:text-black transition-colors duration-300 ease-in-out">
+                                                    {
+                                                        ...(
+                                                            !heroCta.href.startsWith("/") && (
+                                                                {
+                                                                    onClick: (e) => setLinkWithoutHash(e, heroCta.href)
+                                                                }
+                                                            )
+                                                        )
+                                                    }
+                                                    className="bg-[#f5f2e8] text-black last:bg-transparent last:text-white last:border last:border-[#f5f2e8] last:hover:bg-[#f5f2e8] last:hover:text-black transition-colors duration-300 ease-in-out"
+                                                    // className="bg-[#f5f2e8] text-black transition-colors duration-300 ease-in-out"
+                                                    >
                                                         <Padding>
                                                             {heroCta.text}
                                                         </Padding>

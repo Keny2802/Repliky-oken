@@ -18,6 +18,7 @@ type WrapperType = {
 const Wrapper = ({ ...props }: WrapperType) => {
     const {
         className,
+        id,
         onClick,
         children
     } = props;
@@ -26,6 +27,7 @@ const Wrapper = ({ ...props }: WrapperType) => {
         <Fragment>
             <div
             className={clsx("wrapper", className)}
+            id={id}
             onClick={onClick}>
                 {children}
             </div>

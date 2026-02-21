@@ -109,7 +109,7 @@ const About = () => {
                             </FlexCol>
                         </FlexRow>
                     </Wrapper>
-                    <Wrapper className="flex justify-center">
+                    {/* <Wrapper className="flex justify-center">
                         <Cta
                         href="#nabidka"
                         onClick={(e) => {
@@ -120,7 +120,7 @@ const About = () => {
                                 Zjistit více
                             </Padding>
                         </Cta>
-                    </Wrapper>
+                    </Wrapper> */}
                 </ScrollAnimation>
             </Wrapper>
             {

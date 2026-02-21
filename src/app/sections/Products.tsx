@@ -53,7 +53,9 @@ const products = [
 const Products = () => {
     return (
         <Fragment>
-            <Wrapper className="p-4 md:p-6 lg:p-8 bg-white shadow-lg">
+            <Wrapper
+            className="p-4 md:p-6 lg:p-8 bg-white shadow-lg"
+            id="produkty">
                 <ScrollAnimation>
                     <Wrapper>
                         <FlexCol className="justify-center items-center">
