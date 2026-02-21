@@ -2,13 +2,20 @@
 
 import {
     useState,
-  Fragment
+    useEffect,
+    Fragment
 } from "react";
+import {
+    useScroll,
+    useMotionValueEvent,
+    motion
+} from "motion/react";
 import {
     Menu,
     XIcon
 } from "lucide-react";
 import Link from "next/link";
+import clsx from "clsx";
 
 import Padding from "./Padding";
 import Flex from "./Flex";
@@ -16,12 +23,62 @@ import Logo from "./Logo";
 import Icon from "./Icon";
 import MobileMenu from "./MobileMenu";
 
-const Header = () => {
+type HeaderType = {
+    className?: string;
+};
+
+const Header = ({ ...props }: HeaderType) => {
+    const {
+        className
+    } = props;
+
     const [isMobileMenu, setMobileMenu] = useState<boolean>(false);
+    const [isHeaderHidden, setHeaderHidden] = useState<boolean>(false);
+    const [isHeaderScrolled, setHeaderScrolled] = useState<boolean>(false);
+    
+    const {
+        scrollY
+    } = useScroll();
+    const animate = {
+        y: isHeaderHidden ? -140 : 0,
+        opacity: isHeaderHidden ? 0 : 1
+    };
+
+    useEffect(() => {
+        const setScrollHeader = () => {
+            if (window.scrollY > 0) {
+                setHeaderScrolled(true);
+            } else {
+                setHeaderScrolled(false);
+            };
+        };
+
+        window.addEventListener("scroll", setScrollHeader);
+
+        return () => {
+            window.removeEventListener("scroll", setScrollHeader);
+        };
+    }, []);
+
+    useMotionValueEvent(scrollY, "change", (current) => {
+        const previousPosition = scrollY.getPrevious() ?? 0;
+
+        if (current > previousPosition && current > 150) {
+            setHeaderHidden(true);
+        } else {
+            setHeaderHidden(false);
+        };
+    });
 
     return (
         <Fragment>
-            <header className="bg-[#f5f2e8] text-black shadow-lg border-b border-gray-200">
+            <motion.header
+            animate={animate}
+            transition={{
+                duration: 0.35,
+                ease: "easeInOut"
+            }}
+            className={clsx(className, isHeaderScrolled && "fixed top-0", `w-full bg-[#f5f2e8] text-black shadow-lg border-b border-gray-200 z-50 header-component`)}>
                 <Padding>
                     <Flex className="justify-between">
                         <Logo />
@@ -85,7 +142,7 @@ const Header = () => {
                         }
                     </Flex>
                 </Padding>
-            </header>
+            </motion.header>
             {
                 isMobileMenu && (
                     <MobileMenu

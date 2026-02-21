@@ -14,6 +14,7 @@ import Image from "next/image";
 
 import Wrapper from "./Wrapper";
 import Subheading from "./Subheading";
+import ImgPlaceholder from "./ImgPlaceholder";
 
 // type CarouselItemType = {
 //     image: string;
@@ -60,13 +61,13 @@ const Carousel = ( { ...props } : CarouselType ) => {
 
     return (
         <Fragment>
-            <Wrapper className="fixed inset-0 min-h-screen z-50 bg-black/30 flex justify-center items-center">
+            <Wrapper className="fixed inset-0 min-h-screen z-50 flex justify-center items-center">
                 <Wrapper className="relative w-full max-w-[800px] aspect-square md:aspect-[4/3] overflow-hidden">
-                <p className="absolute top-5 left-4 z-50 text-xl md:text-[25px] text-white font-medium mt-2 md:mt-3 lg:mt-4">
+                <p className="absolute top-12 md:top-5 left-4 z-50 text-xl md:text-[25px] text-white font-medium mt-2 md:mt-3 lg:mt-4">
                     {currentIndex + 1} / {carouselSet.length}
                 </p>
                 <button
-                className="mt-2 md:mt-3 lg:mt-4 p-1.5 md:p-2 lg:p-2.5 absolute top-5 right-4 bg-black/40 text-white cursor-pointer rounded-full z-50"
+                className="mt-2 md:mt-3 lg:mt-4 p-1.5 md:p-2 lg:p-2.5 absolute top-12 md:top-5 right-4 bg-black/40 text-white cursor-pointer rounded-full z-50"
                 onClick={onClose}>
                     <XMarkIcon className="w-5 h-5 md:h-6 md:w-6 lg:h-8 lg:w-8" />
                 </button>
@@ -91,13 +92,22 @@ const Carousel = ( { ...props } : CarouselType ) => {
                                     <Wrapper
                                     className="relative w-full h-full shrink-0 flex justify-center"
                                     key={index}>
-                                        <Image
+                                        {/* <Image
                                         width={800}
                                         height={800}
                                         src={carouselItem}
                                         alt={title || `${index + 1}. Ukázka práce od replikyoken.cz | Jaroslav Heidinger`}
                                         sizes="(max-width: 800px) 100vw, 800px"
                                         priority={index === currentIndex}
+                                        className="object-cover"
+                                        /> */}
+                                        <ImgPlaceholder
+                                        width={800}
+                                        height={800}
+                                        src={carouselItem}
+                                        alt={title || `${index + 1}. Ukázka práce od replikyoken.cz | Jaroslav Heidinger`}
+                                        // sizes="(max-width: 800px) 100vw, 800px"
+                                        // priority={index === currentIndex}
                                         className="object-cover"
                                         />
                                     </Wrapper>

@@ -3,6 +3,8 @@ import type {
 } from "next";
 import "./globals.css";
 
+import ProgressBar from "./components/ProgressBar";
+
 export const metadata: Metadata = {
   title: "Dokonalé repliky oken | Jaroslav Heindinger",
   description: "Jsme malá rodinná firma, vyrábíme s respektem k řemeslu a přání zákazníka. Každému oknu věnujeme maximální péči a chceme, aby vytvořené výrobky sloužily výborně a dlouho. Firma úspěšně funguje druhou generaci a všechny naše zkušenosti promítáme do naší práce. | Replikyoken.cz Jaroslav Heindinger",
@@ -24,6 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <ProgressBar />
         {children}
       </body>
     </html>
