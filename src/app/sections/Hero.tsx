@@ -20,6 +20,7 @@ import Cta from "../components/Cta";
 import Padding from "../components/Padding";
 import setLinkWithoutHash from "../functions/setLinkWithoutHash";
 import { button } from "motion/react-client";
+import DottedButton from "../components/DottedButton";
 
 const HeroCarousel = [
     {
@@ -108,8 +109,8 @@ const Hero = () => {
                                                 href: "/nase-realizace"
                                             },
                                             {
-                                                text: "Podívat se na produkty",
-                                                href: "produkty"
+                                                text: "Podívat se na špaletová okna",
+                                                href: "/produkty/spaletova-okna"
                                             },
                                             // {
                                             //     text: "Zjistit více",
@@ -122,7 +123,9 @@ const Hero = () => {
                                         ].map((heroCta, index) => {
                                             return (
                                                 <Fragment key={index}>
-                                                    <Cta
+                                                   {
+                                                    index !== 1 ? (
+                                                         <Cta
                                                     href={heroCta.href}
                                                     {
                                                         ...(
@@ -140,6 +143,14 @@ const Hero = () => {
                                                             {heroCta.text}
                                                         </Padding>
                                                     </Cta>
+                                                    ) : (
+                                                        <DottedButton
+                                                        href={heroCta.href}>
+                                                            {heroCta.text}
+                                                        </DottedButton>
+                                                    )
+                                                   }
+
                                                 </Fragment>
                                             );
                                         })
