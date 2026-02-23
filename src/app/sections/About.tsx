@@ -109,18 +109,6 @@ const About = () => {
                             </FlexCol>
                         </FlexRow>
                     </Wrapper>
-                    {/* <Wrapper className="flex justify-center">
-                        <Cta
-                        href="#nabidka"
-                        onClick={(e) => {
-                            setLinkWithoutHash(e, "#nabidka");
-                        }}
-                        className="flex justify-center items-center w-full mt-2 md:mt-4 lg:mt-6 bg-[#f5f2e8] text-black text-center border border-gray-200">
-                            <Padding className="bg-[#f5f2e8]">
-                                Zjistit více
-                            </Padding>
-                        </Cta>
-                    </Wrapper> */}
                 </ScrollAnimation>
             </Wrapper>
             {

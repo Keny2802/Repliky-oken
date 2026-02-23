@@ -169,11 +169,11 @@ const Hero = () => {
                                             }}
                                             className={`
                                             ${currentPhotoIndex === index ?
-                                                "w-8 bg-[#87ceeb]"
+                                                "w-8 bg-[#87ceeb] hover:bg-white"
                                                 // "w-8 bg-[#e40209]"
                                                 : "bg-white"
                                             }    
-                                            w-5 h-5 rounded-full cursor-pointer transition-colors duration-300 ease-in-out`}
+                                            w-5 h-5 rounded-full cursor-pointer transition-colors duration-300 ease-in-out hover:bg-[#87ceeb]`}
                                             />
                                             );
                                         })

@@ -90,34 +90,36 @@ const Products = () => {
                                         });
 
                                         return (
-                                            <RelativeOverlayWrapper
+                                            <Link
                                             key={index}
-                                            className="p-4 md:p-5 lg:p-6 md:w-[449px] max-h-[600px] odd:bg-[#f2f0ef] even:border-4 even:border-[#f2f0ef] cursor-pointer group">
-                                                <Wrapper className="transition-transform duration-300 ease-in-out group-hover:scale-105">
-                                                    <SmallerHeading className="text-[#1d1b21] text-center">
-                                                        {/* {card.title} */}
-                                                        {highlightedSentence}
-                                                    </SmallerHeading>
-                                                    <MarginTop>
-                                                        <RelativeOverlayWrapper>
-                                                            <Img
-                                                            width={327}
-                                                            height={360}
-                                                            src={card.image}
-                                                            alt={card.alt}
-                                                            // w-full max-h-[300px] md:w-[327px] md:h-[360px]
-                                                            className="md:w-[327px] md:h-[360px] mx-auto object-cover"
-                                                            />
-                                                            <Link
-                                                            href={card.href}
-                                                            target="_blank"
-                                                            className="p-2.5 md:p-3 lg:p-4 absolute bottom-5 right-5 md:right-0 bg-[#e40209] text-white rounded-md cursor-pointer">
-                                                                <ChevronRight className="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8" />
-                                                            </Link>
-                                                        </RelativeOverlayWrapper>
-                                                    </MarginTop>
-                                                </Wrapper>
-                                            </RelativeOverlayWrapper>
+                                            href={card.href}
+                                            target="_blank">
+                                                <RelativeOverlayWrapper
+                                                    // key={index}
+                                                    className="p-4 md:p-5 lg:p-6 md:w-[449px] max-h-[600px] odd:bg-[#f2f0ef] even:border-4 even:border-[#f2f0ef] cursor-pointer group">
+                                                        <Wrapper className="transition-transform duration-300 ease-in-out group-hover:scale-105">
+                                                            <SmallerHeading className="text-[#1d1b21] text-center">
+                                                                {/* {card.title} */}
+                                                                {highlightedSentence}
+                                                            </SmallerHeading>
+                                                            <MarginTop>
+                                                                <RelativeOverlayWrapper>
+                                                                    <Img
+                                                                    width={327}
+                                                                    height={360}
+                                                                    src={card.image}
+                                                                    alt={card.alt}
+                                                                    // w-full max-h-[300px] md:w-[327px] md:h-[360px]
+                                                                    className="md:w-[327px] md:h-[360px] mx-auto object-cover"
+                                                                    />                                                            
+                                                                <Wrapper className="p-2.5 md:p-3 lg:p-4 absolute bottom-5 right-5 md:right-0 bg-[#e40209] text-white rounded-md cursor-pointer">
+                                                                        <ChevronRight className="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8" />
+                                                                    </Wrapper>
+                                                                </RelativeOverlayWrapper>
+                                                        </MarginTop>
+                                                    </Wrapper>
+                                                </RelativeOverlayWrapper>
+                                            </Link>
                                         );
                                     })
                                 }
