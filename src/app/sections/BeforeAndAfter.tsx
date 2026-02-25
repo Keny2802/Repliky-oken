@@ -91,7 +91,7 @@ const BeforeAndAfter = () => {
                                     style={{
                                         left: `calc(${isSliderPosition}% - 1px)`
                                     }}
-                                    className="absolute top-0 bottom-0 w-1 bg-white cursor-ew-resize">
+                                    className="absolute top-0 bottom-0 w-1 bg-white cursor-grab active:cursor-grabbing">
                                         <div className="h-3 w-3 bg-white absolute -left-1 top-[calc(50%-5px)] rounded-full " />
                                     </div>
                                 </div>
