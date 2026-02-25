@@ -35,7 +35,7 @@ const ImgPlaceholder = ({ ...props }: ImgPlaceholderType) => {
             <Wrapper className="relative w-full h-full">
                 {
                     !isLoaded && (
-                        <Wrapper className="absolute inset-0 bg-gray-200 animate-pulse rounded-lg"></Wrapper>
+                        <Wrapper className="absolute inset-0 bg-gray-200 z-0 animate-pulse rounded-lg"></Wrapper>
                         // <Wrapper className="absolute inset-0 bg-gray-200 animate-pulse rounded-lg"></Wrapper>
                         // <Wrapper className="animate-pulse blur-lg scale-105 transition-colors duration-500 ease-in-out"></Wrapper>
                     )
