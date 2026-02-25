@@ -61,7 +61,7 @@ const Carousel = ( { ...props } : CarouselType ) => {
 
     return (
         <Fragment>
-            <Wrapper className="fixed inset-0 min-h-screen z-50 flex justify-center items-center">
+            <Wrapper className="fixed inset-0 min-h-screen z-[900] flex justify-center items-center">
                 <Wrapper className="relative w-full max-w-[800px] aspect-square md:aspect-[4/3] overflow-hidden">
                 <p className="absolute top-12 md:top-5 left-4 z-50 text-xl md:text-[25px] text-white font-medium mt-2 md:mt-3 lg:mt-4">
                     {currentIndex + 1} / {carouselSet.length}
