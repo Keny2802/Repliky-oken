@@ -28,6 +28,18 @@ const BeforeAndAfter = () => {
         setSliderPosition(percent);
     };
 
+    const handleTouchMove = (event: React.TouchEvent<HTMLDivElement>) => {
+        if (!isSliderDragging) return;
+
+        const currentTarget = event.currentTarget;
+        const rect = currentTarget.getBoundingClientRect();
+        const touch = event.touches[0];
+        const x = Math.max(0, Math.min(touch.clientX - rect.left, rect.width));
+        const percent = Math.max(0, Math.min((x / rect.width) * 100, 100));
+
+        setSliderPosition(percent);
+    };
+
     const handleMouseDown = () => {
         setSliderDragging(true);
     };
@@ -35,6 +47,10 @@ const BeforeAndAfter = () => {
     const handleMouseUp = () => {
         setSliderDragging(false);
     };
+
+    const handleTouchStart = () => setSliderDragging(true);
+
+    const handleTouchEnd = () => setSliderDragging(false);
 
     return (
         <Fragment>
@@ -51,11 +67,16 @@ const BeforeAndAfter = () => {
                         </FlexCol>
                         <MarginTop>
                             <div
-                            onMouseUp={handleMouseUp}
+                            // onMouseUp={handleMouseUp}
+                            // onMouseUp={handleMouseUp}
                             className="w-full relative">
                                 <div
                                 onMouseMove={handleMove}
                                 onMouseDown={handleMouseDown}
+                                onMouseUp={handleMouseUp}
+                                onTouchMove={handleTouchMove}
+                                onTouchStart={handleTouchStart}
+                                onTouchEnd={handleTouchEnd}
                                 className="w-full max-w-[700px] relative aspect-[4/3] m-auto select-none rounded-3xl">
                                     <Img
                                     fill={true}
