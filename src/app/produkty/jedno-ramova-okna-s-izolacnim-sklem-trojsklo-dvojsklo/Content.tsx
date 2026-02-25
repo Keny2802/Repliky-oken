@@ -22,35 +22,14 @@ import Footer from "@/app/sections/Footer";
 import Carousel from "@/app/components/Carousel";
 
 const Gallery = [
-    // "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-s-izolacnim-zasklenim-1.avif",
-    // "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-s-izolacnim-zasklenim-2.avif",
-    // "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-s-izolacnim-zasklenim-3.avif",
-    // "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-s-izolacnim-zasklenim-4.avif",
-    // "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-s-izolacnim-zasklenim-5.avif",
-    // "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-s-izolacnim-zasklenim-6.avif",
-    // "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-s-izolacnim-zasklenim-7.avif",
-    // "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-s-izolacnim-zasklenim-8.avif",
-    // "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-s-izolacnim-zasklenim-9.avif",
-    // "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-s-izolacnim-zasklenim-10.avif",
-    // "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-s-izolacnim-zasklenim-11.avif",
-    // "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-s-izolacnim-zasklenim-12.avif",
-    // "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-s-izolacnim-zasklenim-13.avif",
-    // "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-s-izolacnim-zasklenim-14.avif",
-    // "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-s-izolacnim-zasklenim-15.avif",
-    // "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-s-izolacnim-zasklenim-16.avif",
-    // "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-s-izolacnim-zasklenim-17.avif",
-    // "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-s-izolacnim-zasklenim-18.avif",
-    // "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-s-izolacnim-zasklenim-19.avif",
-    // "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-s-izolacnim-zasklenim-20.avif",
-
-    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-se-spaletou/jednoramova-okna-se-spaletou-1.avif",
-    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-se-spaletou/jednoramova-okna-se-spaletou-2.avif",
-    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-se-spaletou/jednoramova-okna-se-spaletou-3.avif",
-    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-se-spaletou/jednoramova-okna-se-spaletou-4.avif",
-    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-se-spaletou/jednoramova-okna-se-spaletou-5.avif",
-    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-se-spaletou/jednoramova-okna-se-spaletou-6.avif",
-    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-se-spaletou/jednoramova-okna-se-spaletou-7.avif",
-    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-se-spaletou/jednoramova-okna-se-spaletou-8.avif",
+    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna/jednoramova-okna-1.avif",
+    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna/jednoramova-okna-2.avif",
+    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna/jednoramova-okna-3.avif",
+    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna/jednoramova-okna-4.avif",
+    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna/jednoramova-okna-5.avif",
+    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna/jednoramova-okna-6.avif",
+    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna/jednoramova-okna-7.avif",
+    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna/jednoramova-okna-8.avif",
 ];
 
 const Content = () => {
@@ -117,8 +96,8 @@ const Content = () => {
                         <Image
                         width={600}
                         height={600}
-                        src="/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-se-spaletou/jednoramova-okna-se-spaletou-1.avif"
-                        alt="Ukázka produktu špaletových oken z replikyoken.cz | Jaroslav Heindinger"
+                        src="/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna/jednoramova-okna-1.avif"
+                        alt="Ukázka produktu jednorámových oken z replikyoken.cz | Jaroslav Heindinger"
                         onClick={() => setActiveIndex(0)}
                         className="max-h-[600px] object-cover cursor-pointer"
                         />

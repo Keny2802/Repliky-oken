@@ -39,7 +39,7 @@ const DottedButton = (props: props) => {
                 <Link
                 href={href}
                 target="_blank"
-                className={clsx(className, "bg-white text-black border-2 border-dashed border-black w-full md:min-w-75 md:max-w-100 text-base md:text-lg lg:text-[19px] rounded-3xl p-3 md:p-4 lg:p-4.5 transition-all duration-100 ease-in-out hover:translate-x-[-5px] hover:translate-y-[-5px] hover:shadow-[-5px_-5px_0_white] active:translate-x-[0px] active:translate-y-[0px] active:shadow-none dotted-button-component")}>
+                className={clsx(className, "bg-white text-black border-2 border-dashed border-black w-full md:min-w-75 md:max-w-100 text-base md:text-lg lg:text-[19px] rounded-3xl p-3 md:p-4 lg:p-4.5 transition-all duration-300 ease-in-out hover:translate-x-[-5px] hover:translate-y-[-5px] hover:shadow-[5px_5px_0_black] active:translate-x-[0px] active:translate-y-[0px] active:shadow-none dotted-button-component")}>
                     {children}
                 </Link>
             </motion.div>

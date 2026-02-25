@@ -101,7 +101,7 @@ const Hero = () => {
                                 </Flex>
                             </Wrapper>
                             <MarginTop>
-                                <Flex className="w-full justify-center md:flex-row flex-col">
+                                <Flex className="w-full justify-center md:flex-row flex-col gap-3">
                                     {
                                         [
                                             {
@@ -111,15 +111,7 @@ const Hero = () => {
                                             {
                                                 text: "Podívat se na špaletová okna",
                                                 href: "/produkty/spaletova-okna"
-                                            },
-                                            // {
-                                            //     text: "Zjistit více",
-                                            //     href: "#nabidka"
-                                            // },
-                                            // {
-                                            //     text: "Nezávazná kalkulace",
-                                            //     href: "#kalkulacka"
-                                            // }
+                                            }
                                         ].map((heroCta, index) => {
                                             return (
                                                 <Fragment key={index}>
@@ -136,7 +128,7 @@ const Hero = () => {
                                                             )
                                                         )
                                                     }
-                                                    className="bg-[#f5f2e8] text-black last:bg-transparent last:text-white last:border last:border-[#f5f2e8] last:hover:bg-[#f5f2e8] last:hover:text-black transition-colors duration-300 ease-in-out"
+                                                    className="w-full bg-[#f5f2e8] text-black last:bg-transparent last:text-white last:border last:border-[#f5f2e8] last:hover:bg-[#f5f2e8] last:hover:text-black transition-colors duration-300 ease-in-out"
                                                     // className="bg-[#f5f2e8] text-black transition-colors duration-300 ease-in-out"
                                                     >
                                                         <Padding>
@@ -145,7 +137,8 @@ const Hero = () => {
                                                     </Cta>
                                                     ) : (
                                                         <DottedButton
-                                                        href={heroCta.href}>
+                                                        href={heroCta.href}
+                                                        className="block w-full mt-3">
                                                             {heroCta.text}
                                                         </DottedButton>
                                                     )

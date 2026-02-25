@@ -23,19 +23,16 @@ import Footer from "@/app/sections/Footer";
 import Carousel from "@/app/components/Carousel";
 
 const Gallery = [
-    // "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-se-spaletou/jednoramova-okna-se-spaletou-1.avif",
-    // "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-se-spaletou/jednoramova-okna-se-spaletou-2.avif",
-    // "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-se-spaletou/jednoramova-okna-se-spaletou-3.avif",
-    // "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-se-spaletou/jednoramova-okna-se-spaletou-4.avif",
-    // "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-se-spaletou/jednoramova-okna-se-spaletou-5.avif",
-    // "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-se-spaletou/jednoramova-okna-se-spaletou-6.avif",
-    // "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-se-spaletou/jednoramova-okna-se-spaletou-7.avif",
-    // "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-se-spaletou/jednoramova-okna-se-spaletou-8.avif",
-
-    "/assets/fotky/produkty/okna-se-skutecnym-vakuovym-sklem/okna-se-skutecnym-vakuovym-sklem-1.avif",
-    "/assets/fotky/produkty/okna-se-skutecnym-vakuovym-sklem/okna-se-skutecnym-vakuovym-sklem-2.avif",
-    "/assets/fotky/produkty/okna-se-skutecnym-vakuovym-sklem/okna-se-skutecnym-vakuovym-sklem-3.avif",
-    "/assets/fotky/produkty/okna-se-skutecnym-vakuovym-sklem/okna-se-skutecnym-vakuovym-sklem-4.avif",
+    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna-se-spaletou/jednoramova-okna-se-spaletou-1.avif",
+    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna-se-spaletou/jednoramova-okna-se-spaletou-2.avif",
+    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna-se-spaletou/jednoramova-okna-se-spaletou-3.avif",
+    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna-se-spaletou/jednoramova-okna-se-spaletou-4.avif",
+    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna-se-spaletou/jednoramova-okna-se-spaletou-5.avif",
+    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna-se-spaletou/jednoramova-okna-se-spaletou-6.avif",
+    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna-se-spaletou/jednoramova-okna-se-spaletou-7.avif",
+    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna-se-spaletou/jednoramova-okna-se-spaletou-8.avif",
+    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna-se-spaletou/jednoramova-okna-se-spaletou-9.avif",
+    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna-se-spaletou/jednoramova-okna-se-spaletou-10.avif",
 ];
 
 const Content = () => {
@@ -88,7 +85,7 @@ const Content = () => {
                         <Image
                         width={800}
                         height={800}
-                        src="/assets/fotky/produkty/okna-se-skutecnym-vakuovym-sklem/okna-se-skutecnym-vakuovym-sklem-1.avif"
+                        src="/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna-se-spaletou/jednoramova-okna-se-spaletou-1.avif"
                         alt="Ukázka produktu okna se skutečným vakuovým sklem fineo od firmy AGC | replikyoken.cz Jaroslav Heindinger"
                         className="max-h-[600px] object-cover cursor-pointer"
                         onClick={() => setActiveIndex(0)}

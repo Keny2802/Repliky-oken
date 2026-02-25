@@ -12,6 +12,8 @@ type ImageType = {
     src: string;
     alt: string;
     loading?: "eager" | "lazy";
+    priority?: boolean;
+    draggable?: boolean;
     style?: React.CSSProperties;
     onLoad?: () => void;
 };
@@ -25,6 +27,8 @@ const Img = ({ ...props }: ImageType) => {
         src,
         alt,
         loading,
+        priority,
+        draggable,
         style,
         onLoad
     } = props;
@@ -44,6 +48,8 @@ const Img = ({ ...props }: ImageType) => {
                 )
             }
             style={style}
+            priority={priority}
+            draggable={draggable}
             onLoad={onLoad}
             className={clsx(className, "image-component")}
             />

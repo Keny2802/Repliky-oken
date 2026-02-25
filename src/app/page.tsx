@@ -8,6 +8,7 @@ import Subheader from "./components/Subheader";
 import Hero from "./sections/Hero";
 import Products from "./sections/Products";
 import About from "./sections/About";
+import BeforeAndAfter from "./sections/BeforeAndAfter";
 import Atc from "./sections/Atc";
 import Gallery from "./sections/Gallery";
 import Contact from "./sections/Contact";
@@ -22,6 +23,7 @@ const Home = () => {
       <Hero />
       <Products />
       <About />
+      <BeforeAndAfter />
       <Atc />
       <Gallery />
       <Contact />

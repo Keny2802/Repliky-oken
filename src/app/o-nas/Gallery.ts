@@ -31,8 +31,8 @@ export const Gallery = [
         image: "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-s-izolacnim-zasklenim-13.avif",
         alt: "2. Ukázka práce jedno rámových oken | Repliky oken Jaroslav Heindinger"
     },
-    {
-        image: "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-s-izolacnim-zasklenim-16.avif",
-        alt: "3. Ukázka práce jedno rámových oken | Repliky oken Jaroslav Heindinger"
-    }
+    // {
+    //     image: "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-s-izolacnim-zasklenim/jednoramova-okna-s-izolacnim-zasklenim-16.avif",
+    //     alt: "3. Ukázka práce jedno rámových oken | Repliky oken Jaroslav Heindinger"
+    // }
 ];

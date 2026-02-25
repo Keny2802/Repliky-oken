@@ -28,15 +28,16 @@ const ImgPlaceholder = ({ ...props }: ImgPlaceholderType) => {
         className
     } = props;
     const [isLoaded, setLoaded] = useState<boolean>(false);
-    const [error, setError] = useState<boolean>(false);
+    // const [error, setError] = useState<boolean>(false);
 
     return (
         <Fragment>
             <Wrapper className="relative w-full h-full">
                 {
-                    !isLoaded && !error && (
+                    !isLoaded && (
+                        <Wrapper className="absolute inset-0 bg-gray-200 animate-pulse rounded-lg"></Wrapper>
                         // <Wrapper className="absolute inset-0 bg-gray-200 animate-pulse rounded-lg"></Wrapper>
-                        <Wrapper className="blur-lg scale-105 transition-colors duration-500 ease-in-out"></Wrapper>
+                        // <Wrapper className="animate-pulse blur-lg scale-105 transition-colors duration-500 ease-in-out"></Wrapper>
                     )
                 }
                 <Img

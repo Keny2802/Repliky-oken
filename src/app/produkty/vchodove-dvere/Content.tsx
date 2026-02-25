@@ -30,7 +30,7 @@ const Gallery = [
     "/assets/fotky/produkty/vchodove-dvere-do-bytu/vchodove-dvere-do-bytu-6.avif",
     "/assets/fotky/produkty/vchodove-dvere-do-bytu/vchodove-dvere-do-bytu-7.avif",
     "/assets/fotky/produkty/vchodove-dvere-do-bytu/vchodove-dvere-do-bytu-8.avif",
-    "/assets/fotky/produkty/vchodove-dvere-do-bytu/vchodove-dvere-do-bytu-9.avif",
+    // "/assets/fotky/produkty/vchodove-dvere-do-bytu/vchodove-dvere-do-bytu-9.avif",
 ];
 
 const Content = () => {

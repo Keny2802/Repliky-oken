@@ -31,16 +31,6 @@ export const GalleryHradesinska = [
     },
     {
         title: "Praha ulice Hradešínská, Praha 10. Repliky",
-        image: "/assets/fotky/reference/okna-hradesinska-praha-10/okna-hradesinska-praha-10-7.avif",
-        alt: "Ukázka práce oken ulice Hradešínská na Praze 10 | Jaroslav Heidinger | replikyoken.cz"
-    },
-    {
-        title: "Praha ulice Hradešínská, Praha 10. Repliky",
-        image: "/assets/fotky/reference/okna-hradesinska-praha-10/okna-hradesinska-praha-10-8.avif",
-        alt: "Ukázka práce oken ulice Hradešínská na Praze 10 | Jaroslav Heidinger | replikyoken.cz"
-    },
-    {
-        title: "Praha ulice Hradešínská, Praha 10. Repliky",
         image: "/assets/fotky/reference/okna-hradesinska-praha-10/okna-hradesinska-praha-10-9.avif",
         alt: "Ukázka práce oken ulice Hradešínská na Praze 10 | Jaroslav Heidinger | replikyoken.cz"
     },
@@ -62,11 +52,6 @@ export const GalleryHradesinska = [
     {
         title: "Praha ulice Hradešínská, Praha 10. Repliky",
         image: "/assets/fotky/reference/okna-hradesinska-praha-10/okna-hradesinska-praha-10-13.avif",
-        alt: "Ukázka práce oken ulice Hradešínská na Praze 10 | Jaroslav Heidinger | replikyoken.cz"
-    },
-    {
-        title: "Praha ulice Hradešínská, Praha 10. Repliky",
-        image: "/assets/fotky/reference/okna-hradesinska-praha-10/okna-hradesinska-praha-10-14.avif",
         alt: "Ukázka práce oken ulice Hradešínská na Praze 10 | Jaroslav Heidinger | replikyoken.cz"
     },
     {

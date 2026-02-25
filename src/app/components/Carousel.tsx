@@ -90,7 +90,7 @@ const Carousel = ( { ...props } : CarouselType ) => {
                             carouselSet.map((carouselItem, index) => {
                                 return (
                                     <Wrapper
-                                    className="relative w-full h-full shrink-0 flex justify-center"
+                                    className="relative w-full shrink-0 flex justify-center"
                                     key={index}>
                                         {/* <Image
                                         width={800}
@@ -108,7 +108,7 @@ const Carousel = ( { ...props } : CarouselType ) => {
                                         alt={title || `${index + 1}. Ukázka práce od replikyoken.cz | Jaroslav Heidinger`}
                                         // sizes="(max-width: 800px) 100vw, 800px"
                                         // priority={index === currentIndex}
-                                        className="object-cover"
+                                        // className="object-cover"
                                         />
                                     </Wrapper>
                                 );
