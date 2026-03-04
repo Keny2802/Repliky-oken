@@ -22,7 +22,7 @@ const Atc = () => {
                         Potřebujete nová okna do domu nebo bytu?
                     </Heading>
                     <Subheading>
-                        Kvalitní, precizní a přesně na míru - ať vaše okna vypadají jako nová.
+                        Kvalitní, precizní a přesně na míru.
                     </Subheading>
                     <Cta
                     href="#kontakt"

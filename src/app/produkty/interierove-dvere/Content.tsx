@@ -109,7 +109,7 @@ const Content = () => {
                     </Wrapper>
                     <FlexRow className="flex-wrap justify-center items-center w-full">
                         {
-                            Gallery.map((img, index) => {
+                            Gallery.slice(1).map((img, index) => {
                                 return (
                                     <Fragment key={index}>
                                         <Image
@@ -118,7 +118,7 @@ const Content = () => {
                                         src={img}
                                         alt={`${index + 1}. Ukázka produktu interiérových dveřích | replikyoken.cz Jaroslav Heindinger`}
                                         className="w-full max-h-[210px] md:w-50 md:h-50 object-cover cursor-pointer rounded-md"
-                                        onClick={() => setActiveIndex(index)}
+                                        onClick={() => setActiveIndex(index + 1)}
                                         />
                                     </Fragment>
                                 );

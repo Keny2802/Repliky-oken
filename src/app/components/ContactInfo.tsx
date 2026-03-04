@@ -40,9 +40,15 @@ const ContactInfo = () => {
                         </Flex>
                     </Link>
                     <Link
+                    href="//1url.cz/jeJe1"
+                    target="_blank"
+                    className="border-b border-gray-300">
+                        Naše reference jsou důkazem důvěryhodnosti
+                    </Link>
+                    <Link
                     href="https://www.google.com/maps/dir/50.102474,14.5027632/Na+Z%C3%A1jezdu+2131%2F9,+101+00+Vinohrady"
                     target="_blank">
-                        Praha 10, Na Zájezdu 2131/9, 101 00, Vinohrady
+                        Mapa - Praha 10, Na Zájezdu 2131/9, 101 00, Vinohrady
                     </Link>
                     <p className="text-base">
                         Pondělí - Pátek 08:00 - 16:00

@@ -78,7 +78,8 @@ const Header = ({ ...props }: HeaderType) => {
                 duration: 0.35,
                 ease: "easeInOut"
             }}
-            className={clsx(className, isHeaderScrolled && "fixed top-0", `w-full bg-[#f5f2e8] text-black shadow-lg border-b border-gray-200 z-50 header-component`)}>
+            className={clsx(className, isHeaderScrolled && "fixed top-0", `w-full bg-[#f5f2e8] text-black shadow-lg border-b border-gray-200 z-50 header-component`)}
+            id="navigace">
                 <Padding>
                     <Flex className="justify-between">
                         <Logo />
@@ -109,7 +110,7 @@ const Header = ({ ...props }: HeaderType) => {
                                     ].map((link, index) => {
                                         return (
                                             <Fragment key={index}>
-                                                <li className="text-base md:text-[17px] lg:text-lg header-item">
+                                                <li className="text-base md:text-[17px] lg:text-xl header-item">
                                                     <Link
                                                     href={link.href}>
                                                         {link.text}

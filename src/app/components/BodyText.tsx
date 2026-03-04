@@ -17,7 +17,7 @@ const BodyText = ({ ...props }: BodyTextType) => {
 
     return (
         <Fragment>
-            <p className={clsx(className, "text-[15px] md:text-[15.5px] lg:text-base")}>
+            <p className={clsx(className, "text-[15px] md:text-[15.5px] lg:text-base max-w-3xl")}>
                 {children}
             </p>
         </Fragment>

@@ -62,9 +62,6 @@ const Products = () => {
                             <Heading>
                                 Produkty
                             </Heading>
-                            <Subheading>
-                                Podívejte se na naší širokou nabídku oken.
-                            </Subheading>
                         </FlexCol>
                         <MarginTop>
                             <Flex className="justify-center items-center flex-wrap gap-4 md:gap-5 lg:gap-6">

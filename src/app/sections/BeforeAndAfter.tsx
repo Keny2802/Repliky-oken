@@ -87,7 +87,8 @@ const BeforeAndAfter = () => {
                                     />
                                     <Wrapper className="relative">
                                         <Heading className="absolute top-5 left-5 text-white uppercase">
-                                            Před realizací
+                                            {/* Před realizací */}
+                                            Před
                                         </Heading>
                                     </Wrapper>
                                     <div
@@ -104,7 +105,8 @@ const BeforeAndAfter = () => {
                                         />
                                         <Wrapper className="relative">
                                             <Heading className="absolute top-5 right-5 text-white uppercase">
-                                                Po realizaci
+                                                {/* Po realizaci */}
+                                                Po
                                             </Heading>
                                         </Wrapper>
                                     </div>

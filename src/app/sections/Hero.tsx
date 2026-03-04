@@ -21,6 +21,7 @@ import Padding from "../components/Padding";
 import setLinkWithoutHash from "../functions/setLinkWithoutHash";
 import { button } from "motion/react-client";
 import DottedButton from "../components/DottedButton";
+import WAContact from "../components/WAContact";
 
 const HeroCarousel = [
     {
@@ -74,7 +75,9 @@ const Hero = () => {
 
     return (
         <Fragment>
-            <Wrapper className="relative">
+            <Wrapper
+            className="relative"
+            id="uvod">
                 <Image
                 width={800}
                 height={800}
@@ -94,7 +97,7 @@ const Hero = () => {
                                 <Flex>
                                     <CheckIcon className="w-8 md:w-9 lg:w-12 h-8 md:h-9 lg:h-12 text-[#f5f2e8]" />
                                     <Wrapper>
-                                        <p className="text-xl md:text-2xl lg:text-[26px] font-medium">
+                                        <p className="text-xl md:text-2xl lg:text-[26px] font-medium max-w-3xl">
                                             {card.title}
                                         </p>
                                     </Wrapper>
@@ -104,46 +107,57 @@ const Hero = () => {
                                 <Flex className="w-full justify-center md:flex-row flex-col gap-3">
                                     {
                                         [
+                                            // {
+                                            //     text: "Mrknout na realizace",
+                                            //     href: "/nase-realizace"
+                                            // },
+                                            // {
+                                            //     text: "Podívat se na špaletová okna",
+                                            //     href: "/produkty/spaletova-okna"
+                                            // }
                                             {
-                                                text: "Mrknout na realizace",
+                                                text: "Podívat se na realizace",
                                                 href: "/nase-realizace"
                                             },
                                             {
-                                                text: "Podívat se na špaletová okna",
-                                                href: "/produkty/spaletova-okna"
+                                                text: "Podívat se na recenze",
+                                                href: "//1url.cz/jeJe1"
+                                            },
+                                            {
+                                                text: "Získat nabídku",
+                                                href: "kontakt"
                                             }
                                         ].map((heroCta, index) => {
                                             return (
                                                 <Fragment key={index}>
-                                                   {
-                                                    index !== 1 ? (
-                                                         <Cta
+                                                    <Cta
                                                     href={heroCta.href}
                                                     {
                                                         ...(
-                                                            !heroCta.href.startsWith("/") && (
+                                                            !heroCta.href.startsWith("/") ? (
                                                                 {
                                                                     onClick: (e) => setLinkWithoutHash(e, heroCta.href)
                                                                 }
-                                                            )
+                                                            ) : {
+                                                                target: "_blank"
+                                                            }
                                                         )
                                                     }
-                                                    className="w-full bg-[#f5f2e8] text-black last:bg-transparent last:text-white last:border last:border-[#f5f2e8] last:hover:bg-[#f5f2e8] last:hover:text-black transition-colors duration-300 ease-in-out"
+                                                    // {
+                                                    //     ...(
+                                                    //         !heroCta.href.startsWith("/") || !heroCta.href.startsWith("https://") && {
+                                                    //             target: "_blank"
+                                                    //         }
+                                                    //     )
+                                                    // }
+                                                    // className="w-full bg-[#f5f2e8] text-black last:bg-transparent last:text-white last:border last:border-[#f5f2e8] last:hover:bg-[#f5f2e8] last:hover:text-black transition-colors duration-300 ease-in-out"
+                                                    className="w-full bg-[#f5f2e8] text-black transition-colors duration-300 ease-in-out"
                                                     // className="bg-[#f5f2e8] text-black transition-colors duration-300 ease-in-out"
                                                     >
                                                         <Padding>
                                                             {heroCta.text}
                                                         </Padding>
                                                     </Cta>
-                                                    ) : (
-                                                        <DottedButton
-                                                        href={heroCta.href}
-                                                        className="block w-full mt-3">
-                                                            {heroCta.text}
-                                                        </DottedButton>
-                                                    )
-                                                   }
-
                                                 </Fragment>
                                             );
                                         })
@@ -188,6 +202,7 @@ const Hero = () => {
                     </ScrollAnimation>
                 </Wrapper>
             </Wrapper>
+            <WAContact />
         </Fragment>
     );
 };

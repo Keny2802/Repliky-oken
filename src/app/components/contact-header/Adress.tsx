@@ -11,7 +11,7 @@ import Icon from "../Icon";
 const Adress = () => {
     return (
         <Fragment>
-            <Flex>
+            <Flex className="items-center">
                 <Icon className="mt-2">
                     <MapPin />
                 </Icon>

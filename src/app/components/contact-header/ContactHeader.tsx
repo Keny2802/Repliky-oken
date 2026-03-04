@@ -13,9 +13,11 @@ import Adress from "./Adress";
 const ContactHeader = () => {
     return (
         <Fragment>
-            <Wrapper className="hidden md:block bg-[#f5f2e8] text-black border-b border-gray-200">
+            <Wrapper
+            className="bg-[#f5f2e8] text-black border-b border-gray-200"
+            id="kontaktni-navigace">
                 <Padding>
-                    <Flex className="justify-between">
+                    <Flex className="md:justify-between items-start lg:items-center flex-col lg:flex-row">
                         <Flex>
                             <CtaText />
                             <Phone />

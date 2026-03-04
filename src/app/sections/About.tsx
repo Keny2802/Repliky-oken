@@ -89,7 +89,7 @@ const About = () => {
                                     </MarginTop>
                                 </MarginTop>
                                 <Flex className="max-w-5xl flex-wrap">
-                                    {Gallery.map((card, index) => {
+                                    {Gallery.slice(1).map((card, index) => {
                                         return (
                                             <Image
                                             key={index}
@@ -100,7 +100,7 @@ const About = () => {
                                             loading="lazy"
                                             decoding="async"
                                             draggable={false}
-                                            onClick={() => setActiveIndex(index)}
+                                            onClick={() => setActiveIndex(index + 1)}
                                             className="w-full max-h-[210px] md:w-50 md:h-50 object-cover rounded-md cursor-pointer"
                                             />
                                         );

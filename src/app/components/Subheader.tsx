@@ -39,7 +39,7 @@ const Subheader = () => {
                                     ].map((link, index) => {
                                         return (
                                             <Fragment key={index}>
-                                                <li className="header-item">
+                                                <li className="text-base md:text-[17px] lg:text-xl header-item">
                                                     <Link
                                                     href={link.href}>
                                                         {link.text}
