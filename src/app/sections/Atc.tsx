@@ -3,7 +3,7 @@
 import {
     Fragment
 } from "react";
-import Link from "next/link";
+import clsx from "clsx";
 
 import Wrapper from "../components/Wrapper";
 import ScrollAnimation from "../components/ScrollAnimation";
@@ -13,10 +13,10 @@ import Cta from "../components/Cta";
 import setLinkWithoutHash from "../functions/setLinkWithoutHash";
 import Padding from "../components/Padding";
 
-const Atc = () => {
+const Atc = ({ className }: { className?: string }) => {
     return (
         <Fragment>
-            <Wrapper className="px-8 md:px-12 py-16 md:py-24 bg-[#f5f2e8] text-black text-center  flex justify-center items-center flex-col gap-3 md:gap-6 lg:gap-8">
+            <Wrapper className={clsx(className, "px-8 md:px-12 py-16 md:py-24 bg-[#f5f2e8] text-black text-center flex justify-center items-center flex-col gap-3 md:gap-6 lg:gap-8")}>
                 <ScrollAnimation>
                     <Heading>
                         Potřebujete nová okna do domu nebo bytu?

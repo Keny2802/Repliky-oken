@@ -100,6 +100,41 @@ const Footer = () => {
                                 }
                             </Wrapper>
                         </ul>
+                        <p className="mt-2 md:mt-2.5 lg:mt-3 text-2xl uppercase">
+                            „Právní“ odkazy
+                        </p>
+                        <ul className="mt-2 footer-header-list">
+                            <Wrapper className="mt-2 md:mt-2.5 flex flex-col gap-2 md:gap-2.5 lg:gap-1.5">
+                                {
+                                    [
+                                        {
+                                            text: "Obchodní podmínky",
+                                            href: "/obchodni-podminky"
+                                        },
+                                        {
+                                            text: "Ochrana osobních údajů",
+                                            href: "/ochrana-osobnich-udaju"
+                                        },
+                                        {
+                                            text: "Nastavení cookies",
+                                            href: "/nastaveni-cookies"
+                                        }
+                                    ].map((link, index) => {
+                                        return (
+                                            <Fragment key={index}>
+                                                <li className="footer-header-item">
+                                                    <Link
+                                                    href={link.href}
+                                                    className="footer-header-link">
+                                                        {link.text}
+                                                    </Link>
+                                                </li>
+                                            </Fragment>
+                                        );
+                                    })
+                                }
+                            </Wrapper>
+                        </ul>
                     </Wrapper>
                     <ContactInfo />
                 </Flex>

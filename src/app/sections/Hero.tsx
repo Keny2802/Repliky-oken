@@ -6,8 +6,11 @@ import {
     Fragment
 } from "react";
 import {
-    CheckIcon
+    CheckIcon,
 } from "@heroicons/react/24/solid";
+import {
+    StarIcon
+} from "lucide-react";
 import Image from "next/image";
 
 import Wrapper from "../components/Wrapper";
@@ -19,30 +22,53 @@ import Flex from "../components/Flex";
 import Cta from "../components/Cta";
 import Padding from "../components/Padding";
 import setLinkWithoutHash from "../functions/setLinkWithoutHash";
-import { button } from "motion/react-client";
-import DottedButton from "../components/DottedButton";
+import Img from "../components/Img";
+import BodyText from "../components/BodyText";
 import WAContact from "../components/WAContact";
 
 const HeroCarousel = [
     {
-        image: "/assets/fotky/reference/praha-ulice-rybna-repliky-oken/praha-ulice-rybna-repliky-oken-17.avif",
+        // image: "/assets/fotky/reference/praha-ulice-rybna-repliky-oken/praha-ulice-rybna-repliky-oken-17.avif",
+        image: "/assets/fotky/reference/praha-ulice-rybna-repliky-oken/praha-ulice-rybna-repliky-oken-18.avif",
         alt: "Praha 1 ulice Rybná, repliky oken v památkově chráněném domě realizováno společností Repliky Oken",
-        title: "Jsme specialisté na výměnu oken v památkových oblastech, povolení pro výměnu zajišťujeme"
+        // title: "Jsme specialisté na výměnu oken v památkových oblastech, povolení pro výměnu zajišťujeme"
+        title: [
+            "Vyrábíme s respektem k řemeslu.",
+            "Podle přání zákazníka.",
+            "Repliky oken se skvělou tepelnou a zvukovou izolací."
+        ]
     },
     {
         image: "/assets/fotky/reference/jednoramova-okna-praha-ulice-nerudova/jednoramova-okna-praha-ulice-nerudova-11.avif",
         alt: "Jednorámová okna realizováno na Praze 1 ulice Nerudová společností Repliky Oken",
-        title: "Rekonstrukce bytů - výměna všech výplní otvorů"
+        // title: "Rekonstrukce bytů - výměna všech výplní otvorů",
+        title: [
+            "Vyrábíme s respektem k řemeslu.",
+            "Podle přání zákazníka.",
+            "Repliky oken se skvělou tepelnou a zvukovou izolací."
+        ]
     },
     {
         image: "/assets/fotky/reference/pysely-rekonstrukce-historicke-vily/pysely-rekonstrukce-historicke-vily-19.avif",
         alt: "Dokonalé repliky oken pro váš domov | Replikyoken.cz Jaroslav Heindinger",
-        title: "Repliky oken a dveří v historických vilách a domech"
+        // title: "Repliky oken a dveří v historických vilách a domech",
+        title: [
+            "Jsme specialisté na výměnu oken v památkových oblastech, povolení pro výměnu zajišťujeme.",
+            "Rekonstrukce bytů - výměna všech výplní otvorů.",
+            "Repliky oken a dveří v historických vilách a domech.",
+            "Okna v činžovních domech v památkových oblastech."
+        ]
     },
     {
         image: "/assets/fotky/reference/lomena-okna-praha-zizkov/lomena-okna-praha-zizkov-7.avif",
         alt: "Lomená okna realizace Praha 3-Žižkov spolešností Repliky Oken",
-        title: "Okna v činžovních domech v památkových oblastech"
+        // title: "Okna v činžovních domech v památkových oblastech",
+        title: [
+            "Jsme specialisté na výměnu oken v památkových oblastech, povolení pro výměnu zajišťujeme.",
+            "Rekonstrukce bytů - výměna všech výplní otvorů.",
+            "Repliky oken a dveří v historických vilách a domech.",
+            "Okna v činžovních domech v památkových oblastech."
+        ]
     }
 ];
 
@@ -86,22 +112,29 @@ const Hero = () => {
                 draggable={false}
                 className={`w-full min-h-[600px] max-h-[800px] bg-fixed bg-center object-cover transition-opacity duration-500 ease-in-out ${carouselFade ? "opacity-0" : "opacity-100"}`}
                 />
-                <Wrapper className="absolute inset-0 bg-black/15"></Wrapper>
+                <Wrapper className="absolute inset-0 bg-black/40"></Wrapper>
                 <Wrapper className="p-3 md:p-3.5 lg:p-4 text-white text-center absolute inset-0 flex justify-center items-center flex-col gap-3 md:gap-3.5 lg:gap-6">
                     <ScrollAnimation className="flex justify-center items-center flex-col gap-2 md:gap-4 lg:gap-6">
                        <Wrapper className={`${carouselFade ? "opacity-0" : "opacity-100"} transition-opacity duration-500 ease-in-out`}>
                             <HeroHeading>
                                 Repliky historických oken a dveří
                             </HeroHeading>
-                            <Wrapper className="flex items-center flex-col gap-3 md:gap-3.5 lg:gap-4">
-                                <Flex>
-                                    <CheckIcon className="w-8 md:w-9 lg:w-12 h-8 md:h-9 lg:h-12 text-[#f5f2e8]" />
-                                    <Wrapper>
-                                        <p className="text-xl md:text-2xl lg:text-[26px] font-medium max-w-3xl">
-                                            {card.title}
-                                        </p>
-                                    </Wrapper>
-                                </Flex>
+                            <Wrapper className="mt-2 flex items-center flex-col gap-1.5">
+                                {
+                                            card.title.map((title, index) => {
+                                                return (
+                                                    <Fragment key={index}>
+                                                        <Wrapper className="flex items-center gap-1">
+                                                            <CheckIcon className="w-8 h-8 text-[#f5f2e8]" />
+                                                            <p
+                                                            className="text-xl font-medium max-w-3xl">
+                                                                {title}
+                                                            </p>
+                                                        </Wrapper>
+                                                    </Fragment>
+                                                );
+                                            })
+                                        }
                             </Wrapper>
                             <MarginTop>
                                 <Flex className="w-full justify-center md:flex-row flex-col gap-3">
@@ -196,6 +229,31 @@ const Hero = () => {
                                             );
                                         })
                                     }
+                                </Flex>
+                            </MarginTop>
+                            <MarginTop>
+                                <Flex className="absolute bottom-4 left-4">
+                                    <Img
+                                    width={45}
+                                    height={45}
+                                    src="/assets/google.svg"
+                                    alt="Google ikonka"
+                                    />
+                                    <Flex>
+                                        <BodyText className="font-medium">
+                                            5,0
+                                        </BodyText>
+                                        <Flex>
+                                            <StarIcon className="w-5 h-5 text-yellow-400" />
+                                            <StarIcon className="w-5 h-5 text-yellow-400" />
+                                            <StarIcon className="w-5 h-5 text-yellow-400" />
+                                            <StarIcon className="w-5 h-5 text-yellow-400" />
+                                            <StarIcon className="w-5 h-5 text-yellow-400" />
+                                        </Flex>
+                                        <BodyText className="font-medium">
+                                            16 recenzí
+                                        </BodyText>
+                                    </Flex>
                                 </Flex>
                             </MarginTop>
                        </Wrapper>

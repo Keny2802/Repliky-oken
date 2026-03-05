@@ -55,7 +55,7 @@ const ImgPlaceholder = ({ ...props }: ImgPlaceholderType) => {
                 alt={alt}
                 onLoad={() => setLoaded(true)}
                 // className={clsx(isLoaded ? "blur-none scale-100" : "blur-lg scale-105", "transition-colors duration-500 ease-in-out image-placeholder-component", className)}
-                className={clsx(className, "relative z-10 image-placeholder-component")}
+                className={clsx(className, "relative z-10 w-full h-full object-contain image-placeholder-component")}
                 />
             </Wrapper>
         </Fragment>

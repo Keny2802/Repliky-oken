@@ -16,10 +16,11 @@ const Contact = () => {
         <Fragment>
             <Wrapper
             // md:h-[500px]
-            className="max-w-full relative"
+            // relative
+            className="border-y border-gray-200 bg-white max-w-full "
             id="kontakt">
 
-                <Image
+                {/* <Image
                 fill
                 // src="/assets/contact/contact.avif"
                 src="/assets/fotky/produkty/spaletova-okna/spaletova-okna-2.avif"
@@ -29,11 +30,12 @@ const Contact = () => {
                 draggable={false}
                 priority={false}
                 className="object-cover"
-                />
+                /> */}
 
-                <Wrapper className="absolute inset-0 bg-black/40"></Wrapper>
+                {/* <Wrapper className="absolute inset-0 bg-black/40"></Wrapper> */}
 
-                <Wrapper className="p-6 md:p-12 text-white text-center relative z-10">
+                {/* text-white */}
+                <Wrapper className="p-6 md:p-12 text-black text-center relative z-10">
                     <ScrollAnimation className="w-full flex flex-col justify-center items-center gap-3 text-center">
                         <Heading className="md:pt-32 text-center">
                             Spojte se s námi.
