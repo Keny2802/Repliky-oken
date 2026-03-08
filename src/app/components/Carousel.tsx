@@ -10,10 +10,8 @@ import {
     ChevronLeftIcon,
     ChevronRightIcon
 } from "@heroicons/react/24/solid";
-import Image from "next/image";
 
 import Wrapper from "./Wrapper";
-import Subheading from "./Subheading";
 import ImgPlaceholder from "./ImgPlaceholder";
 
 // type CarouselItemType = {
@@ -61,8 +59,8 @@ const Carousel = ( { ...props } : CarouselType ) => {
 
     return (
         <Fragment>
-            <Wrapper className="fixed inset-0 min-h-screen z-[900] flex justify-center items-center bg-black/80 p-4">
-                <Wrapper className="relative w-full max-w-[1000px] max-h-[100vh] flex justify-center items-center overflow-hidden">
+            <Wrapper className="fixed inset-0 h-[100dvh] z-[900] flex justify-center items-center bg-black/80 p-4">
+                <Wrapper className="relative w-full max-w-[1000px] max-h-[95vh] flex justify-center items-center overflow-hidden">
                 <p className="absolute mt-0 top-4 md:top-12 left-4 z-50 text-xl md:text-[25px] text-white font-medium mt-2 md:mt-3 lg:mt-4">
                     {currentIndex + 1} / {carouselSet.length}
                 </p>
@@ -90,7 +88,7 @@ const Carousel = ( { ...props } : CarouselType ) => {
                             carouselSet.map((carouselItem, index) => {
                                 return (
                                     <Wrapper
-                                    className="relative w-full shrink-0 flex justify-center"
+                                    className="relative w-full shrink-0 flex justify-center items-center min-h-[70vh]"
                                     key={index}>
                                         <ImgPlaceholder
                                         width={800}

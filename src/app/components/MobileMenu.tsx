@@ -41,10 +41,10 @@ const MobileMenu = ({ ...props }: MobileMenuType) => {
                         <FlexCol>
                             {
                                     [
-                                        {
-                                            text: "Jak to probíhá",
-                                            href: "/jak-to-probiha"
-                                        },
+                                        // {
+                                        //     text: "Jak to probíhá",
+                                        //     href: "/jak-to-probiha"
+                                        // },
                                         // {
                                         //     text: "Galerie",
                                         //     href: "/galerie"

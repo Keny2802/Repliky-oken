@@ -111,7 +111,7 @@ const Hero = () => {
                 src={card.image}
                 alt={card.alt}
                 draggable={false}
-                className={`w-full min-h-[600px] max-h-[800px] bg-fixed bg-center object-cover transition-opacity duration-500 ease-in-out ${carouselFade ? "opacity-0" : "opacity-100"}`}
+                className={`w-full min-h-[600px] max-h-screen bg-fixed bg-center object-cover transition-opacity duration-500 ease-in-out ${carouselFade ? "opacity-0" : "opacity-100"}`}
                 />
                 <Wrapper className="absolute inset-0 bg-black/40"></Wrapper>
                 <Wrapper className="p-3 md:p-3.5 lg:p-6 text-white text-center absolute inset-0 flex justify-center items-center flex-col gap-3 md:gap-3.5 lg:gap-6">
@@ -128,7 +128,7 @@ const Hero = () => {
                                                         <Wrapper className="flex items-center gap-1">
                                                             <CheckIcon className="w-8 h-8 text-[#f5f2e8]" />
                                                             <p
-                                                            className="text-base md:text-xl max-w-3xl">
+                                                            className="text-[15px] md:text-base lg:text-lg max-w-[500px]">
                                                                 {title}
                                                             </p>
                                                         </Wrapper>
@@ -232,37 +232,37 @@ const Hero = () => {
                                     }
                                 </Flex>
                             </MarginTop>
-                            <MarginTop>
-                                <Link
-                                href="https://1url.cz/BeeLq"
-                                target="_blank">
-                                    <Flex className="absolute bottom-4 left-4">
-                                        <Img
-                                        width={45}
-                                        height={45}
-                                        src="/assets/google.svg"
-                                        alt="Google ikonka"
-                                        />
-                                        <Flex>
-                                            <BodyText className="font-medium">
-                                                5,0
-                                            </BodyText>
-                                            <Flex>
-                                                <StarIcon className="w-5 h-5 text-yellow-400" />
-                                                <StarIcon className="w-5 h-5 text-yellow-400" />
-                                                <StarIcon className="w-5 h-5 text-yellow-400" />
-                                                <StarIcon className="w-5 h-5 text-yellow-400" />
-                                                <StarIcon className="w-5 h-5 text-yellow-400" />
-                                            </Flex>
-                                            <BodyText className="font-medium">
-                                                16 recenzí
-                                            </BodyText>
-                                        </Flex>
-                                    </Flex>
-                                </Link>
-                            </MarginTop>
                        </Wrapper>
                     </ScrollAnimation>
+                    <MarginTop>
+                        <Link
+                        href="https://1url.cz/BeeLq"
+                        target="_blank">
+                            <Flex className="absolute bottom-4 left-4">
+                                <Img
+                                width={45}
+                                height={45}
+                                src="/assets/google.svg"
+                                alt="Google ikonka"
+                                />
+                                <Flex>
+                                    <BodyText className="font-medium">
+                                        5,0
+                                    </BodyText>
+                                    <Flex>
+                                        <StarIcon className="w-5 h-5 text-yellow-400" />
+                                        <StarIcon className="w-5 h-5 text-yellow-400" />
+                                        <StarIcon className="w-5 h-5 text-yellow-400" />
+                                        <StarIcon className="w-5 h-5 text-yellow-400" />
+                                        <StarIcon className="w-5 h-5 text-yellow-400" />
+                                    </Flex>
+                                    <BodyText className="font-medium">
+                                        16 recenzí
+                                    </BodyText>
+                                </Flex>
+                            </Flex>
+                        </Link>
+                    </MarginTop>
                 </Wrapper>
             </Wrapper>
             <WAContact />

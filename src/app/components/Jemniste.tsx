@@ -12,6 +12,7 @@ import Image from "next/image";
 
 import Wrapper from "./Wrapper";
 import SectionHeading from "./SectionHeading";
+import Carousel from "./Carousel";
 
 const Jemniste = () => {
     const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -32,7 +33,7 @@ const Jemniste = () => {
     
     return (
         <Fragment>
-            <Wrapper>
+            <Wrapper className="p-2.5 md:p-3 lg:p-4 bg-[#f5f2e8] border-t border-gray-200">
                 <SectionHeading>
                     Jemniště repliky jednorámových oken
                 </SectionHeading>
@@ -53,9 +54,9 @@ const Jemniste = () => {
                                         decoding="async"
                                         draggable={false}
                                         className="w-full md:w-75 md:h-75 object-cover rounded-md cursor-pointer"
-                                        // onClick={() => setActiveCarousel({ gallery: "Jemniste", index: index })}
+                                        onClick={() => setActiveIndex(index)}
                                         />
-                                        <Wrapper className="rounded-md bg-black/50 text-white absolute inset-0 flex justify-center items-center text-center p-2 md:p-3 lg:p-4 md:opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100">
+                                        <Wrapper className="rounded-md bg-black/50 text-white absolute inset-0 flex justify-center items-center text-center p-2 md:p-3 lg:p-4 md:opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out group-hover:opacity-100">
                                             <p className="text-base md:text-lg lg:text-xl font-medium">
                                                 {`${titleIndex}. Ukázka - ${card.title}`}
                                             </p>
@@ -67,6 +68,17 @@ const Jemniste = () => {
                     }
                 </Wrapper>
             </Wrapper>
+            {
+                activeIndex !== null && (
+                    <Fragment>
+                        <Carousel
+                        carouselSet={GalleryJemniste.map((item) => item.image)}
+                        startIndex={activeIndex}
+                        onClose={() => setActiveIndex(null)}
+                        />
+                    </Fragment>
+                )
+            }
         </Fragment>
     );
 };

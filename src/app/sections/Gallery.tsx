@@ -42,7 +42,7 @@ const Gallery = () => {
                             Fotogalerie realizací našich klientů.
                         </Subheading>
                     </FlexCol>
-                    <Wrapper className="mt-2 md:mt-4 lg:mt-6 flex justify-center items-center md:flex-row flex-col flex-wrap gap-2 md:gap-4 lg:gap-6">
+                    <Wrapper className="mt-2 md:mt-4 lg:mt-6 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 2xl:grid-cols-7 gap-2 md:gap-4 lg:gap-6 rounded-md">
                         {
                             gal.map((card, index) => {
                                 return (
@@ -53,7 +53,7 @@ const Gallery = () => {
                                         src={card.image}
                                         alt={card.alt || `${index + 1}. Ukázka realizace replikyoken.cz Jaroslav Heindinger`}
                                         draggable={false}
-                                        className="w-full max-h-[210px] md:w-50 md:h-50 object-cover rounded-md cursor-pointer"
+                                        className="w-full max-h-[350px] md:w-[250px] md:h-[250px] object-cover rounded-md cursor-pointer"
                                         onClick={() => setActiveIndex(index)}
                                         />
                                     </Fragment>

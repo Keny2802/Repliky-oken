@@ -16,6 +16,7 @@ type ImageType = {
     draggable?: boolean;
     style?: React.CSSProperties;
     onLoad?: () => void;
+    onLoadingComplete?: () => void;
 };
 
 const Img = ({ ...props }: ImageType) => {
@@ -30,7 +31,8 @@ const Img = ({ ...props }: ImageType) => {
         priority,
         draggable,
         style,
-        onLoad
+        onLoad,
+        onLoadingComplete
     } = props;
 
     return (
@@ -51,6 +53,7 @@ const Img = ({ ...props }: ImageType) => {
             priority={priority}
             draggable={draggable}
             onLoad={onLoad}
+            onLoadingComplete={onLoadingComplete}
             className={clsx(className, "image-component")}
             />
         </Fragment>

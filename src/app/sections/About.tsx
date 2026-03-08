@@ -101,7 +101,7 @@ const About = () => {
                                             decoding="async"
                                             draggable={false}
                                             onClick={() => setActiveIndex(index + 1)}
-                                            className="w-full max-h-[210px] md:w-50 md:h-50 object-cover rounded-md cursor-pointer"
+                                            className="w-full max-h-[450px] md:w-50 md:h-50 object-cover rounded-md cursor-pointer"
                                             />
                                         );
                                     })}

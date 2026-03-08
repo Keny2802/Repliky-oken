@@ -32,7 +32,7 @@ const ImgPlaceholder = ({ ...props }: ImgPlaceholderType) => {
 
     return (
         <Fragment>
-            <Wrapper className="relative w-full h-full">
+            <Wrapper className="relative w-full h-full min-h-[300px]">
                 {
                     !isLoaded && (
                         <Wrapper className="absolute inset-0 bg-gray-200 z-0 animate-pulse rounded-lg"></Wrapper>
@@ -46,14 +46,14 @@ const ImgPlaceholder = ({ ...props }: ImgPlaceholderType) => {
                         fill ? ({
                             fill: true
                         }) : ({
-                            width: width,
-                            height: height
+                            width: width || 800,
+                            height: height || 800
                         })
                     )
                 }
                 src={src}
                 alt={alt}
-                onLoad={() => setLoaded(true)}
+                onLoadingComplete={() => setLoaded(true)}
                 // className={clsx(isLoaded ? "blur-none scale-100" : "blur-lg scale-105", "transition-colors duration-500 ease-in-out image-placeholder-component", className)}
                 className={clsx(className, "relative z-10 w-full h-full object-contain image-placeholder-component")}
                 />

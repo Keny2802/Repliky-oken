@@ -58,13 +58,13 @@ const Products = () => {
             id="produkty">
                 <ScrollAnimation>
                     <Wrapper>
-                        <FlexCol className="justify-center items-center">
+                        <FlexCol className="justify-center items-center text-center">
                             <Heading>
                                 Produkty
                             </Heading>
                         </FlexCol>
                         <MarginTop>
-                            <Flex className="justify-center items-center flex-wrap gap-4 md:gap-5 lg:gap-6">
+                            <Flex className="mt-4 md:mt-5 lg:mt-6 grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-4 md:gap-6 max-w-7xl mx-auto">
                                 {
                                     products.map((card, index) => {
                                         const words = card.title.split(" ");
@@ -93,7 +93,7 @@ const Products = () => {
                                             target="_blank">
                                                 <RelativeOverlayWrapper
                                                     // key={index}
-                                                    className="p-4 md:p-5 lg:p-6 md:w-[449px] max-h-[600px] odd:bg-[#f2f0ef] even:border-4 even:border-[#f2f0ef] cursor-pointer group">
+                                                    className="p-4 md:p-5 lg:p-6 w-full md:w-[449px] max-h-[600px] odd:bg-[#f2f0ef] even:border-4 even:border-[#f2f0ef] cursor-pointer group">
                                                         <Wrapper className="transition-transform duration-300 ease-in-out group-hover:scale-105">
                                                             <SmallerHeading className="text-[#1d1b21] text-center">
                                                                 {/* {card.title} */}
