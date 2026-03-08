@@ -111,7 +111,7 @@ const Hero = () => {
                 src={card.image}
                 alt={card.alt}
                 draggable={false}
-                className={`w-full min-h-[1000px] max-h-[1400px] bg-fixed bg-center object-cover transition-opacity duration-500 ease-in-out ${carouselFade ? "opacity-0" : "opacity-100"}`}
+                className={`w-full min-h-[1000px] max-h-[1200px] bg-fixed bg-center object-cover transition-opacity duration-500 ease-in-out ${carouselFade ? "opacity-0" : "opacity-100"}`}
                 />
                 <Wrapper className="absolute inset-0 bg-black/40"></Wrapper>
                 <Wrapper className="p-3 md:p-3.5 lg:p-6 text-white text-center absolute inset-0 flex justify-center items-center flex-col gap-3 md:gap-3.5 lg:gap-6">
