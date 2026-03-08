@@ -12,7 +12,9 @@ const Footer = () => {
 
     return (
         <Fragment>
-            <Wrapper className="p-4 md:p-6 lg:p-12 bg-white text-black">
+            <Wrapper
+            className="p-4 md:p-6 lg:p-12 bg-white text-black"
+            id="footer">
                 <Flex className="md:justify-between items-start md:items-center flex-col md:flex-row">
                     <Wrapper>
                         <p className="text-2xl uppercase">
