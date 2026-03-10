@@ -66,43 +66,45 @@ const Content = () => {
             <Wrapper className="px-8 md:px-12 py-16 md:py-24 bg-white shadow-md">
                 <ScrollAnimation>
                     <FlexCol className="items-center">
-                        <Heading>
-                            Špaletová okna
-                        </Heading>
-                        <Subheading className="max-w-3xl text-start">
-                            Vycházíme z konstrukce klasického špaletového okna, vyrobeného na přelomu 19. a 20. století, které
-                            díky úzkým profilům okenních křídel a rámů propouštělo více světla do místností a na svou dobu
-                            mělo velmi dobré izolační vlastnosti. Ruční truhlářská práce je základem naší výroby, nesnažíme se o
-                            předělání moderního eurookna do vzhledu klasického, ale o klasické okno, které má skvělé tepelné a
-                            hlukové izolační vlastnosti.
-                        </Subheading>
-                        <ul className="point-lit">
-                            <li className="list-disc point-list-item">
-                                Naše okna
-                                {" "}
-                                <strong className="strong">
-                                    běžně osazujeme v památkově chráněných oblastech.
-                                </strong>
-                            </li>
-                            <li className="list-disc point-list-item">
-                                Veškerou komunikaci a
-                                {" "}
-                                <strong className="strong">
-                                    dokumentaci potřebnou pro památkový odbor zajistíme!
-                                </strong>
-                            </li>
-                            <li className="list-disc point-list-item">
-                                Stáhněte si
-                                {" "}
-                                <Link
-                                href="/assets/fotky/produkty/spaletova-okna/spaletova-okna-pdf.pdf"
-                                download="Vzorek řezů špaletových oken.pdf"
-                                className="border-b">
-                                    vzorek řezů špaletových oken v PDF.
-                                </Link>
-                                {" "}
-                            </li>
-                        </ul>
+                        <Wrapper>
+                            <Heading className="text-start">
+                                Špaletová okna
+                            </Heading>
+                            <Subheading className="max-w-3xl text-start">
+                                Vycházíme z konstrukce klasického špaletového okna, vyrobeného na přelomu 19. a 20. století, které
+                                díky úzkým profilům okenních křídel a rámů propouštělo více světla do místností a na svou dobu
+                                mělo velmi dobré izolační vlastnosti. Ruční truhlářská práce je základem naší výroby, nesnažíme se o
+                                předělání moderního eurookna do vzhledu klasického, ale o klasické okno, které má skvělé tepelné a
+                                hlukové izolační vlastnosti.
+                            </Subheading>
+                            <ul className="mt-2 md:mt-4 ml-4 point-lit">
+                                <li className="list-disc point-list-item">
+                                    Naše okna
+                                    {" "}
+                                    <strong className="strong">
+                                        běžně osazujeme v památkově chráněných oblastech.
+                                    </strong>
+                                </li>
+                                <li className="list-disc point-list-item">
+                                    Veškerou komunikaci a
+                                    {" "}
+                                    <strong className="strong">
+                                        dokumentaci potřebnou pro památkový odbor zajistíme!
+                                    </strong>
+                                </li>
+                                <li className="list-disc point-list-item">
+                                    Stáhněte si
+                                    {" "}
+                                    <Link
+                                    href="/assets/fotky/produkty/spaletova-okna/spaletova-okna-pdf.pdf"
+                                    download="Vzorek řezů špaletových oken.pdf"
+                                    className="border-b">
+                                        vzorek řezů špaletových oken v PDF.
+                                    </Link>
+                                    {" "}
+                                </li>
+                            </ul>
+                        </Wrapper>
                     </FlexCol>
                     <Wrapper className="mt-2 md:mt-4 flex justify-center">
                         <Image
@@ -135,61 +137,98 @@ const Content = () => {
                         }
                     </FlexRow>
                     <FlexCol className="mt-2 md:mt-4 lg:mt-6 justify-center items-center">
-                        <h3 className="text-2xl md:text-3xl font-semibold">
-                            Špaletová okna jsme vylepšili:
-                        </h3>
-                        <ul className="point-list">
-                            {
-                                [
-                                    "Izolačním zasklením ve venkovních křídlech.",
-                                    "Dvojím těsněním ve venkovních křídlech a vnitřním rámu - nebude profukovat.",
-                                    "Nástřikem barvy vysokotlakým stříkacím zařízením pro dlouhou životnost povrchu.",
-                                    "Panty, které lze jednoduše štelovat - křídla nebudou drhnout.",
-                                ].map((point, index) => {
-                                    return (
-                                        <Fragment key={index}>
-                                            <li className="list-disc point-list-item">
-                                                {point}
-                                            </li>
-                                        </Fragment>
-                                    );
-                                })
-                            }
-                        </ul>
+                        <Wrapper>
+                            <h3 className="text-2xl md:text-3xl font-semibold">
+                                Špaletová okna jsme vylepšili:
+                            </h3>
+                            <ul className="mt-2 md:mt-4 ml-4 point-list">
+                                {
+                                    [
+                                        "Izolačním zasklením ve venkovních křídlech.",
+                                        "Dvojím těsněním ve venkovních křídlech a vnitřním rámu - nebude profukovat.",
+                                        "Nástřikem barvy vysokotlakým stříkacím zařízením pro dlouhou životnost povrchu.",
+                                        "Panty, které lze jednoduše štelovat - křídla nebudou drhnout.",
+                                    ].map((point, index) => {
+                                        return (
+                                            <Fragment key={index}>
+                                                <li className="list-disc point-list-item">
+                                                    {point}
+                                                </li>
+                                            </Fragment>
+                                        );
+                                    })
+                                }
+                            </ul>
+                            <Wrapper>
+                            <h3 className="my-2 md:my-4 lg:my-6 text-2xl md:text-3xl font-semibold max-w-3xl text-start">
+                                Špaletová okna umíme vyrobit podle vašich přání a požadavků, lze osadit:
+                            </h3>
+                            <ul className="ml-4 point-list">
+                                {
+                                    [
+                                        "Trojsklo pro lepší izolaci tepelnou a hlukovou.",
+                                        "Izolační sklo i do vnitřních křídel.",
+                                        "Bezpečnostní lepení sklo.",
+                                        "Otevírání křídel jednou kličkou místo dvěma s pomocí zavírací lišty.",
+                                        "Vyklápění vrchních křídel ovládací pákou."
+                                    ].map((point, index) => {
+                                        return (
+                                            <Fragment key={index}>
+                                                <li className="list-disc point-list-item">
+                                                    {point}
+                                                </li>
+                                            </Fragment>
+                                        );
+                                    })
+                                }
+                                <li className="list-disc point-list-item">
+                                    Matné sklo či speciální čistě průhledné sklo Clearvision od firmy AGC.
+                                    <Link
+                                    href="https://www.agc-yourglass.com/cz-CZ/nase-znacky/planibel-clearvision"
+                                    target="_blank"
+                                    className="block text-[#5495ff]">
+                                        https://www.agc-yourglass.com/cz-CZ/nase-znacky/planibel-clearvision
+                                    </Link>
+                                </li>
+                            </ul>
+                            </Wrapper>
+                        </Wrapper>
                     </FlexCol>
-                    <FlexCol className="mt-2 md:mt-4 lg:mt-6 justify-center items-center">
-                        <h3 className="text-2xl md:text-3xl font-semibold max-w-3xl text-start">
-                            Špaletová okna umíme vyrobit podle vašich přání a požadavků, lze osadit:
-                        </h3>
-                        <ul className="point-list">
-                            {
-                                [
-                                    "Trojsklo pro lepší izolaci tepelnou a hlukovou.",
-                                    "Izolační sklo i do vnitřních křídel.",
-                                    "Bezpečnostní lepení sklo.",
-                                    "Otevírání křídel jednou kličkou místo dvěma s pomocí zavírací lišty.",
-                                    "Vyklápění vrchních křídel ovládací pákou."
-                                ].map((point, index) => {
-                                    return (
-                                        <Fragment key={index}>
-                                            <li className="list-disc point-list-item">
-                                                {point}
-                                            </li>
-                                        </Fragment>
-                                    );
-                                })
-                            }
-                            <li className="list-disc point-list-item">
-                                Matné sklo či speciální čistě průhledné sklo Clearvision od firmy AGC.
-                                <Link
-                                href="https://www.agc-yourglass.com/cz-CZ/nase-znacky/planibel-clearvision"
-                                target="_blank"
-                                className="block text-[#5495ff]">
-                                    https://www.agc-yourglass.com/cz-CZ/nase-znacky/planibel-clearvision
-                                </Link>
-                            </li>
-                        </ul>
-                    </FlexCol>
+                    {/* <FlexCol className="mt-2 md:mt-4 lg:mt-6 justify-center items-center">
+                        <Wrapper>
+                            <h3 className="text-2xl md:text-3xl font-semibold max-w-3xl text-start">
+                                Špaletová okna umíme vyrobit podle vašich přání a požadavků, lze osadit:
+                            </h3>
+                            <ul className="point-list">
+                                {
+                                    [
+                                        "Trojsklo pro lepší izolaci tepelnou a hlukovou.",
+                                        "Izolační sklo i do vnitřních křídel.",
+                                        "Bezpečnostní lepení sklo.",
+                                        "Otevírání křídel jednou kličkou místo dvěma s pomocí zavírací lišty.",
+                                        "Vyklápění vrchních křídel ovládací pákou."
+                                    ].map((point, index) => {
+                                        return (
+                                            <Fragment key={index}>
+                                                <li className="list-disc point-list-item">
+                                                    {point}
+                                                </li>
+                                            </Fragment>
+                                        );
+                                    })
+                                }
+                                <li className="list-disc point-list-item">
+                                    Matné sklo či speciální čistě průhledné sklo Clearvision od firmy AGC.
+                                    <Link
+                                    href="https://www.agc-yourglass.com/cz-CZ/nase-znacky/planibel-clearvision"
+                                    target="_blank"
+                                    className="block text-[#5495ff]">
+                                        https://www.agc-yourglass.com/cz-CZ/nase-znacky/planibel-clearvision
+                                    </Link>
+                                </li>
+                            </ul>
+                        </Wrapper>
+                    </FlexCol> */}
                 </ScrollAnimation>
             </Wrapper>
             <Atc />

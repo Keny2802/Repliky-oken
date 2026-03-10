@@ -64,9 +64,10 @@ const Content = () => {
             <Wrapper className="px-8 md:px-12 py-16 md:py-24 bg-white shadow-md">
                 <ScrollAnimation>
                     <FlexCol className="items-center">
-                        <Heading>
-                            Interiérové dveře
-                        </Heading>
+                        <Wrapper>
+                            <Heading className="text-start">
+                                Interiérové dveře
+                            </Heading>
                         <Subheading className="max-w-3xl text-start">
                             Věrné repliky klasických a historických dřevěných kazetových a prosklených dveří všech druhů se
                             zárubní. Technologie naší výroby dveří je založena na pevné konstrukci dveřního rámu. Spoje zásadně provádíme vyklínovaným čepem a dlabem tak, jak to dělali mistři truhláři při výrobě Vašich
@@ -77,7 +78,7 @@ const Content = () => {
                                 repliky. Pokud máte stávající dveřní kování, lze repasovat a osadit na nové dveře.
                             </span>
                         </Subheading>
-                        <ul className="point-list">
+                        <ul className="mt-2 md:mt-2 ml-4 point-list">
                             {
                                 [
                                     "Kazetové dveře a dveře s částečným zasklením.",
@@ -97,6 +98,7 @@ const Content = () => {
                                 })
                             }
                         </ul>
+                        </Wrapper>
                     </FlexCol>
                     <Wrapper className="mt-2 md:mt-4 flex justify-center">
                         <Image

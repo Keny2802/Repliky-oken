@@ -103,170 +103,173 @@ const Hero = () => {
     return (
         <Fragment>
             <Wrapper
-            className="relative"
+            className="bg-[#f5f2e8] md:p-6"
             id="uvod">
-                <Image
-                width={800}
-                height={800}
-                src={card.image}
-                alt={card.alt}
-                draggable={false}
-                // md:min-h-[1000px]
-                // min-h-[800px] max-h-[1000px]
-                className={`w-full min-h-[600px] max-h-[1000px] bg-fixed bg-center object-cover transition-opacity duration-500 ease-in-out ${carouselFade ? "opacity-0" : "opacity-100"}`}
-                />
-                <Wrapper className="absolute inset-0 bg-black/40" />
-                <Wrapper className="p-3 md:p-3.5 lg:p-6 text-white text-center absolute inset-0 flex justify-center items-center flex-col gap-3 md:gap-3.5 lg:gap-6">
-                    <ScrollAnimation className="flex justify-center items-center flex-col gap-2 md:gap-4 lg:gap-6">
-                       <Wrapper className={`${carouselFade ? "opacity-0" : "opacity-100"} transition-opacity duration-500 ease-in-out`}>
-                            <HeroHeading>
-                                Repliky historických oken a dveří
-                            </HeroHeading>
-                            <Wrapper className="my-2 md:my-4 lg:my-6 flex justify-center flex-col gap-1.5 w-full max-w-[500px] mx-auto">
-                                {
-                                            card.title.map((title, index) => {
+                <Wrapper className="relative">
+                    <Image
+                    width={800}
+                    height={800}
+                    src={card.image}
+                    alt={card.alt}
+                    draggable={false}
+                    // md:min-h-[1000px]
+                    // min-h-[800px] max-h-[1000px]
+                    className={`w-full min-h-[600px] max-h-[1000px] md:rounded-md bg-fixed bg-center object-cover transition-opacity duration-500 ease-in-out ${carouselFade ? "opacity-0" : "opacity-100"}`}
+                    />
+                    <Wrapper className="absolute inset-0 bg-black/60 rounded-md" />
+                    <Wrapper className="p-4 md:p-5 lg:p-6 text-white text-center absolute inset-0 flex justify-center items-center flex-col gap-3 md:gap-3.5 lg:gap-6">
+                        <ScrollAnimation className="flex justify-center items-center flex-col gap-2 md:gap-4 lg:gap-6">
+                        <Wrapper className={`${carouselFade ? "opacity-0" : "opacity-100"} transition-opacity duration-500 ease-in-out`}>
+                                <HeroHeading>
+                                    Repliky historických oken a dveří
+                                </HeroHeading>
+                                <Wrapper className="my-2 md:my-4 lg:my-6 flex justify-center flex-col gap-1.5 w-full max-w-[500px] mx-auto">
+                                    {
+                                                card.title.map((title, index) => {
+                                                    return (
+                                                        <Fragment key={index}>
+                                                            <Wrapper className="flex justify-start items-center gap-1">
+                                                                <Wrapper>
+                                                                    <CheckIcon className="w-6 h-6 md:w-8 md:h-8 text-[#f5f2e8]" />
+                                                                </Wrapper>
+                                                                <p
+                                                                className="text-[14px] md:text-base lg:text-lg">
+                                                                    {title}
+                                                                </p>
+                                                            </Wrapper>
+                                                        </Fragment>
+                                                    );
+                                                })
+                                            }
+                                </Wrapper>
+                                <MarginTop>
+                                    <Flex className="w-full justify-center flex-col gap-3">
+                                        {
+                                            [
+                                                // {
+                                                //     text: "Mrknout na realizace",
+                                                //     href: "/nase-realizace"
+                                                // },
+                                                // {
+                                                //     text: "Podívat se na špaletová okna",
+                                                //     href: "/produkty/spaletova-okna"
+                                                // }
+                                                {
+                                                    text: "Podívat se na realizace",
+                                                    href: "/nase-realizace"
+                                                },
+                                                {
+                                                    text: "Podívat se na recenze",
+                                                    href: "//1url.cz/BeeLq"
+                                                },
+                                                {
+                                                    text: "Získat nabídku",
+                                                    href: "kontakt"
+                                                }
+                                            ].map((heroCta, index) => {
                                                 return (
                                                     <Fragment key={index}>
-                                                        <Wrapper className="flex justify-start items-center gap-1">
-                                                            <Wrapper>
-                                                                <CheckIcon className="w-8 h-8 text-[#f5f2e8]" />
-                                                            </Wrapper>
-                                                            <p
-                                                            className="text-[15px] md:text-base lg:text-lg">
-                                                                {title}
-                                                            </p>
-                                                        </Wrapper>
+                                                        <Cta
+                                                        href={heroCta.href}
+                                                        {
+                                                            ...(
+                                                                !heroCta.href.startsWith("/") ? (
+                                                                    {
+                                                                        onClick: (e) => setLinkWithoutHash(e, heroCta.href)
+                                                                    }
+                                                                ) : {
+                                                                    target: "_blank"
+                                                                }
+                                                            )
+                                                        }
+                                                        // {
+                                                        //     ...(
+                                                        //         !heroCta.href.startsWith("/") || !heroCta.href.startsWith("https://") && {
+                                                        //             target: "_blank"
+                                                        //         }
+                                                        //     )
+                                                        // }
+                                                        // className="w-full bg-[#f5f2e8] text-black last:bg-transparent last:text-white last:border last:border-[#f5f2e8] last:hover:bg-[#f5f2e8] last:hover:text-black transition-colors duration-300 ease-in-out"
+                                                        className="w-full odd:bg-[#f5f2e8] text-black even:bg-[#87ceeb] transition-colors duration-300 ease-in-out"
+                                                        // className="bg-[#f5f2e8] text-black transition-colors duration-300 ease-in-out"
+                                                        >
+                                                            <Padding>
+                                                                {heroCta.text}
+                                                            </Padding>
+                                                        </Cta>
                                                     </Fragment>
                                                 );
                                             })
                                         }
-                            </Wrapper>
-                            <MarginTop>
-                                <Flex className="w-full justify-center flex-col gap-3">
-                                    {
-                                        [
-                                            // {
-                                            //     text: "Mrknout na realizace",
-                                            //     href: "/nase-realizace"
-                                            // },
-                                            // {
-                                            //     text: "Podívat se na špaletová okna",
-                                            //     href: "/produkty/spaletova-okna"
-                                            // }
-                                            {
-                                                text: "Podívat se na realizace",
-                                                href: "/nase-realizace"
-                                            },
-                                            {
-                                                text: "Podívat se na recenze",
-                                                href: "//1url.cz/BeeLq"
-                                            },
-                                            {
-                                                text: "Získat nabídku",
-                                                href: "kontakt"
-                                            }
-                                        ].map((heroCta, index) => {
-                                            return (
-                                                <Fragment key={index}>
-                                                    <Cta
-                                                    href={heroCta.href}
-                                                    {
-                                                        ...(
-                                                            !heroCta.href.startsWith("/") ? (
-                                                                {
-                                                                    onClick: (e) => setLinkWithoutHash(e, heroCta.href)
-                                                                }
-                                                            ) : {
-                                                                target: "_blank"
-                                                            }
-                                                        )
-                                                    }
-                                                    // {
-                                                    //     ...(
-                                                    //         !heroCta.href.startsWith("/") || !heroCta.href.startsWith("https://") && {
-                                                    //             target: "_blank"
-                                                    //         }
-                                                    //     )
-                                                    // }
-                                                    // className="w-full bg-[#f5f2e8] text-black last:bg-transparent last:text-white last:border last:border-[#f5f2e8] last:hover:bg-[#f5f2e8] last:hover:text-black transition-colors duration-300 ease-in-out"
-                                                    className="w-full odd:bg-[#f5f2e8] odd:text-black even:bg-[#87ceeb] even:text-white transition-colors duration-300 ease-in-out"
-                                                    // className="bg-[#f5f2e8] text-black transition-colors duration-300 ease-in-out"
-                                                    >
-                                                        <Padding>
-                                                            {heroCta.text}
-                                                        </Padding>
-                                                    </Cta>
-                                                </Fragment>
-                                            );
-                                        })
-                                    }
-                                </Flex>
-                            </MarginTop>
-                            <MarginTop className="lg:mt-12">
-                                <Flex className="justify-center">
-                                    {
-                                        HeroCarousel.map((_, index) => {
-                                            return (
-                                            <button
-                                            key={index}
-                                            aria-label={`${index + 1}. Ukázka realizace`}
-                                            // onClick={() => {setCurrentPhotoIndex(prev => (prev + 1) % HeroCarousel.length)}}
-                                            onClick={() => {
-                                                setCarouselFade(true);
-
-                                                const timeOut = setTimeout(() => {
-                                                    setCurrentPhotoIndex(index);
-                                                    setCarouselFade(false);
-                                                }, FADE_DURATION);
-
-                                                return () => {
-                                                    clearTimeout(timeOut);
-                                                };
-                                            }}
-                                            className={`
-                                            ${currentPhotoIndex === index ?
-                                                "w-8 bg-[#87ceeb] hover:bg-white"
-                                                // "w-8 bg-[#e40209]"
-                                                : "bg-white"
-                                            }    
-                                            w-5 h-5 rounded-full cursor-pointer transition-colors duration-300 ease-in-out hover:bg-[#87ceeb]`}
-                                            />
-                                            );
-                                        })
-                                    }
-                                </Flex>
-                            </MarginTop>
-                       </Wrapper>
-                    </ScrollAnimation>
-                    <MarginTop>
-                        <Link
-                        href="https://1url.cz/BeeLq"
-                        target="_blank">
-                            <Flex className="absolute bottom-4 left-4">
-                                <Img
-                                width={45}
-                                height={45}
-                                src="/assets/google.svg"
-                                alt="Google ikonka"
-                                />
-                                <Flex>
-                                    <BodyText className="font-medium">
-                                        5,0
-                                    </BodyText>
-                                    <Flex>
-                                        <StarIcon className="w-5 h-5 text-yellow-400" />
-                                        <StarIcon className="w-5 h-5 text-yellow-400" />
-                                        <StarIcon className="w-5 h-5 text-yellow-400" />
-                                        <StarIcon className="w-5 h-5 text-yellow-400" />
-                                        <StarIcon className="w-5 h-5 text-yellow-400" />
                                     </Flex>
-                                    <BodyText className="font-medium">
-                                        16 recenzí
-                                    </BodyText>
+                                </MarginTop>
+                                <MarginTop className="lg:mt-12">
+                                    <Flex className="justify-center">
+                                        {
+                                            HeroCarousel.map((_, index) => {
+                                                return (
+                                                <button
+                                                key={index}
+                                                aria-label={`${index + 1}. Ukázka realizace`}
+                                                // onClick={() => {setCurrentPhotoIndex(prev => (prev + 1) % HeroCarousel.length)}}
+                                                onClick={() => {
+                                                    setCarouselFade(true);
+
+                                                    const timeOut = setTimeout(() => {
+                                                        setCurrentPhotoIndex(index);
+                                                        setCarouselFade(false);
+                                                    }, FADE_DURATION);
+
+                                                    return () => {
+                                                        clearTimeout(timeOut);
+                                                    };
+                                                }}
+                                                className={`
+                                                ${currentPhotoIndex === index ?
+                                                    "w-8 bg-[#87ceeb] hover:bg-white"
+                                                    // "w-8 bg-[#e40209]"
+                                                    : "bg-white"
+                                                }    
+                                                w-5 h-5 rounded-full cursor-pointer transition-colors duration-300 ease-in-out hover:bg-[#87ceeb]`}
+                                                />
+                                                );
+                                            })
+                                        }
+                                    </Flex>
+                                </MarginTop>
+                        </Wrapper>
+                        </ScrollAnimation>
+                        <MarginTop>
+                            <Link
+                            href="https://1url.cz/BeeLq"
+                            target="_blank">
+                                <Flex className="absolute md:bottom-16 left-4 md:left-16">
+                                    <Img
+                                    width={45}
+                                    height={45}
+                                    src="/assets/google.svg"
+                                    alt="Google ikonka"
+                                    className="w-[32px] h-[32px] md:w-[45px] md:h-[45px]"
+                                    />
+                                    <Flex>
+                                        <BodyText className="font-medium">
+                                            5,0
+                                        </BodyText>
+                                        <Flex>
+                                            <StarIcon className="w-5 h-5 text-yellow-400" />
+                                            <StarIcon className="w-5 h-5 text-yellow-400" />
+                                            <StarIcon className="w-5 h-5 text-yellow-400" />
+                                            <StarIcon className="w-5 h-5 text-yellow-400" />
+                                            <StarIcon className="w-5 h-5 text-yellow-400" />
+                                        </Flex>
+                                        <BodyText className="font-medium">
+                                            16 recenzí
+                                        </BodyText>
+                                    </Flex>
                                 </Flex>
-                            </Flex>
-                        </Link>
-                    </MarginTop>
+                            </Link>
+                        </MarginTop>
+                    </Wrapper>
                 </Wrapper>
             </Wrapper>
             <WAContact />

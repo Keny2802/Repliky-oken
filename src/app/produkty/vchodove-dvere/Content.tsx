@@ -54,37 +54,39 @@ const Content = () => {
             <Wrapper className="px-8 md:px-12 py-16 md:py-24 bg-white shadow-md">
                 <ScrollAnimation>
                     <FlexCol className="items-center">
-                        <Heading>
-                            Vchodové dveře do bytů
-                        </Heading>
-                        <Subheading className="max-w-3xl text-start">
-                            <span className="block mt-2">
-                                Repliky vchodových dveří do bytu vyrábíme s tepelnou a hlukovou izolací a zabezpečením.
-                            </span>
-                            Technologie naší výroby je založena na pevné konstrukci dveřního rámu stejně jako u interiérových
-                            dveří. Spoje zásadně provádíme vyklínovaným čepem a dlabem tak, jak to dělali mistři truhláři při
-                            výrobě Vašich původních dveří. Pevná konstrukce zajišťuje velmi dlouhou životnost.
-                        </Subheading>
-                        <ul className="point-list">
-                            {
-                                [
-                                    "Zesílená konstrukce dveří až 70 mm pro zvukovou a tepelnou izolaci.",
-                                    "Vícebodový bezpečnostní dveřní zámek MACO.",
-                                    "Bezpečnostní dveřní kování (klika).",
-                                    "Masivní dveřní kazety nebo kazety s polyuretanovou vložkou (PUR výplně) pro tepelnou.",
-                                    "izolaci a odlehčení.",
-                                    "Bezpečnostní zasklení lepeným sklem (connex).",
-                                ].map((point, index) => {
-                                    return (
-                                        <Fragment key={index}>
-                                            <li className="list-disc point-list-item">
-                                                {point}
-                                            </li>
-                                        </Fragment>
-                                    );
-                                })
-                            }
-                        </ul>
+                        <Wrapper>
+                            <Heading className="text-start">
+                                Vchodové dveře do bytů
+                            </Heading>
+                            <Subheading className="max-w-3xl text-start">
+                                <span className="block mt-2">
+                                    Repliky vchodových dveří do bytu vyrábíme s tepelnou a hlukovou izolací a zabezpečením.
+                                </span>
+                                Technologie naší výroby je založena na pevné konstrukci dveřního rámu stejně jako u interiérových
+                                dveří. Spoje zásadně provádíme vyklínovaným čepem a dlabem tak, jak to dělali mistři truhláři při
+                                výrobě Vašich původních dveří. Pevná konstrukce zajišťuje velmi dlouhou životnost.
+                            </Subheading>
+                            <ul className="mt-2 md:mt-4 ml-4 point-list">
+                                {
+                                    [
+                                        "Zesílená konstrukce dveří až 70 mm pro zvukovou a tepelnou izolaci.",
+                                        "Vícebodový bezpečnostní dveřní zámek MACO.",
+                                        "Bezpečnostní dveřní kování (klika).",
+                                        "Masivní dveřní kazety nebo kazety s polyuretanovou vložkou (PUR výplně) pro tepelnou.",
+                                        "izolaci a odlehčení.",
+                                        "Bezpečnostní zasklení lepeným sklem (connex).",
+                                    ].map((point, index) => {
+                                        return (
+                                            <Fragment key={index}>
+                                                <li className="list-disc point-list-item">
+                                                    {point}
+                                                </li>
+                                            </Fragment>
+                                        );
+                                    })
+                                }
+                            </ul>
+                        </Wrapper>
                     </FlexCol>
                     <Wrapper className="mt-2 md:mt-4 flex justify-center">
                         <Image

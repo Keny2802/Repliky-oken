@@ -59,11 +59,15 @@ const Content = () => {
             <Subheader />
             <Wrapper className="px-8 md:px-12 py-16 md:py-24 bg-white shadow-md">
                 <ScrollAnimation>
+
                     <FlexCol className="items-center">
-                        <Heading>
+                        {/* <Heading className="max-w-xl text-start">
+                            Okna se skutečným vakuovým sklem Fineo od firmy AGC.
+                        </Heading> */}
+                        <Wrapper>
+                            <Heading className="max-w-[20ch] text-start text-balance">
                             Okna se skutečným vakuovým sklem Fineo od firmy AGC.
                         </Heading>
-                        <Wrapper>
                             <Subheading className="max-w-3xl text-start">
                                 Sklo, které má uvnitř skutečné vakuum existuje, vyrábí jej firma AGC v Belgii. Častým omylem bývá
                                 informace o vakuu ve dvojsklech a trojsklech, není tam vakuum ale nejčastěji plyn argon. Fineo je
