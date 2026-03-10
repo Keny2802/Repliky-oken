@@ -33,6 +33,16 @@ const carouselItems = [
     "/assets/fotky/produkty/spaletova-okna/spaletova-okna-8.avif",
     "/assets/fotky/produkty/spaletova-okna/spaletova-okna-9.avif",
     "/assets/fotky/produkty/spaletova-okna/spaletova-okna-10.avif",
+    "/assets/fotky/produkty/produkt-1.avif",
+    "/assets/fotky/produkty/produkt-2.avif",
+    "/assets/fotky/produkty/produkt-3.avif",
+    "/assets/fotky/produkty/produkt-4.avif",
+    "/assets/fotky/produkty/produkt-5.avif",
+    "/assets/fotky/produkty/produkt-6.avif",
+    "/assets/fotky/produkty/produkt-7.avif",
+    "/assets/fotky/produkty/produkt-9.avif",
+    "/assets/fotky/produkty/spaletova-okna/spaletova-okna-24.png",
+    "/assets/fotky/produkty/spaletova-okna/spaletova-okna-25.png"
 ];
 
 const Content = () => {
@@ -59,7 +69,7 @@ const Content = () => {
                         <Heading>
                             Špaletová okna
                         </Heading>
-                        <Subheading className="md:max-w-5xl">
+                        <Subheading className="max-w-3xl text-start">
                             Vycházíme z konstrukce klasického špaletového okna, vyrobeného na přelomu 19. a 20. století, které
                             díky úzkým profilům okenních křídel a rámů propouštělo více světla do místností a na svou dobu
                             mělo velmi dobré izolační vlastnosti. Ruční truhlářská práce je základem naší výroby, nesnažíme se o
@@ -80,6 +90,17 @@ const Content = () => {
                                 <strong className="strong">
                                     dokumentaci potřebnou pro památkový odbor zajistíme!
                                 </strong>
+                            </li>
+                            <li className="list-disc point-list-item">
+                                Stáhněte si
+                                {" "}
+                                <Link
+                                href="/assets/fotky/produkty/spaletova-okna/spaletova-okna-pdf.pdf"
+                                download="Vzorek řezů špaletových oken.pdf"
+                                className="border-b">
+                                    vzorek řezů špaletových oken v PDF.
+                                </Link>
+                                {" "}
                             </li>
                         </ul>
                     </FlexCol>
@@ -137,7 +158,7 @@ const Content = () => {
                         </ul>
                     </FlexCol>
                     <FlexCol className="mt-2 md:mt-4 lg:mt-6 justify-center items-center">
-                        <h3 className="text-2xl md:text-3xl font-semibold">
+                        <h3 className="text-2xl md:text-3xl font-semibold max-w-3xl text-start">
                             Špaletová okna umíme vyrobit podle vašich přání a požadavků, lze osadit:
                         </h3>
                         <ul className="point-list">

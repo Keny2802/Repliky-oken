@@ -48,7 +48,7 @@ const About = () => {
                             <Heading>
                                 O nás
                             </Heading>
-                            <Subheading className="max-w-3xl">
+                            <Subheading className="max-w-3xl text-start">
                                 Každé okno z naší výroby je originál. Jsme malá rodinná firma, vyrábíme s respektem k řemeslu a přání zákazníka. Každému oknu věnujeme maximální péči a chceme, aby vytvořené výrobky sloužily výborně a dlouho. Firma úspěšně funguje druhou generaci a všechny naše zkušenosti promítáme do naší práce.
                             </Subheading>
                         </FlexCol>

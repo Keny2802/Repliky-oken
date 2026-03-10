@@ -1,7 +1,7 @@
 "use client";
 
 import {
-  Fragment
+    Fragment
 } from "react";
 import {
     usePathname
@@ -16,14 +16,15 @@ const Logo = () => {
     return (
         <Fragment>
             <Link
-            href={isHome}>
+                href={isHome}>
                 <Image
-                width={250}
-                height={250}
-                src="/assets/logo/clean-logo.avif"
-                alt="Jaroslav Heindinger Replikyoken.cz Logo"
-                priority={true}
-                draggable={false}
+                    width={320}
+                    height={320}
+                    src="/assets/logo/clean-logo.avif"
+                    alt="Jaroslav Heindinger Replikyoken.cz Logo"
+                    priority={true}
+                    draggable={false}
+                    className="max-w-[250px] max-h-[250px] lg:max-w-[320px] lg:min-h-[130px] w-full"
                 />
             </Link>
         </Fragment>

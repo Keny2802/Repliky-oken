@@ -23,16 +23,20 @@ import Footer from "@/app/sections/Footer";
 import Carousel from "@/app/components/Carousel";
 
 const Gallery = [
-    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna-se-spaletou/jednoramova-okna-se-spaletou-1.avif",
-    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna-se-spaletou/jednoramova-okna-se-spaletou-2.avif",
-    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna-se-spaletou/jednoramova-okna-se-spaletou-3.avif",
-    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna-se-spaletou/jednoramova-okna-se-spaletou-4.avif",
-    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna-se-spaletou/jednoramova-okna-se-spaletou-5.avif",
-    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna-se-spaletou/jednoramova-okna-se-spaletou-6.avif",
-    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna-se-spaletou/jednoramova-okna-se-spaletou-7.avif",
-    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna-se-spaletou/jednoramova-okna-se-spaletou-8.avif",
-    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna-se-spaletou/jednoramova-okna-se-spaletou-9.avif",
-    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna-se-spaletou/jednoramova-okna-se-spaletou-10.avif",
+    "/assets/fotky/produkty/okna-se-skutecnym-vakuovym-sklem/1.avif",
+    "/assets/fotky/produkty/okna-se-skutecnym-vakuovym-sklem/2.avif",
+    "/assets/fotky/produkty/okna-se-skutecnym-vakuovym-sklem/3.avif",
+    "/assets/fotky/produkty/okna-se-skutecnym-vakuovym-sklem/4.avif",
+    // "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna-se-spaletou/jednoramova-okna-se-spaletou-1.avif",
+    // "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna-se-spaletou/jednoramova-okna-se-spaletou-2.avif",
+    // "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna-se-spaletou/jednoramova-okna-se-spaletou-3.avif",
+    // "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna-se-spaletou/jednoramova-okna-se-spaletou-4.avif",
+    // "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna-se-spaletou/jednoramova-okna-se-spaletou-5.avif",
+    // "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna-se-spaletou/jednoramova-okna-se-spaletou-6.avif",
+    // "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna-se-spaletou/jednoramova-okna-se-spaletou-7.avif",
+    // "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna-se-spaletou/jednoramova-okna-se-spaletou-8.avif",
+    // "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna-se-spaletou/jednoramova-okna-se-spaletou-9.avif",
+    // "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna-se-spaletou/jednoramova-okna-se-spaletou-10.avif",
 ];
 
 const Content = () => {
@@ -59,33 +63,36 @@ const Content = () => {
                         <Heading>
                             Okna se skutečným vakuovým sklem Fineo od firmy AGC.
                         </Heading>
-                        <Subheading>
-                            Sklo, které má uvnitř skutečné vakuum existuje, vyrábí jej firma AGC v Belgii. Častým omylem bývá
-                            informace o vakuu ve dvojsklech a trojsklech, není tam vakuum ale nejčastěji plyn argon. Fineo je
-                            jediné sklo v Evropě, které vakuum má. Jedná se o tenké sklo s lepšími izolačními parametry než
-                            trojsklo. Fineo má uvnitř mezeru, kde je vakuum (cca 0,1mm) a aby se nezhroutilo má v ploše
-                            malinkaté můstky, které sklo vyztužují. Toto vakuové sklo lze osadit do všech našich oken, máme
-                            s ním zkušenosti. Obrovskou výhodou vakuového skla jsou vynikající tepelné a hlukové izolační
-                            vlastnosti při zachování tenkého skla, Fineo má sílu 4-8 mm. Nevýhodou je bohužel vysoká cena skla a
-                            delší doba dodání.
-                        </Subheading>
-                        <Wrapper className="mt-2 md:mt-4">
-                            <h3 className="text-2xl md:text-3xl font-semibold">
-                                Zde se podívejte
-                            </h3>
-                            <Link
-                            href="https://www.agc-fenestra.cz/produkty-fineo-vakuove-izolacni-sklo"
-                            target="_blank"
-                            className="text-[#5495ff]">
-                                https://www.agc-fenestra.cz/produkty-fineo-vakuove-izolacni-sklo
-                            </Link>
+                        <Wrapper>
+                            <Subheading className="max-w-3xl text-start">
+                                Sklo, které má uvnitř skutečné vakuum existuje, vyrábí jej firma AGC v Belgii. Častým omylem bývá
+                                informace o vakuu ve dvojsklech a trojsklech, není tam vakuum ale nejčastěji plyn argon. Fineo je
+                                jediné sklo v Evropě, které vakuum má. Jedná se o tenké sklo s lepšími izolačními parametry než
+                                trojsklo. Fineo má uvnitř mezeru, kde je vakuum (cca 0,1mm) a aby se nezhroutilo má v ploše
+                                malinkaté můstky, které sklo vyztužují. Toto vakuové sklo lze osadit do všech našich oken, máme
+                                s ním zkušenosti. Obrovskou výhodou vakuového skla jsou vynikající tepelné a hlukové izolační
+                                vlastnosti při zachování tenkého skla, Fineo má sílu 4-8 mm. Nevýhodou je bohužel vysoká cena skla a
+                                delší doba dodání.
+                            </Subheading>
+                            <Wrapper className="mt-2 md:mt-4">
+                                <h3 className="text-2xl md:text-3xl font-semibold">
+                                    Zde se podívejte
+                                </h3>
+                                <Link
+                                href="https://www.agc-fenestra.cz/produkty-fineo-vakuove-izolacni-sklo"
+                                target="_blank"
+                                className="text-[#5495ff]">
+                                    https://www.agc-fenestra.cz/produkty-fineo-vakuove-izolacni-sklo
+                                </Link>
+                            </Wrapper>
                         </Wrapper>
                     </FlexCol>
                     <Wrapper className="mt-2 md:mt-4 flex justify-center">
                         <Image
                         width={800}
                         height={800}
-                        src="/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna-se-spaletou/jednoramova-okna-se-spaletou-1.avif"
+                        // src="/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna-se-spaletou/jednoramova-okna-se-spaletou-1.avif"
+                        src="/assets/fotky/produkty/okna-se-skutecnym-vakuovym-sklem/1.avif"
                         alt="Ukázka produktu okna se skutečným vakuovým sklem fineo od firmy AGC | replikyoken.cz Jaroslav Heindinger"
                         className="max-h-[600px] object-cover cursor-pointer"
                         onClick={() => setActiveIndex(0)}

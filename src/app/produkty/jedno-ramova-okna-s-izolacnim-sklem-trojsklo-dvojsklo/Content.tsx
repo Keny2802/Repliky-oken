@@ -22,18 +22,44 @@ import Footer from "@/app/sections/Footer";
 import Carousel from "@/app/components/Carousel";
 
 const Gallery = [
-    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna/jednoramova-okna-1.avif",
-    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna/jednoramova-okna-2.avif",
-    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna/jednoramova-okna-3.avif",
-    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna/jednoramova-okna-4.avif",
-    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna/jednoramova-okna-5.avif",
-    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna/jednoramova-okna-6.avif",
-    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna/jednoramova-okna-7.avif",
-    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna/jednoramova-okna-8.avif",
+    // "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna/jednoramova-okna-1.avif",
+    // "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna/jednoramova-okna-2.avif",
+    // "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna/jednoramova-okna-3.avif",
+    // "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna/jednoramova-okna-4.avif",
+    // "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna/jednoramova-okna-5.avif",
+    // "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna/jednoramova-okna-6.avif",
+    // "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna/jednoramova-okna-7.avif",
+    // "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna/jednoramova-okna-8.avif",
+    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna/3.avif",
+    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna/4.avif",
+    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna/5.avif",
+    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna/6.avif",
+    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna/7.avif",
+    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna/8.avif",
+    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna-se-spaletou/3.avif",
+    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna-se-spaletou/4.avif",
+    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna-se-spaletou/5.avif",
+    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna-se-spaletou/6.avif",
+    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna-se-spaletou/7.avif",
+    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna-se-spaletou/8.avif",
+    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna-se-spaletou/9.avif",
+    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna-se-spaletou/10.avif",
+];
+
+const currentGallery1 = [
+    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna/1.avif",
+    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna/2.avif"
+];
+
+const currentGallery2 = [
+    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna-se-spaletou/1.avif",
+    "/assets/fotky/produkty/jednoramova-okna-s-izolacnim-zasklenim-1/jednoramova-okna-se-spaletou/2.avif"
 ];
 
 const Content = () => {
     const [activeIndex, setActiveIndex] = useState<number | null>(null);
+    const [currentIndex1, setCurrentIndex1] = useState<number | null>(null);
+    const [currentIndex2, setCurrentIndex2] = useState<number | null>(null);
     
     useEffect(() => {
         const body = document.body;
@@ -52,22 +78,18 @@ const Content = () => {
             <Subheader />
             <Wrapper className="px-8 md:px-12 py-16 md:py-24 bg-white shadow-md">
                 <ScrollAnimation>
-                    <FlexCol className="items-center">
+                    <FlexCol className="justify-center">
                         <Heading>
                             Jedno rámová okna s izolačním zasklením - trojsklo, dvojsklo
                         </Heading>
                         <FlexCol className="mt-2 md:mt-4 lg:mt-6 justify-center items-center">
-                            <h3 className="text-2xl md:text-3xl font-semibold">
+                            <h3 className="text-2xl md:text-3xl font-semibold max-w-3xl text-start">
                                 Jedno rámová okna (klasická alternativa eurooken)
                             </h3>
-                            <Subheading>
-                                Klasické okno, které izoluje tepelně i hlukově. Má úzké profily a tím pouští více světla do místností.
-                                Nejedná se o eurookno ale o okno, které lze osadit všude a bude hezky vypadat.
-                                Lze osadit do památkově chráněných oblastí jako alternativa špaletového. Z exteriéru přesně kopíruje
-                                vzhled špaletového okna, šířky profilů jsou stejné a tím i stejné světlo procházející do místností. Při
-                                výměně za špaletové je nutno zednických prací, zednické práce zajistíme.
+                            <Subheading className="max-w-3xl text-start">
+                                Klasické okno, které izoluje tepelně i hlukově. Má úzké profily a tím pouští více světla do místností. Nejedná se o eurookno ale o okno, které lze osadit všude a bude hezky vypadat. Lze osadit do památkově chráněných oblastí jako alternativa špaletového. Z exteriéru přesně kopíruje vzhled špaletového okna, šířky profilů jsou stejné a tím i stejné světlo procházející do místností. Při výměně za špaletové je nutno zednických prací, zednické práce zajistíme.
                             </Subheading>
-                            <Subheading>
+                            <Subheading className="max-w-3xl text-start">
                                 <strong className="strong">
                                     Technický údaj:
                                 </strong>
@@ -75,11 +97,28 @@ const Content = () => {
                                 síla materiálu pro trojsklo je 70 mm, pro dvojsklo 60 mm. Sílu lze samozřejmě měni dle vašich požadavků.
                             </Subheading>
                         </FlexCol>
+                        <Wrapper className="mt-2 md:mt-4 flex justify-center lg:flex-row gap-2 md:gap-4">
+                            {
+                                currentGallery1.map((img, idx) => {
+                                    return (
+                                        <Image
+                                        key={idx}
+                                        width={350}
+                                        height={350}
+                                        src={img}
+                                        alt={`${idx + 1}. ukázka produktu jednorámových oken z replikyoken.cz | Jaroslav Heindinger`}
+                                        onClick={() => setCurrentIndex1(idx)}
+                                        className="max-h-[350px] object-cover rounded-md cursor-pointer"
+                                        />
+                                    );
+                                })
+                            }
+                        </Wrapper>
                         <FlexCol className="mt-2 md:mt-4 lg:mt-6 justify-center items-center">
-                            <h3 className="text-2xl md:text-3xl font-semibold">
+                            <h3 className="text-2xl md:text-3xl font-semibold max-w-3xl text-start">
                                 Jedno rámová okna se špaletou (bez vnitřních křídel)
                             </h3>
-                            <Subheading>
+                            <Subheading className="max-w-3xl text-start">
                                 Jednorázové okno lze doplnit špaletou/obložením. Okno vypadá jako špaletové, ale nemá vnitřní
                                 křídla, má špaletu neboli obložení. Při výměně za staré špaletové okno
                                 {" "}
@@ -87,12 +126,29 @@ const Content = () => {
                                     není potřeba zednických prací.
                                 </strong>
                             </Subheading>
-                            <Subheading>
+                            <Subheading className="max-w-3xl text-start">
                                 Obložení dává oknu vzhled špalety a hluboký vnitřní parapet. Vhodná varianta, když chcete mít hezké okno, více prostoru a nechcete zednické práce se zděním otvoru.
                             </Subheading>
                         </FlexCol>
+                        <Wrapper className="my-2 md:my-4 lg:my-12 flex justify-center lg:flex-row gap-2 md:gap-4">
+                            {
+                                currentGallery2.map((img, idx) => {
+                                    return (
+                                        <Image
+                                        key={idx}
+                                        width={350}
+                                        height={350}
+                                        src={img}
+                                        alt={`${idx + 1}. ukázka produktu jednorámových oken se špaletou z replikyoken.cz | Jaroslav Heindinger`}
+                                        onClick={() => setCurrentIndex2(idx)}
+                                        className="max-h-[350px] object-cover rounded-md cursor-pointer"
+                                        />
+                                    );
+                                })
+                            }
+                        </Wrapper>
                     </FlexCol>
-                    <Wrapper className="mt-2 md:mt-4 flex justify-center">
+                    {/* <Wrapper className="mt-2 md:mt-4 flex justify-center">
                         <Image
                         width={600}
                         height={600}
@@ -101,7 +157,7 @@ const Content = () => {
                         onClick={() => setActiveIndex(0)}
                         className="max-h-[600px] object-cover cursor-pointer"
                         />
-                    </Wrapper>
+                    </Wrapper> */}
                     <FlexRow className="flex-wrap justify-center items-center w-full">
                         {
                             Gallery.slice(1).map((img, index) => {
@@ -132,6 +188,28 @@ const Content = () => {
                         carouselSet={Gallery}
                         startIndex={activeIndex}
                         onClose={() => setActiveIndex(null)}
+                        />
+                    </Fragment>
+                )
+            }
+            {
+                currentIndex1 !== null && (
+                    <Fragment>
+                        <Carousel
+                        carouselSet={currentGallery1}
+                        startIndex={currentIndex1}
+                        onClose={() => setCurrentIndex1(null)}
+                        />
+                    </Fragment>
+                )
+            }
+            {
+                currentIndex2 !== null && (
+                    <Fragment>
+                        <Carousel
+                        carouselSet={currentGallery2}
+                        startIndex={currentIndex2}
+                        onClose={() => setCurrentIndex2(null)}
                         />
                     </Fragment>
                 )

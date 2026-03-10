@@ -71,32 +71,32 @@ export const Gallery = [
         image: "/assets/fotky/reference/pysely-rekonstrukce-historicke-vily/pysely-rekonstrukce-historicke-vily-22.avif",
         alt: "22. Ukázka rekonstrukce historické vily v Pyšelách okrese Benešov ve Středočeském kraji."
     },
-    {
-        image: "/assets/fotky/produkty/produkt-1.avif",
-        alt: "1. Ukázka produktu průřezu špaletových oken."
-    },
-    {
-        image: "/assets/fotky/produkty/produkt-2.avif",
-        alt: "2. Ukázka produktu průřezu špaletových oken."
-    },
-    {
-        image: "/assets/fotky/produkty/produkt-3.avif",
-        alt: "3. Ukázka produktu průřezu špaletových oken."
-    },
-    {
-        image: "/assets/fotky/produkty/produkt-4.avif",
-        alt: "4. Ukázka produktu průřezu špaletových oken."
-    },
-    {
-        image: "/assets/fotky/produkty/produkt-5.avif",
-        alt: "5. Ukázka produktu průřezu špaletových oken."
-    },
-    {
-        image: "/assets/fotky/produkty/produkt-7.avif",
-        alt: "7. Ukázka produktu průřezu špaletových oken."
-    },
-    {
-        image: "/assets/fotky/produkty/produkt-9.avif",
-        alt: "8. Ukázka produktu průřezu špaletových oken."
-    },
+    // {
+    //     image: "/assets/fotky/produkty/produkt-1.avif",
+    //     alt: "1. Ukázka produktu průřezu špaletových oken."
+    // },
+    // {
+    //     image: "/assets/fotky/produkty/produkt-2.avif",
+    //     alt: "2. Ukázka produktu průřezu špaletových oken."
+    // },
+    // {
+    //     image: "/assets/fotky/produkty/produkt-3.avif",
+    //     alt: "3. Ukázka produktu průřezu špaletových oken."
+    // },
+    // {
+    //     image: "/assets/fotky/produkty/produkt-4.avif",
+    //     alt: "4. Ukázka produktu průřezu špaletových oken."
+    // },
+    // {
+    //     image: "/assets/fotky/produkty/produkt-5.avif",
+    //     alt: "5. Ukázka produktu průřezu špaletových oken."
+    // },
+    // {
+    //     image: "/assets/fotky/produkty/produkt-7.avif",
+    //     alt: "7. Ukázka produktu průřezu špaletových oken."
+    // },
+    // {
+    //     image: "/assets/fotky/produkty/produkt-9.avif",
+    //     alt: "8. Ukázka produktu průřezu špaletových oken."
+    // },
 ];

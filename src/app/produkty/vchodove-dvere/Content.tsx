@@ -57,7 +57,7 @@ const Content = () => {
                         <Heading>
                             Vchodové dveře do bytů
                         </Heading>
-                        <Subheading className="md:max-w-5xl">
+                        <Subheading className="max-w-3xl text-start">
                             <span className="block mt-2">
                                 Repliky vchodových dveří do bytu vyrábíme s tepelnou a hlukovou izolací a zabezpečením.
                             </span>

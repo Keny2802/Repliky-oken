@@ -64,7 +64,7 @@ const Products = () => {
                             </Heading>
                         </FlexCol>
                         <MarginTop>
-                            <Flex className="mt-4 md:mt-5 lg:mt-6 grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-4 md:gap-6 max-w-7xl mx-auto">
+                            <Flex className="mt-4 md:mt-5 lg:mt-6 grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-4 md:gap-6 items-center">
                                 {
                                     products.map((card, index) => {
                                         const words = card.title.split(" ");

@@ -40,6 +40,7 @@ const Gallery = [
     "/assets/fotky/produkty/interierove-dvere/interierove-dvere-19.avif",
     "/assets/fotky/produkty/interierove-dvere/interierove-dvere-20.avif",
     "/assets/fotky/produkty/interierove-dvere/interierove-dvere-21.avif",
+    "/assets/fotky/produkty/interierove-dvere/interierove-dvere-22.jpeg",
 ];
 
 const Content = () => {
@@ -66,7 +67,7 @@ const Content = () => {
                         <Heading>
                             Interiérové dveře
                         </Heading>
-                        <Subheading className="md:max-w-5xl">
+                        <Subheading className="max-w-3xl text-start">
                             Věrné repliky klasických a historických dřevěných kazetových a prosklených dveří všech druhů se
                             zárubní. Technologie naší výroby dveří je založena na pevné konstrukci dveřního rámu. Spoje zásadně provádíme vyklínovaným čepem a dlabem tak, jak to dělali mistři truhláři při výrobě Vašich
                             původních dveří. Žádné kolíčky ve spojích nedáváme, takový spoj není kvalitní, jen byl rychle

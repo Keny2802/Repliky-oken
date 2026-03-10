@@ -21,6 +21,7 @@ import Padding from "./Padding";
 import Flex from "./Flex";
 import Logo from "./Logo";
 import Icon from "./Icon";
+import Img from "./Img";
 import MobileMenu from "./MobileMenu";
 
 type HeaderType = {
@@ -120,6 +121,18 @@ const Header = ({ ...props }: HeaderType) => {
                                         );
                                     })
                                 }
+                                <li className="ml-4 header-item">
+                                    <Link
+                                    href="https://1url.cz/BeeLq"
+                                    target="_blank">
+                                        <Img
+                                        width={35}
+                                        height={35}
+                                        src="/assets/google.svg"
+                                        alt="Google ikonka"
+                                        />
+                                    </Link>
+                                </li>
                             </Flex>
                         </ul>
                         {

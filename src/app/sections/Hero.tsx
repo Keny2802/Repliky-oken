@@ -111,24 +111,28 @@ const Hero = () => {
                 src={card.image}
                 alt={card.alt}
                 draggable={false}
-                className={`w-full min-h-[800px] md:min-h-[1000px] max-h-[1200px] bg-fixed bg-center object-cover transition-opacity duration-500 ease-in-out ${carouselFade ? "opacity-0" : "opacity-100"}`}
+                // md:min-h-[1000px]
+                // min-h-[800px] max-h-[1000px]
+                className={`w-full min-h-[600px] max-h-[1000px] bg-fixed bg-center object-cover transition-opacity duration-500 ease-in-out ${carouselFade ? "opacity-0" : "opacity-100"}`}
                 />
-                <Wrapper className="absolute inset-0 bg-black/40"></Wrapper>
+                <Wrapper className="absolute inset-0 bg-black/40" />
                 <Wrapper className="p-3 md:p-3.5 lg:p-6 text-white text-center absolute inset-0 flex justify-center items-center flex-col gap-3 md:gap-3.5 lg:gap-6">
                     <ScrollAnimation className="flex justify-center items-center flex-col gap-2 md:gap-4 lg:gap-6">
                        <Wrapper className={`${carouselFade ? "opacity-0" : "opacity-100"} transition-opacity duration-500 ease-in-out`}>
                             <HeroHeading>
                                 Repliky historických oken a dveří
                             </HeroHeading>
-                            <Wrapper className="mt-2 flex items-center flex-col gap-1.5">
+                            <Wrapper className="my-2 md:my-4 lg:my-6 flex justify-center flex-col gap-1.5 w-full max-w-[500px] mx-auto">
                                 {
                                             card.title.map((title, index) => {
                                                 return (
                                                     <Fragment key={index}>
-                                                        <Wrapper className="flex items-center gap-1">
-                                                            <CheckIcon className="w-8 h-8 text-[#f5f2e8]" />
+                                                        <Wrapper className="flex justify-start items-center gap-1">
+                                                            <Wrapper>
+                                                                <CheckIcon className="w-8 h-8 text-[#f5f2e8]" />
+                                                            </Wrapper>
                                                             <p
-                                                            className="text-[15px] md:text-base lg:text-lg max-w-[500px]">
+                                                            className="text-[15px] md:text-base lg:text-lg">
                                                                 {title}
                                                             </p>
                                                         </Wrapper>
@@ -138,7 +142,7 @@ const Hero = () => {
                                         }
                             </Wrapper>
                             <MarginTop>
-                                <Flex className="w-full justify-center md:flex-row flex-col gap-3">
+                                <Flex className="w-full justify-center flex-col gap-3">
                                     {
                                         [
                                             // {

@@ -1,5 +1,6 @@
 import {
-    Fragment
+    Fragment,
+    useEffect
 } from "react";
 import clsx from "clsx";
 import Link from "next/link";
@@ -8,6 +9,7 @@ import Wrapper from "./Wrapper";
 import Padding from "./Padding";
 import Logo from "./Logo";
 import FlexCol from "./FlexCol";
+import Img from "./Img";
 
 type MobileMenuType = {
     isMobileMenu: boolean;
@@ -22,12 +24,24 @@ const MobileMenu = ({ ...props }: MobileMenuType) => {
         className
     } = props;
 
+    useEffect(() => {
+        const setResized = () => {
+            setMobileMenu(false);
+        };
+
+        window.addEventListener("resize", setResized);
+
+        return () => {
+            window.removeEventListener("resize", setResized);;
+        };
+    }, [isMobileMenu]);
+
     return (
         <Fragment>
             <Wrapper
             className={clsx(
-                "fixed inset-0 bg-black/40 z-40 transition-opacity duration-300 ease-in-out",
-                isMobileMenu ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+                "fixed inset-0 z-40 transition-opacity duration-300 ease-in-out",
+                isMobileMenu ? "bg-black/40 opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
             )}
             onClick={() => {
                 setMobileMenu(false);
@@ -74,6 +88,18 @@ const MobileMenu = ({ ...props }: MobileMenuType) => {
                                         );
                                     })
                                 }
+                                <li className="mt-2 mobile-menu-item">
+                                    <Link
+                                    href="https://1url.cz/BeeLq"
+                                    target="_blank">
+                                        <Img
+                                        width={35}
+                                        height={35}
+                                        src="/assets/google.svg"
+                                        alt="Google ikonka"
+                                        />
+                                    </Link>
+                                </li>
                         </FlexCol>
                     </ul>
                     <Wrapper className="mt-2 border-t border-gray-300"></Wrapper>
