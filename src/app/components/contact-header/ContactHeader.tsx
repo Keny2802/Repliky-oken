@@ -19,7 +19,7 @@ const ContactHeader = () => {
                 <Padding>
                     <Flex className="md:justify-between items-start lg:items-center flex-col lg:flex-row">
                         <Flex>
-                            <CtaText />
+                            {/* <CtaText /> */}
                             <Phone />
                         </Flex>
                         <Mail />
