@@ -27,7 +27,7 @@ const Content = () => {
             <Subheader />
             <Wrapper className="p-3 md:p-4 lg:p-4.5 bg-[#f5f2e8]">
                 <ScrollAnimation>
-                    <Heading>
+                    <Heading className="text-center">
                         Ochrana osobních údajů
                     </Heading>
                     <MarginTop>

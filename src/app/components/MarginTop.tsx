@@ -21,7 +21,7 @@ const MarginTop = ({ ...props }: MarginTopType) => {
 
     return (
         <Fragment>
-            <Wrapper className={clsx(className, "mt-3 md:mt-4 margin-top-component")}>
+            <Wrapper className={clsx(className, "mt-6 md:mt-8 margin-top-component")}>
                 {children}
             </Wrapper>
         </Fragment>
