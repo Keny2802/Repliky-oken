@@ -26,7 +26,7 @@ const PathLink = () => {
 
     return (
         <Fragment>
-            <Wrapper className="mx-4 md:mx-6 my-4 md:my-6 border-b border-gray-200 md:max-w-max flex items-center flex-col lg:flex-row gap-1 md:gap-2 lg:gap-3">
+            <Wrapper className="mx-4 md:mx-6 my-4 md:my-6 border-b border-gray-200 md:max-w-max flex md:items-center flex-col lg:flex-row gap-1 md:gap-2 lg:gap-3">
                 {
                     currentProduct && (
                         <Link
