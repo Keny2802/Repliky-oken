@@ -11,6 +11,7 @@ import Link from "next/link";
 import ContactHeader from "@/app/components/contact-header/ContactHeader";
 import Header from "@/app/components/Header";
 import Subheader from "@/app/components/Subheader";
+import PathLink from "@/app/components/PathLink";
 import Atc from "@/app/sections/Atc";
 import Wrapper from "@/app/components/Wrapper";
 import ScrollAnimation from "@/app/components/ScrollAnimation";
@@ -63,6 +64,7 @@ const Content = () => {
             <ContactHeader />
             <Header />
             <Subheader />
+            <PathLink />
             <Wrapper className="px-8 md:px-12 py-16 md:py-24 bg-white shadow-md">
                 <ScrollAnimation>
                     <FlexCol className="items-center">
@@ -194,41 +196,6 @@ const Content = () => {
                             </Wrapper>
                         </Wrapper>
                     </FlexCol>
-                    {/* <FlexCol className="mt-2 md:mt-4 lg:mt-6 justify-center items-center">
-                        <Wrapper>
-                            <h3 className="text-2xl md:text-3xl font-semibold max-w-3xl text-start">
-                                Špaletová okna umíme vyrobit podle vašich přání a požadavků, lze osadit:
-                            </h3>
-                            <ul className="point-list">
-                                {
-                                    [
-                                        "Trojsklo pro lepší izolaci tepelnou a hlukovou.",
-                                        "Izolační sklo i do vnitřních křídel.",
-                                        "Bezpečnostní lepení sklo.",
-                                        "Otevírání křídel jednou kličkou místo dvěma s pomocí zavírací lišty.",
-                                        "Vyklápění vrchních křídel ovládací pákou."
-                                    ].map((point, index) => {
-                                        return (
-                                            <Fragment key={index}>
-                                                <li className="list-disc point-list-item">
-                                                    {point}
-                                                </li>
-                                            </Fragment>
-                                        );
-                                    })
-                                }
-                                <li className="list-disc point-list-item">
-                                    Matné sklo či speciální čistě průhledné sklo Clearvision od firmy AGC.
-                                    <Link
-                                    href="https://www.agc-yourglass.com/cz-CZ/nase-znacky/planibel-clearvision"
-                                    target="_blank"
-                                    className="block text-[#5495ff]">
-                                        https://www.agc-yourglass.com/cz-CZ/nase-znacky/planibel-clearvision
-                                    </Link>
-                                </li>
-                            </ul>
-                        </Wrapper>
-                    </FlexCol> */}
                 </ScrollAnimation>
             </Wrapper>
             <Atc />

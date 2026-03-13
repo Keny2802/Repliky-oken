@@ -11,6 +11,7 @@ import Link from "next/link";
 import ContactHeader from "@/app/components/contact-header/ContactHeader";
 import Header from "@/app/components/Header";
 import Subheader from "@/app/components/Subheader";
+import PathLink from "@/app/components/PathLink";
 import Atc from "@/app/sections/Atc";
 import Wrapper from "@/app/components/Wrapper";
 import ScrollAnimation from "@/app/components/ScrollAnimation";
@@ -57,6 +58,7 @@ const Content = () => {
             <ContactHeader />
             <Header />
             <Subheader />
+            <PathLink />
             <Wrapper className="px-8 md:px-12 py-16 md:py-24 bg-white shadow-md">
                 <ScrollAnimation>
 

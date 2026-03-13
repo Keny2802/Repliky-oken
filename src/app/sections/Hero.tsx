@@ -231,7 +231,7 @@ const Hero = () => {
                                                     // "w-8 bg-[#e40209]"
                                                     : "bg-white hover:bg-[#87ceeb]"
                                                 }    
-                                                w-25 h-[3px] rounded-full cursor-pointer transition-colors duration-300 ease-in-out hover:bg-[#87ceeb]`}
+                                                w-8 md:w-25 h-[3px] rounded-full cursor-pointer transition-colors duration-300 ease-in-out hover:bg-[#87ceeb]`}
                                                 />
                                                 );
                                             })
