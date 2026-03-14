@@ -273,7 +273,7 @@ const Hero = () => {
                     </Wrapper>
                 </Wrapper>
             </Wrapper>
-            <WAContact />
+            {/* <WAContact /> */}
         </Fragment>
     );
 };

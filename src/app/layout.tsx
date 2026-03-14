@@ -4,6 +4,7 @@ import type {
 import "./globals.css";
 
 import ProgressBar from "./components/ProgressBar";
+import WAContact from "./components/WAContact";
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3001"),
@@ -122,6 +123,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <ProgressBar />
+        <WAContact />
         {children}
       </body>
     </html>
