@@ -13,7 +13,7 @@ const Subheader = () => {
                 <Wrapper className="p-2 md:p-2.5 lg:p-3">
                     <Flex className="justify-center">
                         <ul className="header-list">
-                            <Flex className="justify-center">
+                            <Flex className="justify-between">
                                 {
                                     [
                                         {

@@ -23,12 +23,13 @@ const Cta = ({ ...props }: CtaType) => {
         target,
         children
     } = props;
+
     return (
         <Fragment>
             <Link
-            {...props}
-            target={target}
-            className={clsx(`${className || ""} w-full md:min-w-75 md:max-w-100 text-base md:text-lg lg:text-[19px] rounded-3xl`)}>
+                {...props}
+                target={target}
+                className={clsx(`${className || ""} w-full md:min-w-75 md:max-w-100 text-base md:text-lg lg:text-[19px] rounded-3xl`)}>
                 <TapAnimation>
                     {children}
                 </TapAnimation>

@@ -13,6 +13,9 @@ import {
     ContactFormSchema,
     ContactFormProps
 } from "@/app/lib/validation";
+import {
+    useRouter
+} from "next/navigation";
 import Link from "next/link";
 
 import Wrapper from "../components/Wrapper";
@@ -21,9 +24,10 @@ import Heading from "../components/Heading";
 import Subheading from "../components/Subheading";
 import Flex from "../components/Flex";
 import ContactInfo from "../components/ContactInfo";
-import Padding from "../components/Padding";
 
 const Contact = () => {
+    const router = useRouter();
+
     const {
         register,
         handleSubmit,
@@ -58,6 +62,8 @@ const Contact = () => {
                 
                 return;
             };
+
+            router.push("/dekujeme");
 
             reset();
         } catch (catchError) {

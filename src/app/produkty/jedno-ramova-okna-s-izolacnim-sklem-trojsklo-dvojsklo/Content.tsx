@@ -101,7 +101,7 @@ const Content = () => {
                             </Subheading>
                             </Wrapper>
                         </FlexCol>
-                        <Wrapper className="mt-2 md:mt-4 flex justify-center lg:flex-row gap-2 md:gap-4">
+                        <Wrapper className="mt-2 md:mt-4 flex justify-center items-center flex-col lg:flex-row gap-2 md:gap-4">
                             {
                                 currentGallery1.map((img, idx) => {
                                     return (
@@ -136,7 +136,7 @@ const Content = () => {
                                 </Subheading>
                             </Wrapper>
                         </FlexCol>
-                        <Wrapper className="my-2 md:my-4 lg:my-12 flex justify-center lg:flex-row gap-2 md:gap-4">
+                        <Wrapper className="my-2 md:my-4 lg:my-12 flex justify-center items-center flex-col lg:flex-row gap-2 md:gap-4">
                             {
                                 currentGallery2.map((img, idx) => {
                                     return (

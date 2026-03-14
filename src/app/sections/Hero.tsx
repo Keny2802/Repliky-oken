@@ -114,7 +114,7 @@ const Hero = () => {
                     draggable={false}
                     // md:min-h-[1000px]
                     // min-h-[800px] max-h-[1000px]
-                    className={`w-full min-h-[600px] max-h-[1000px] md:rounded-md bg-fixed bg-center object-cover transition-opacity duration-500 ease-in-out ${carouselFade ? "opacity-0" : "opacity-100"}`}
+                    className={`w-full min-h-[720px] max-h-[1000px] md:rounded-md bg-fixed bg-center object-cover transition-opacity duration-500 ease-in-out ${carouselFade ? "opacity-0" : "opacity-100"}`}
                     />
                     <Wrapper className="absolute inset-0 bg-black/60 rounded-md" />
                     <Wrapper className="p-4 md:p-5 lg:p-6 text-white text-center absolute inset-0 flex justify-center items-center flex-col gap-3 md:gap-3.5 lg:gap-6">
