@@ -71,6 +71,15 @@ const Contact = () => {
         };
     };
 
+    const wordsToCapitalize = (evt: React.ChangeEvent<HTMLInputElement>) => {
+        const target = evt.target;
+        const targetValue = target.value;
+        const words = targetValue.split(" ");
+        const wordsCapitalize = words[0].toString().toUpperCase();
+
+        target.value = " " + wordsCapitalize;
+    };
+
     return (
         <Fragment>
             <Wrapper
@@ -96,7 +105,7 @@ const Contact = () => {
                                             {
                                                 key: "name",
                                                 type: "text",
-                                                placeholder: "Jan nový"
+                                                placeholder: "Jan Nový"
                                             },
                                             {
                                                 key: "email",
@@ -122,6 +131,13 @@ const Contact = () => {
                                                             {...register(input.key as any)}
                                                             type={input.type}
                                                             placeholder={input.placeholder}
+                                                            // {
+                                                            //     ...(
+                                                            //         input.key === "name" && {
+                                                            //             onChange: (evt) => wordsToCapitalize(evt)
+                                                            //         }
+                                                            //     )
+                                                            // }
                                                             className="p-4 md:p-4.5 lg:p-5 w-full bg-[#f5f2e8] text-black focus:outline-none placeholder:text-black"
                                                             />
                                                         ) : (
