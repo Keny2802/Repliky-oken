@@ -9,7 +9,7 @@ import {
 } from "next/server";
 
 // const resend = new Resend(process.env.RESEND_API_KEY);
-const resend = new Resend("re_RMpG7k6Q_KJ4XGgPfq2EDCtFeS2t5vMdV");
+const resend = new Resend("re_Bnxzgqsf_HaWBjsC1XBtu6AYsf9cigs7r");
 
 export async function POST (request: Request) {
     try {
@@ -38,7 +38,7 @@ export async function POST (request: Request) {
 
         await resend.emails.create({
             from: "onboarding@resend.dev",
-            to: `info.modernizujme@gmail.com`,
+            to: `heidinger@replikyoken.cz`,
             subject: "Nová zpráva / poptávka z replikyoken.cz",
             html: `
             <p>
