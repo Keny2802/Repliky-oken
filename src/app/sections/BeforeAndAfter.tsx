@@ -62,7 +62,7 @@ const BeforeAndAfter = () => {
                                 Před a Po
                             </Heading>
                             <Subheading className="max-w-3xl">
-                                Podívejte se na naše realizace jak vypadali a jak vypadají teď po naší kvalitní práci.
+                                Podívejte se na naše realizace jak vypadaly a jak vypadají teď po naší kvalitní práci.
                             </Subheading>
                         </FlexCol>
                         <MarginTop>
