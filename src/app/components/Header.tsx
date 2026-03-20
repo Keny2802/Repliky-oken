@@ -88,10 +88,10 @@ const Header = ({ ...props }: HeaderType) => {
                             <Flex>
                                 {
                                     [
-                                        // {
-                                        //     text: "Jak to probíhá",
-                                        //     href: "/jak-to-probiha"
-                                        // },
+                                        {
+                                            text: "Jak to probíhá",
+                                            href: "/jak-to-probiha"
+                                        },
                                         // {
                                         //     text: "Galerie",
                                         //     href: "/galerie"

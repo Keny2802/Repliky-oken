@@ -121,6 +121,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-959631745"></script>
+        {/* <script>
+          window.data0Layer = window.dataLayer || [];
+          function gtag(){
+            dataLayer.push(arguments);
+          };
+          
+          gtag('js', new Date()); gtag('config', 'AW-959631745');
+        </script> */}
+      </head>
       <body>
         <ProgressBar />
         <WAContact />
