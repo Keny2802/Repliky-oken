@@ -82,7 +82,7 @@ const Content = () => {
                 <ScrollAnimation>
                     <FlexCol className="justify-center">
                         <Heading>
-                            Jedno rámová okna s izolačním zasklením - trojsklo, dvojsklo
+                            Jednorámová okna s izolačním zasklením - trojsklo, dvojsklo
                         </Heading>
                         <FlexCol className="mt-2 md:mt-4 lg:mt-6 justify-center items-center">
                             <Wrapper>

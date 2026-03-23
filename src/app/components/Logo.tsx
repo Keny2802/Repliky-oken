@@ -8,8 +8,17 @@ import {
 } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
+import clsx from "clsx";
 
-const Logo = () => {
+type props = {
+    className?: string;
+    id?: string;
+};
+
+const Logo = ({
+    className,
+    id
+}: props) => {
     const pathName = usePathname();
     const isHome = pathName === "/" ? "" : "/";
 
@@ -24,7 +33,8 @@ const Logo = () => {
                     alt="Jaroslav Heindinger Replikyoken.cz Logo"
                     priority={true}
                     draggable={false}
-                    className="max-w-[250px] max-h-[250px] lg:max-w-[320px] lg:min-h-[130px] w-full"
+                    className={clsx(className, "max-w-[250px] max-h-[250px] lg:max-w-[320px] lg:min-h-[130px] w-full")}
+                    id={id}
                 />
             </Link>
         </Fragment>

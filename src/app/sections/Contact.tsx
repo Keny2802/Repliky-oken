@@ -138,13 +138,14 @@ const Contact = () => {
                                                             //         }
                                                             //     )
                                                             // }
-                                                            className="p-4 md:p-4.5 lg:p-5 w-full bg-[#f5f2e8] text-black focus:outline-none placeholder:text-black"
+                                                            // bg-[#f5f2e8]
+                                                            className="p-4 md:p-4.5 lg:p-5 w-full bg-[#e8e4d5] text-black focus:outline-none placeholder:text-black"
                                                             />
                                                         ) : (
                                                             <textarea
                                                             {...register(input.key as "message")}
                                                             placeholder="Zpráva pro nás"
-                                                            className="p-4 md:p-4.5 lg:p-5 min-h-[200px] w-full resize-none bg-[#f5f2e8] text-black focus:outline-none placeholder:text-black" />
+                                                            className="p-4 md:p-4.5 lg:p-5 min-h-[200px] w-full resize-none bg-[#e8e4d5] text-black focus:outline-none placeholder:text-black" />
                                                         )
                                                     }
                                                 </Fragment>

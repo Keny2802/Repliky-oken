@@ -33,37 +33,37 @@ const realizace = [
     {
         image: "/assets/fotky/reference/praha-ulice-rybna-repliky-oken/praha-ulice-rybna-repliky-oken-1.avif",
         alt: "Ukázka práce špaletových oken v ulice Rybná Prahy 1 | Jaroslav Heidinger | replikyoken.cz",
-        title: "Praha ulice Rybná repliky oken",
+        title: "Repliky špaletových oken, Praha, ulice Rybná",
         href: "/nase-realizace/praha-ulice-rybna-repliky-oken"
     },
     {
         image: "/assets/fotky/reference/okna-hradesinska-praha-10/okna-hradesinska-praha-10-2.avif",
         alt: "Ukázka práce oken ulice Hradešínská na Praze 10 | Jaroslav Heidinger | replikyoken.cz",
-        title: "Praha ulice Hradešínská, Praha 10. Repliky",
+        title: "Rekonstrukce historické vily, Praha ulice Hradešínská",
         href: "/nase-realizace/praha-ulice-hradesinska-praha-10-repliky"
     },
     {
         image: "/assets/fotky/reference/jednoramova-okna-praha-ulice-nerudova/jednoramova-okna-praha-ulice-nerudova-1.avif",
         alt: "Ukázka práce jednorámová okna Praha ulice Nerudova | Jaroslav Heidinger | replikyoken.cz",
-        title: "Jednorámová okna Praha ulice Nerudova",
+        title: "Jednorámová okna, Praha ulice Nerudova",
         href: "/nase-realizace/jednoramova-okna-praha-ulice-nerudova"
     },
     {
         image: "/assets/fotky/reference/lomena-okna-praha-zizkov/lomena-okna-praha-zizkov-1.avif",
         alt: "Ukázka práce lomená okna Praha žižkov | Jaroslav Heidinger | replikyoken.cz",
-        title: "Lomená okna Praha Žižkov",
+        title: "Lomená špaletová okna, Praha Žižkov",
         href: "/nase-realizace/lomena-okna-praha-zizkov"
     },
     {
         image: "/assets/fotky/reference/jemniste-repliky-jednoramovych-oken/jemniste-repliky-jednoramovych-oken-9.avif",
         alt: "Ukázka práce Jemniště repliky jednorámových oken | Jaroslav Heidinger | replikyoken.cz",
-        title: "Jemniště repliky jednorámových oken",
+        title: "Zámek Jemniště, repliky jednorámových oken",
         href: "/nase-realizace/jemniste-repliky-jednoramovych-oken"
     },
     {
         image: "/assets/fotky/reference/pysely-rekonstrukce-historicke-vily/pysely-rekonstrukce-historicke-vily-19.avif",
         alt: "Ukázka práce rekonstrukce historické vily v Pyšelech | Jaroslav Heidinger | replikyoken.cz",
-        title: "Pyšely rekonstrukce historické vily",
+        title: "Rekonstrukce Historické vily, Pyšely",
         href: "/nase-realizace/pysely-rekonstrukce-historicke-vily"
     }
 ];
@@ -119,10 +119,11 @@ const Content = () => {
                                             <Link
                                             key={index}
                                             href={card.href}
-                                            target="_blank">
+                                            // target="_blank"
+                                            >
                                                 <RelativeOverlayWrapper
                                                     // key={index}
-                                                    className="p-4 md:p-5 lg:p-6 md:w-[449px] max-h-[600px] odd:bg-[#f2f0ef] even:border-4 even:border-[#f2f0ef] cursor-pointer group">
+                                                    className="p-4 md:p-5 lg:p-6 md:w-[449px] max-h-[600px] md:min-h-[520px] odd:bg-[#f2f0ef] even:border-4 even:border-[#f2f0ef] cursor-pointer group">
                                                         <Wrapper className="transition-transform duration-300 ease-in-out group-hover:scale-105">
                                                             <SmallerHeading className="text-[#1d1b21] text-center">
                                                                 {/* {card.title} */}

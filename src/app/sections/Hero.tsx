@@ -17,7 +17,6 @@ import Link from "next/link";
 import Wrapper from "../components/Wrapper";
 import ScrollAnimation from "../components/ScrollAnimation";
 import HeroHeading from "../components/HeroHeading";
-import Subheading from "../components/Subheading";
 import MarginTop from "../components/MarginTop";
 import Flex from "../components/Flex";
 import Cta from "../components/Cta";
@@ -25,7 +24,6 @@ import Padding from "../components/Padding";
 import setLinkWithoutHash from "../functions/setLinkWithoutHash";
 import Img from "../components/Img";
 import BodyText from "../components/BodyText";
-import WAContact from "../components/WAContact";
 
 const HeroCarousel = [
     {
@@ -123,24 +121,24 @@ const Hero = () => {
                                 <HeroHeading>
                                     Repliky historických oken a dveří
                                 </HeroHeading>
-                                <Wrapper className="my-2 md:my-4 lg:my-6 flex justify-center flex-col gap-1.5 w-full max-w-[500px] mx-auto">
-                                    {
-                                                card.title.map((title, index) => {
-                                                    return (
-                                                        <Fragment key={index}>
-                                                            <Wrapper className="flex justify-start items-center gap-1">
-                                                                <Wrapper>
-                                                                    <CheckIcon className="w-6 h-6 md:w-8 md:h-8 text-[#f5f2e8]" />
-                                                                </Wrapper>
-                                                                <p
-                                                                className="text-[14px] md:text-base lg:text-lg">
-                                                                    {title}
-                                                                </p>
+                                <Wrapper className="my-2 md:my-4 lg:my-6 flex justify-evenly flex-col gap-1.5 w-full max-w-[550px] mx-auto">
+                                        {
+                                            card.title.map((title, index) => {
+                                                return (
+                                                    <Fragment key={index}>
+                                                        <Wrapper className="flex justify-start items-start md:items-center  gap-1 text-start">
+                                                            <Wrapper>
+                                                                <CheckIcon className="w-6 h-6 md:w-8 md:h-8 text-[#f5f2e8]" />
                                                             </Wrapper>
-                                                        </Fragment>
-                                                    );
-                                                })
-                                            }
+                                                            <p
+                                                            className="text-[14px] md:text-base lg:text-lg text-wrap md:text-nowrap">
+                                                                {title}
+                                                            </p>
+                                                        </Wrapper>
+                                                    </Fragment>
+                                                );
+                                            })
+                                        }
                                 </Wrapper>
                                 <MarginTop>
                                     <Flex className="w-full justify-center flex-col gap-3">
@@ -173,13 +171,14 @@ const Hero = () => {
                                                         href={heroCta.href}
                                                         {
                                                             ...(
-                                                                !heroCta.href.startsWith("/") ? (
+                                                                !heroCta.href.startsWith("/") && (
                                                                     {
                                                                         onClick: (e) => setLinkWithoutHash(e, heroCta.href)
                                                                     }
-                                                                ) : {
-                                                                    target: "_blank"
-                                                                }
+                                                                )
+                                                                // : {
+                                                                //     target: "_blank"
+                                                                // }
                                                             )
                                                         }
                                                         // {
@@ -226,12 +225,12 @@ const Hero = () => {
                                                 }}
                                                 className={`
                                                 ${currentPhotoIndex === index ?
-                                                    "bg-[#87ceeb] hover:bg-white"
+                                                    "bg-[#87ceeb] hover:bg-white w-16 md:w-25"
                                                     // "w-8 bg-[#87ceeb] hover:bg-white"
                                                     // "w-8 bg-[#e40209]"
                                                     : "bg-white hover:bg-[#87ceeb]"
                                                 }    
-                                                w-8 md:w-25 h-[3px] rounded-full cursor-pointer transition-colors duration-300 ease-in-out hover:bg-[#87ceeb]`}
+                                                w-8 h-[3px] rounded-full cursor-pointer transition-colors duration-300 ease-in-out hover:bg-[#87ceeb]`}
                                                 />
                                                 );
                                             })

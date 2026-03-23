@@ -35,7 +35,7 @@ const Pysely = () => {
         <Fragment>
             <Wrapper className="p-2.5 md:p-3 lg:p-4 bg-[#f5f2e8] border-t border-gray-200">
                 <SectionHeading>
-                    Pyšely - rekonstrukce historické vily
+                    Rekonstrukce Historické vily, Pyšely
                 </SectionHeading>
                 <Wrapper className="mt-2 md:mt-4 lg:mt-6 flex justify-center items-center md:flex-row flex-col flex-wrap gap-2 md:gap-4 lg:gap-6">
                     {

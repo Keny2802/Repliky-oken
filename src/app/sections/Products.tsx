@@ -64,7 +64,7 @@ const Products = () => {
                             </Heading>
                         </FlexCol>
                         <MarginTop>
-                            <Flex className="mt-4 md:mt-5 lg:mt-6 grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-4 md:gap-6 items-center">
+                            <Wrapper className="mt-4 md:mt-5 lg:mt-6 grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-4 md:gap-6 items-center">
                                 {
                                     products.map((card, index) => {
                                         const words = card.title.split(" ");
@@ -89,11 +89,10 @@ const Products = () => {
                                         return (
                                             <Link
                                             key={index}
-                                            href={card.href}
-                                            target="_blank">
+                                            href={card.href}>
                                                 <RelativeOverlayWrapper
                                                     // key={index}
-                                                    className="p-4 md:p-5 lg:p-6 w-full md:w-[449px] max-h-[600px] odd:bg-[#f2f0ef] even:border-4 even:border-[#f2f0ef] cursor-pointer group">
+                                                    className="p-4 md:p-5 lg:p-6 w-full md:w-[449px] max-h-[600px] md:min-h-[530px] odd:bg-[#f2f0ef] even:border-4 even:border-[#f2f0ef] cursor-pointer group">
                                                         <Wrapper className="transition-transform duration-300 ease-in-out group-hover:scale-105">
                                                             <SmallerHeading className="text-[#1d1b21] text-center">
                                                                 {/* {card.title} */}
@@ -120,7 +119,7 @@ const Products = () => {
                                         );
                                     })
                                 }
-                            </Flex>
+                            </Wrapper>
                         </MarginTop>
                     </Wrapper>
                 </ScrollAnimation>

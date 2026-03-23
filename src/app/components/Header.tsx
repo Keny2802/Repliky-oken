@@ -83,7 +83,7 @@ const Header = ({ ...props }: HeaderType) => {
             id="navigace">
                 <Padding>
                     <Flex className="justify-between">
-                        <Logo />
+                        <Logo className="aspect-auto" />
                         <ul className="hidden md:block header-list">
                             <Flex>
                                 {
@@ -121,20 +121,19 @@ const Header = ({ ...props }: HeaderType) => {
                                         );
                                     })
                                 }
-                                <li className="ml-4 header-item">
-                                    <Link
-                                    href="https://1url.cz/BeeLq"
-                                    target="_blank">
-                                        <Img
-                                        width={35}
-                                        height={35}
-                                        src="/assets/google.svg"
-                                        alt="Google ikonka"
-                                        />
-                                    </Link>
-                                </li>
                             </Flex>
                         </ul>
+                        <Link
+                        href="https://1url.cz/BeeLq"
+                        target="_blank"
+                        className="hidden md:inline-block">
+                            <Img
+                            width={35}
+                            height={35}
+                            src="/assets/google.svg"
+                            alt="Google ikonka"
+                            />
+                        </Link>
                         {
                             isMobileMenu === false ? (
                                 <Icon
