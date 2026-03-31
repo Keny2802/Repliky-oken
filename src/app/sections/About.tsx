@@ -53,7 +53,7 @@ const About = () => {
                             </Subheading>
                         </FlexCol>
                     <FlexRow>
-                        <Image
+                        {/* <Image
                         width={400}
                         height={400}
                         src="/assets/fotky/produkty/vchodove-dvere-do-bytu/vchodove-dvere-do-bytu-2.avif"
@@ -63,7 +63,7 @@ const About = () => {
                         draggable={false}
                         onClick={() => setActiveIndex(0)}
                         className="w-full max-h-[300px] md:max-w-[400px] md:max-h-[400px] object-cover rounded-2xl cursor-pointer"
-                        />
+                        /> */}
                         <FlexCol className="justify-center items-center">
                                 <MarginTop>
                                     <BodyText className="max-w-4xl">
@@ -100,7 +100,8 @@ const About = () => {
                                             loading="lazy"
                                             decoding="async"
                                             draggable={false}
-                                            onClick={() => setActiveIndex(index + 1)}
+                                            // onClick={() => setActiveIndex(index + 1)}
+                                            onClick={() => setActiveIndex(index)}
                                             className="w-full max-h-[450px] md:w-50 md:h-50 object-cover rounded-md cursor-pointer"
                                             />
                                         );

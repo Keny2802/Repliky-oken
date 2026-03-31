@@ -21,7 +21,7 @@ const Subheader = () => {
                                             href: "/produkty/spaletova-okna"
                                         },
                                         {
-                                            text: "Jedno rámová okna",
+                                            text: "Jednorámová okna",
                                             href: "/produkty/jedno-ramova-okna-s-izolacnim-sklem-trojsklo-dvojsklo"
                                         },
                                         {

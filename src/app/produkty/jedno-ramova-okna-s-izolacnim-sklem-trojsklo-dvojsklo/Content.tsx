@@ -80,15 +80,15 @@ const Content = () => {
             <PathLink />
             <Wrapper className="px-8 md:px-12 py-16 md:py-24 bg-white shadow-md">
                 <ScrollAnimation>
-                    <FlexCol className="justify-center">
-                        <Heading>
-                            Jednorámová okna s izolačním zasklením - trojsklo, dvojsklo
+                    <FlexCol className="justify-center items-center text-center mx-auto">
+                        <Heading className="text-center">
+                            Jednorámováokna s izolačním zasklením - trojsklo, dvojsklo
                         </Heading>
                         <FlexCol className="mt-2 md:mt-4 lg:mt-6 justify-center items-center">
                             <Wrapper>
                                 <h3 className="text-2xl md:text-3xl font-semibold">
-                                Jedno rámová okna (klasická alternativa eurooken)
-                            </h3>
+                                    Jednorámová okna (klasická alternativa eurooken)
+                                </h3>
                             <Subheading className="max-w-3xl text-start">
                                 Klasické okno, které izoluje tepelně i hlukově. Má úzké profily a tím pouští více světla do místností. Nejedná se o eurookno ale o okno, které lze osadit všude a bude hezky vypadat. Lze osadit do památkově chráněných oblastí jako alternativa špaletového. Z exteriéru přesně kopíruje vzhled špaletového okna, šířky profilů jsou stejné a tím i stejné světlo procházející do místností. Při výměně za špaletové je nutno zednických prací, zednické práce zajistíme.
                             </Subheading>
