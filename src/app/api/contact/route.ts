@@ -9,7 +9,7 @@ import {
 } from "next/server";
 // custom noreply mailová adresa
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = new Resend("re_Bnxzgqsf_HaWBjsC1XBtu6AYsf9cigs7r");
 
 export async function POST (request: Request) {
     try {
