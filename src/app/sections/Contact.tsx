@@ -1,7 +1,9 @@
 "use client";
 
 import {
-    Fragment
+    useState,
+    type ChangeEvent,
+    Fragment,
 } from "react";
 import {
     useForm
@@ -24,6 +26,7 @@ import Heading from "../components/Heading";
 import Subheading from "../components/Subheading";
 import Flex from "../components/Flex";
 import ContactInfo from "../components/ContactInfo";
+import { ul } from "motion/react-client";
 
 const Contact = () => {
     const router = useRouter();
@@ -42,9 +45,12 @@ const Contact = () => {
             name: "",
             email: "",
             phone: "",
+            file: undefined,
             message: ""
         }
     });
+
+    const [isFile, setFile] = useState<File | FileList | null>();
 
     const handleForm = async (contactFormCredentials: ContactFormProps) => {
         try {
@@ -71,6 +77,34 @@ const Contact = () => {
         };
     };
 
+    const handleFile = (event: ChangeEvent<HTMLInputElement | null>) => {
+        const target = event.target;
+        const files = target.files;
+
+        if (files) {
+            setFile(files);
+        };
+    };
+
+    const handleFileUpload = async () => {
+        if (isFile) {
+            const formData = new FormData();
+            formData.append("file", `${isFile}`);
+
+            try {
+                const response = await fetch("/api/contact", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(isFile),
+                });
+                const responseData = await response.json();
+                return responseData;
+            } catch (error) {
+                console.error(`Error: ${error}`);
+            };
+        };
+    };
+
     const wordsToCapitalize = (evt: React.ChangeEvent<HTMLInputElement>) => {
         const target = evt.target;
         const targetValue = target.value;
@@ -85,7 +119,7 @@ const Contact = () => {
             <Wrapper
             // md:h-[500px]
             // relative
-            className="border-y border-gray-200 bg-white max-w-full "
+            className="border-y border-gray-200 bg-white max-w-full"
             id="kontakt">
                 <Wrapper className="p-6 md:p-12 text-black text-center relative z-10">
                     <ScrollAnimation className="w-full flex flex-col justify-center items-center gap-3 text-center">
@@ -105,61 +139,86 @@ const Contact = () => {
                                             {
                                                 key: "name",
                                                 type: "text",
-                                                placeholder: "Jan Nový"
+                                                placeholder: "Jan Nový",
+                                                error: "Vaše jméno je povinné.",
                                             },
                                             {
                                                 key: "email",
                                                 type: "email",
-                                                placeholder: "jan@novy.cz"
+                                                placeholder: "jan@novy.cz",
+                                                error: "Váš e-mail je povinný.",
                                             },
                                             {
                                                 key: "phone",
                                                 type: "tel",
-                                                placeholder: "+420 601 123 456"
+                                                placeholder: "+420 601 123 456",
+                                                error: "Vaše telefonní číslo je povinné.",
+                                            },
+                                            {
+                                                key: "file",
+                                                type: "file",
+                                                placeholder: "Povolené formáty - TXT, DOCX, PDF, JPG, PNG",
                                             },
                                             {
                                                 key: "message",
                                                 type: "textarea",
-                                                placeholder: "Zpráva pro nás"
+                                                placeholder: "Zpráva pro nás",
+                                                error: "Zpráva je povinná.",
                                             }
                                         ].map((input, index) => {
                                             return (
                                                 <Fragment key={index}>
                                                     {
                                                         input.key !== "message" ? (
-                                                            <input
-                                                            {...register(input.key as any)}
-                                                            type={input.type}
-                                                            placeholder={input.placeholder}
-                                                            // {
-                                                            //     ...(
-                                                            //         input.key === "name" && {
-                                                            //             onChange: (evt) => wordsToCapitalize(evt)
-                                                            //         }
-                                                            //     )
-                                                            // }
-                                                            // bg-[#f5f2e8]
-                                                            className="p-4 md:p-4.5 lg:p-5 w-full bg-[#e8e4d5] text-black focus:outline-none placeholder:text-black"
-                                                            />
+                                                            <Fragment>
+                                                                <Flex className="justify-start items-start flex-col w-full">
+                                                                    <input
+                                                                    {...register(input.key as any)}
+                                                                    type={input.type}
+                                                                    { ...( input.key === "file" && {
+                                                                        accept: "image/*,.txt,.doc,.docx,.pdf",
+                                                                        onChange: handleFile,
+                                                                    } ) }
+                                                                    placeholder={input.placeholder}
+                                                                    className="p-4 md:p-4.5 lg:p-5 w-full bg-[#e8e4d5] text-black focus:outline-none placeholder:text-black"
+                                                                    />
+                                                                    {/* {errors.name && <p className="text-red-600">{input.error}</p>}
+                                                                    {errors.email && <p className="text-red-600">{input.error}</p>}
+                                                                    {errors.phone && <p className="text-red-600">{input.error}</p>} */}
+                                                                </Flex>
+                                                            </Fragment>
                                                         ) : (
-                                                            <textarea
-                                                            {...register(input.key as "message")}
-                                                            placeholder="Zpráva pro nás"
-                                                            className="p-4 md:p-4.5 lg:p-5 min-h-[200px] w-full resize-none bg-[#e8e4d5] text-black focus:outline-none placeholder:text-black" />
+                                                            <Fragment>
+                                                                <Flex className="justify-start items-start flex-col w-full">
+                                                                    <textarea
+                                                                    {...register(input.key as "message")}
+                                                                    placeholder="Zpráva pro nás"
+                                                                    className="p-4 md:p-4.5 lg:p-5 min-h-[200px] w-full resize-none bg-[#e8e4d5] text-black focus:outline-none placeholder:text-black" />
+                                                                    {/* { errors.message && (<p className="text-red-600">{input.error}</p>) } */}
+                                                                </Flex>
+                                                            </Fragment>
                                                         )
                                                     }
                                                 </Fragment>
                                             );
                                         })
                                     }
-                                    <button
-                                    type="submit"
-                                    className="p-3 md:p-3.5 lg:p-4 w-full bg-[#f5f2e8] text-black text-base md:text-lg lg:text-[19px] rounded-3xl cursor-pointer">
-                                        Odeslat formulář
-                                    </button>
+                                    <Flex className="w-full">
+                                        <button
+                                        type="submit"
+                                        onSubmit={handleFileUpload}
+                                        className="p-3 md:p-3.5 lg:p-4 w-full bg-white border border-gray-300 text-black text-base md:text-lg lg:text-[19px] rounded-3xl cursor-pointer transition-colors ease-in-out duration-300 hover:bg-[#f5f2e8]">
+                                            Přiložit přílohy
+                                        </button>
+                                        <button
+                                        type="submit"
+                                        className="p-3 md:p-3.5 lg:p-4 w-full bg-[#f5f2e8] text-black text-base md:text-lg lg:text-[19px] rounded-3xl cursor-pointer">
+                                            Odeslat formulář
+                                        </button>
+                                    </Flex>
                                     <Wrapper className="text-sm text-gray-600 text-center flex justify-center items-center flex-col lg:flex-row gap-1">
                                         <p>
-                                            Odesláním formuláře souhlasíte se zásadami
+                                            Odesláním formuláře souhlasíte se zásadami o
                                         </p>
                                         {" "}
                                         <Link

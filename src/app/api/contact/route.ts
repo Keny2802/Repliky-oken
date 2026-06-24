@@ -7,9 +7,9 @@ import {
 import {
     NextResponse
 } from "next/server";
+// custom noreply mailová adresa
 
-// const resend = new Resend(process.env.RESEND_API_KEY);
-const resend = new Resend("re_Bnxzgqsf_HaWBjsC1XBtu6AYsf9cigs7r");
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST (request: Request) {
     try {
@@ -33,6 +33,7 @@ export async function POST (request: Request) {
             name,
             email,
             phone,
+            file,
             message
         } = safeParsedBody.data;
 
@@ -53,7 +54,12 @@ export async function POST (request: Request) {
             <p>
                 Zpráva: ${message}
             </p>
-            `
+            `,
+            attachments: [
+                {
+                    filename: `${file}`,
+                }
+            ],
         });
 
         return (

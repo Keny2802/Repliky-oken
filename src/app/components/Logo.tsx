@@ -25,7 +25,7 @@ const Logo = ({
     return (
         <Fragment>
             <Link
-                href={isHome}>
+                href={isHome === "/" ? "" : "/"}>
                 <Image
                     width={320}
                     height={320}
